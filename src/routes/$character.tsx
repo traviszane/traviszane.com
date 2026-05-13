@@ -29,8 +29,8 @@ export const Route = createFileRoute("/$character")({
 });
 
 function CharacterPage() {
-  const { character } = Route.useParams();
-  const c = characters[character];
+  const params = Route.useParams() as { character: CharacterId };
+  const c = characters[params.character];
   const a = accent[c.id];
 
   return (
