@@ -1,27 +1,22 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { CrtOverlay } from "@/components/CrtOverlay";
-import { HudNav } from "@/components/HudNav";
-import { ProjectTile } from "@/components/ProjectTile";
-import { accent } from "@/lib/accent";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SceneBackdrop } from "@/components/SceneBackdrop";
+import { CharacterSprite } from "@/components/CharacterSprite";
 import { characters, type CharacterId } from "@/lib/characters";
 
-const VALID: CharacterId[] = ["writer", "marketer", "creator"];
-
 export const Route = createFileRoute("/$character")({
-  parseParams: (params) => {
-    if (!VALID.includes(params.character as CharacterId)) {
-      throw notFound();
-    }
-    return { character: params.character as CharacterId };
+  beforeLoad: ({ params }) => {
+    if (!(params.character in characters)) throw notFound();
   },
   head: ({ params }) => {
-    const c = characters[params.character];
+    const c = characters[params.character as CharacterId];
+    if (!c) return { meta: [{ title: "Not found" }] };
     return {
       meta: [
-        { title: `${c.name} — Choose Your Character` },
-        { name: "description", content: c.description },
-        { property: "og:title", content: `${c.name} — Choose Your Character` },
-        { property: "og:description", content: c.description },
+        { title: `${c.name} — ${c.className}'s Journey` },
+        { name: "description", content: c.blurb.slice(0, 155) },
+        { property: "og:title", content: `${c.name} — ${c.className}'s Journey` },
+        { property: "og:description", content: c.blurb.slice(0, 155) },
       ],
     };
   },
@@ -29,125 +24,183 @@ export const Route = createFileRoute("/$character")({
 });
 
 function CharacterPage() {
-  const params = Route.useParams() as { character: CharacterId };
-  const c = characters[params.character];
-  const a = accent[c.id];
+  const { character: id } = Route.useParams();
+  const c = characters[id as CharacterId];
+  const color = `var(${c.colorVar})`;
 
   return (
-    <div className={`min-h-screen bg-background text-foreground ${a.selection}`}>
-      <HudNav active={c.id} />
+    <div className="relative min-h-screen overflow-hidden">
+      <SceneBackdrop />
+      <SiteHeader />
 
-      <main className="relative">
-        {/* Hero */}
-        <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-12 pt-16 md:grid-cols-[1fr_auto] md:gap-12 md:pt-20">
+      <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-10">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
+        >
+          <span>←</span> Change&nbsp;character
+        </Link>
+
+        <section className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
-            className="flex flex-col justify-center"
-            style={{ animation: "slide-in 0.6s var(--ease-arcade) both" }}
+            className="relative flex items-end justify-center rounded-md border border-border bg-card/60 backdrop-blur-sm overflow-hidden min-h-[26rem]"
+            style={{
+              background: `radial-gradient(ellipse at 50% 80%, color-mix(in oklab, ${color} 30%, transparent) 0%, transparent 70%), color-mix(in oklab, var(--card) 80%, transparent)`,
+            }}
           >
-            <p className={`mb-4 font-mono text-xs uppercase tracking-[0.35em] ${a.text}`}>
-              Class {c.classNum} · Now Playing
-            </p>
-            <h1 className="font-display text-7xl uppercase italic leading-[0.85] tracking-tighter md:text-9xl">
-              The {c.name}
-            </h1>
-            <p className="mt-6 max-w-[40ch] text-lg text-foreground/65">
-              {c.description}
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em]">
-              <span className={`border ${a.borderSoft} ${a.text} px-3 py-1.5`}>
-                {c.title}
-              </span>
-              <span className="border border-border px-3 py-1.5 text-foreground/50">
-                {c.projects.length} projects loaded
-              </span>
-            </div>
-          </div>
-
-          <div
-            className={`relative flex aspect-square w-72 items-center justify-center border border-border ${a.bgSoft} md:w-96`}
-            style={{ animation: "slide-in 0.8s var(--ease-arcade) 0.1s both" }}
-          >
-            <div className="crt-overlay absolute inset-0 opacity-60" />
-            <img
-              src={c.sprite}
-              alt={`${c.name} character sprite`}
-              width={512}
-              height={512}
-              className="pixelated relative z-10 size-5/6 object-contain"
-              style={{ animation: "sprite-bob 3.6s ease-in-out infinite" }}
-            />
-            <span className={`absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-[0.25em] ${a.text}`}>
-              SPRITE_{c.id.toUpperCase()}.PNG
-            </span>
-          </div>
-        </section>
-
-        {/* Stats bar */}
-        <section className="border-y border-border bg-white/[0.02]">
-          <div className="mx-auto grid max-w-7xl grid-cols-3 divide-x divide-border">
-            {c.stats.map((s) => (
-              <div key={s.label} className="px-6 py-5">
-                <div className="mb-2 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/50">
-                  <span>{s.label}</span>
-                  <span className={a.text}>{s.value}/100</span>
-                </div>
-                <div className="h-1 bg-white/10">
-                  <div
-                    className={`h-full ${a.bg}`}
-                    style={{ width: `${s.value}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Projects */}
-        <section className="mx-auto max-w-7xl px-6 py-20">
-          <div className="mb-10 flex items-end justify-between">
-            <div>
-              <p className={`mb-2 font-mono text-xs uppercase tracking-[0.3em] ${a.text}`}>
-                [ Inventory ]
-              </p>
-              <h2 className="font-display text-4xl uppercase italic tracking-tight md:text-6xl">
-                Selected Quests
-              </h2>
-            </div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/40">
-              {String(c.projects.length).padStart(2, "0")} items
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2">
-            {c.projects.map((p, i) => (
-              <ProjectTile key={p.title} character={c} project={p} index={i} />
-            ))}
-          </div>
-        </section>
-
-        {/* Switch character */}
-        <section className="border-t border-border">
-          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-12 md:flex-row md:items-center">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/40">
-                End of run
-              </p>
-              <p className="mt-2 font-display text-3xl uppercase italic">
-                Try another class.
-              </p>
-            </div>
-            <Link
-              to="/"
-              className={`border ${a.borderSoft} px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] ${a.text} transition-colors hover:bg-white/5`}
+            <div
+              aria-hidden
+              className="absolute top-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground"
             >
-              ← Reselect Character
-            </Link>
+              <span>Profile</span>
+              <span style={{ color }}>● Active</span>
+            </div>
+            <div className="px-4 pt-12">
+              <CharacterSprite character={c} size="xl" active />
+            </div>
+            <Brackets />
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+                {c.className} · Lvl 99
+              </div>
+              <h1 className="mt-2 font-display uppercase italic text-5xl md:text-7xl leading-[0.9] tracking-tight text-foreground">
+                {c.name}
+              </h1>
+              <p className="mt-3 italic text-lg" style={{ color }}>
+                {c.tagline}
+              </p>
+              <p className="mt-5 max-w-xl text-muted-foreground leading-relaxed">{c.blurb}</p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              {c.stats.map((s) => (
+                <div key={s.label}>
+                  <div className="flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
+                    <span>{s.label}</span>
+                    <span style={{ color }}>{s.value}</span>
+                  </div>
+                  <div className="h-[3px] w-full bg-secondary overflow-hidden">
+                    <div
+                      className="h-full anim-fade-up"
+                      style={{ width: `${s.value}%`, background: color }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground mb-3">
+                Equipped Abilities
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {c.abilities.map((a) => (
+                  <span
+                    key={a}
+                    className="rounded-full border px-3 py-1 text-xs font-mono uppercase tracking-wider"
+                    style={{
+                      borderColor: `color-mix(in oklab, ${color} 50%, transparent)`,
+                      color,
+                    }}
+                  >
+                    {a}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-24">
+          <div className="flex items-end justify-between gap-6 border-b border-border pb-4">
+            <div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
+                ◆ Quest Log
+              </div>
+              <h2 className="mt-2 font-display uppercase italic text-3xl md:text-5xl tracking-tight">The Journey</h2>
+            </div>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+              {c.chapters.length} chapters
+            </span>
+          </div>
+
+          <ol className="mt-8 space-y-4">
+            {c.chapters.map((ch, i) => (
+              <li
+                key={ch.title}
+                className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <div
+                  className="font-display italic text-3xl tabular-nums"
+                  style={{ color }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                    {ch.meta}
+                  </div>
+                  <h3 className="mt-1 font-display uppercase italic text-2xl text-foreground tracking-tight">{ch.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground max-w-2xl">
+                    {ch.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {ch.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="hidden md:block font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
+                  Open →
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="mt-20 rounded-md border border-border bg-card/60 p-8 backdrop-blur-sm">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary">
+                ✦ End of path
+              </div>
+              <h3 className="mt-2 font-display uppercase italic text-2xl md:text-4xl tracking-tight">
+                Ready to start a quest together?
+              </h3>
+              <p className="mt-1 text-muted-foreground max-w-lg">
+                If anything here lines up with what you're building, send a note. I read everything.
+              </p>
+            </div>
+            <a
+              href="mailto:hello@example.com"
+              className="inline-flex items-center justify-center self-start rounded-md bg-primary px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              Send a raven →
+            </a>
           </div>
         </section>
       </main>
-
-      <CrtOverlay />
     </div>
+  );
+}
+
+function Brackets() {
+  const cls = "absolute size-4 border-primary/70";
+  return (
+    <>
+      <span aria-hidden className={`${cls} top-2 left-2 border-t border-l`} />
+      <span aria-hidden className={`${cls} top-2 right-2 border-t border-r`} />
+      <span aria-hidden className={`${cls} bottom-2 left-2 border-b border-l`} />
+      <span aria-hidden className={`${cls} bottom-2 right-2 border-b border-r`} />
+    </>
   );
 }
