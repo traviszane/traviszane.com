@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CrtOverlay } from "@/components/CrtOverlay";
-import { HudNav } from "@/components/HudNav";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SceneBackdrop } from "@/components/SceneBackdrop";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About the Player — Choose Your Character" },
+      { title: "About the Player — Choose Your Story" },
       {
         name: "description",
         content:
@@ -24,14 +24,15 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <HudNav />
+    <div className="relative min-h-screen overflow-hidden">
+      <SceneBackdrop />
+      <SiteHeader />
 
-      <main className="mx-auto max-w-3xl px-6 py-20">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-foreground/50">
+      <main className="relative z-10 mx-auto max-w-3xl px-6 py-20">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-primary">
           File 04 · Player Bio
         </p>
-        <h1 className="font-display text-6xl uppercase italic leading-none tracking-tight md:text-8xl">
+        <h1 className="font-display uppercase italic text-5xl md:text-7xl leading-none tracking-tight">
           About the Player
         </h1>
 
@@ -47,15 +48,13 @@ function AboutPage() {
             Each path on this site is a real body of work, with real outcomes.
             Pick whichever one is most useful to you.
           </p>
-          <p>
-            For collaborations, briefs, or a quiet chat, the inbox is open.
-          </p>
+          <p>For collaborations, briefs, or a quiet chat, the inbox is open.</p>
         </div>
 
         <div className="mt-12 flex flex-wrap gap-4 font-mono text-xs uppercase tracking-[0.25em]">
           <a
             href="mailto:hello@example.com"
-            className="border border-foreground/30 px-5 py-3 transition-colors hover:border-foreground hover:bg-white/5"
+            className="border border-primary/50 text-primary px-5 py-3 transition-colors hover:bg-primary/10"
           >
             Open Inbox →
           </a>
@@ -67,8 +66,6 @@ function AboutPage() {
           </Link>
         </div>
       </main>
-
-      <CrtOverlay />
     </div>
   );
 }

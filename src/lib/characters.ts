@@ -4,168 +4,182 @@ import spriteCreator from "@/assets/sprite-creator.png";
 
 export type CharacterId = "writer" | "marketer" | "creator";
 
-export interface Project {
+export interface Chapter {
   title: string;
-  blurb: string;
   meta: string;
-  tag: string;
+  description: string;
+  tags: string[];
+}
+
+export type SkillTier = "S-TIER" | "EXPERT" | "SIGNATURE";
+
+export interface Skill {
+  label: string;
+  tier: SkillTier;
 }
 
 export interface Character {
   id: CharacterId;
-  classNum: string;
   name: string;
-  title: string;
+  className: string;
   tagline: string;
-  description: string;
+  blurb: string;
   sprite: string;
-  accentClass: string;
-  accentText: string;
-  accentBorder: string;
-  accentBg: string;
+  colorVar: string;
   stats: { label: string; value: number }[];
-  projects: Project[];
+  skills: Skill[];
+  abilities: string[];
+  chapters: Chapter[];
 }
 
 export const characters: Record<CharacterId, Character> = {
   writer: {
     id: "writer",
-    classNum: "01",
-    name: "Writer",
-    title: "Words & Worlds",
+    name: "The Scribe",
+    className: "Writer",
     tagline: "Master of syntax and narrative architecture.",
-    description:
-      "Long-form essays, technical docs, and brand voice work for teams that take language seriously.",
+    blurb:
+      "Long-form essays, technical docs, and brand voice work for teams that take language seriously. The Scribe turns tangled ideas into prose that reads like a current — quiet, deliberate, hard to put down.",
     sprite: spriteWriter,
-    accentClass: "writer",
-    accentText: "text-writer",
-    accentBorder: "border-writer/50",
-    accentBg: "bg-writer/10",
+    colorVar: "--writer",
     stats: [
       { label: "Clarity", value: 92 },
       { label: "Voice", value: 88 },
       { label: "Range", value: 80 },
+      { label: "Depth", value: 86 },
     ],
-    projects: [
+    skills: [
+      { label: "Narrative", tier: "S-TIER" },
+      { label: "Clarity", tier: "SIGNATURE" },
+      { label: "Voice", tier: "EXPERT" },
+    ],
+    abilities: ["Long-form essays", "Brand voice", "UX writing", "DevRel"],
+    chapters: [
       {
         title: "The Syntax of Silence",
-        blurb: "A long essay on negative space in technical documentation.",
-        meta: "2024 / Essay",
-        tag: "Editorial",
+        meta: "Chapter I — Essay",
+        description: "A long essay on negative space in technical documentation.",
+        tags: ["Essay", "Editorial"],
       },
       {
         title: "Onboarding Rewrite — Fintech SaaS",
-        blurb: "Cut activation friction by rewriting 40+ in-app moments.",
-        meta: "2024 / UX Writing",
-        tag: "Product",
+        meta: "Chapter II — Product",
+        description: "Cut activation friction by rewriting 40+ in-app moments.",
+        tags: ["UX Writing", "Product"],
       },
       {
         title: "Field Notes from a Quiet API",
-        blurb: "Developer storytelling series read by 80k engineers.",
-        meta: "2023 / Series",
-        tag: "DevRel",
+        meta: "Chapter III — Series",
+        description: "Developer storytelling series read by 80k engineers.",
+        tags: ["Series", "DevRel"],
       },
       {
         title: "A Brand Voice Playbook",
-        blurb: "End-to-end voice guidelines, lexicon, and examples.",
-        meta: "2023 / Brand",
-        tag: "Strategy",
+        meta: "Chapter IV — Brand",
+        description: "End-to-end voice guidelines, lexicon, and examples.",
+        tags: ["Brand", "Strategy"],
       },
     ],
   },
   marketer: {
     id: "marketer",
-    classNum: "02",
-    name: "Marketer",
-    title: "Growth & Signal",
+    name: "The Strategist",
+    className: "Marketer",
     tagline: "Architect of growth loops and brand positioning.",
-    description:
-      "Campaigns, lifecycle, and positioning that compound — not vanity metrics.",
+    blurb:
+      "Campaigns, lifecycle, and positioning that compound — not vanity metrics. The Strategist treats marketing as a system: measurable inputs, honest outputs, no theater.",
     sprite: spriteMarketer,
-    accentClass: "marketer",
-    accentText: "text-marketer",
-    accentBorder: "border-marketer/50",
-    accentBg: "bg-marketer/10",
+    colorVar: "--marketer",
     stats: [
       { label: "Strategy", value: 90 },
       { label: "Growth", value: 95 },
       { label: "Reach", value: 86 },
+      { label: "Positioning", value: 92 },
     ],
-    projects: [
+    skills: [
+      { label: "Strategy", tier: "S-TIER" },
+      { label: "Positioning", tier: "SIGNATURE" },
+      { label: "Growth", tier: "EXPERT" },
+    ],
+    abilities: ["GTM strategy", "Lifecycle", "Positioning", "Performance"],
+    chapters: [
       {
         title: "Hyperloop Launch Campaign",
-        blurb: "0 → 25k waitlist in six weeks with a single thesis.",
-        meta: "2024 / Campaign",
-        tag: "Launch",
+        meta: "Quest I — Launch",
+        description: "0 → 25k waitlist in six weeks with a single thesis.",
+        tags: ["Campaign", "Launch"],
       },
       {
         title: "Lifecycle Overhaul",
-        blurb: "Re-architected the activation funnel; +38% trial→paid.",
-        meta: "2024 / Lifecycle",
-        tag: "Retention",
+        meta: "Quest II — Retention",
+        description: "Re-architected the activation funnel; +38% trial→paid.",
+        tags: ["Lifecycle", "CRM"],
       },
       {
         title: "Category Reframe — DevTools",
-        blurb: "Repositioned a feature as a category. Press, sales, and pricing followed.",
-        meta: "2023 / Positioning",
-        tag: "Strategy",
+        meta: "Quest III — Positioning",
+        description: "Repositioned a feature as a category. Press, sales, and pricing followed.",
+        tags: ["Positioning", "Strategy"],
       },
       {
         title: "Founder POV Engine",
-        blurb: "Turned a quiet CEO into 200k+ monthly impressions.",
-        meta: "2023 / Content",
-        tag: "Social",
+        meta: "Quest IV — Content",
+        description: "Turned a quiet CEO into 200k+ monthly impressions.",
+        tags: ["Content", "Social"],
       },
     ],
   },
   creator: {
     id: "creator",
-    classNum: "03",
-    name: "Creator",
-    title: "Make & Ship",
+    name: "The Maker",
+    className: "Creator",
     tagline: "Polymath building digital experiences end-to-end.",
-    description:
-      "Side projects, visual identity, and small interactive worlds shipped on the open web.",
+    blurb:
+      "Side projects, visual identity, and small interactive worlds shipped on the open web. The Maker draws the line between a moodboard and a shippable artifact, then crosses it.",
     sprite: spriteCreator,
-    accentClass: "creator",
-    accentText: "text-creator",
-    accentBorder: "border-creator/50",
-    accentBg: "bg-creator/10",
+    colorVar: "--creator",
     stats: [
       { label: "Vision", value: 96 },
       { label: "Craft", value: 88 },
       { label: "Range", value: 84 },
+      { label: "Motion", value: 87 },
     ],
-    projects: [
+    skills: [
+      { label: "Vision", tier: "S-TIER" },
+      { label: "Craft", tier: "SIGNATURE" },
+      { label: "Range", tier: "EXPERT" },
+    ],
+    abilities: ["Creative coding", "Visual identity", "Motion", "Web direction"],
+    chapters: [
       {
         title: "Void.js — Tiny Canvas Library",
-        blurb: "A 4kb creative-coding helper. 1.2k GitHub stars.",
-        meta: "2024 / OSS",
-        tag: "Code",
+        meta: "Artifact I — OSS",
+        description: "A 4kb creative-coding helper. 1.2k GitHub stars.",
+        tags: ["Code", "OSS"],
       },
       {
         title: "Field Recorder",
-        blurb: "Generative audio sketches released as a monthly drop.",
-        meta: "2024 / Audio",
-        tag: "Sound",
+        meta: "Artifact II — Audio",
+        description: "Generative audio sketches released as a monthly drop.",
+        tags: ["Sound", "Audio"],
       },
       {
         title: "Slow Web Zine",
-        blurb: "An interactive editorial site about computing slowness.",
-        meta: "2023 / Web",
-        tag: "Editorial",
+        meta: "Artifact III — Web",
+        description: "An interactive editorial site about computing slowness.",
+        tags: ["Web", "Editorial"],
       },
       {
         title: "Glyph — Pixel Type Family",
-        blurb: "A 6-weight bitmap typeface used in 30+ indie games.",
-        meta: "2022 / Type",
-        tag: "Design",
+        meta: "Artifact IV — Type",
+        description: "A 6-weight bitmap typeface used in 30+ indie games.",
+        tags: ["Type", "Design"],
       },
     ],
   },
 };
 
-export const characterList = [
+export const characterList: Character[] = [
   characters.writer,
   characters.marketer,
   characters.creator,
