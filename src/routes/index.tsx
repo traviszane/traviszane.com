@@ -40,7 +40,7 @@ function Index() {
           </div>
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-7xl leading-[0.9] tracking-tight text-foreground">
             Choose your{" "}
-            <span className="text-primary text-glow">story.</span>
+            <span className="text-primary text-glow">character.</span>
           </h1>
         </section>
 
