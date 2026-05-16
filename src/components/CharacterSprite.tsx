@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { Character } from "@/lib/characters";
 import { useTheme } from "./ThemeProvider";
@@ -20,6 +21,20 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const isPainterly = !isDark;
   const color = `var(${character.colorVar})`;
   const src = isPainterly ? character.spriteDark : character.sprite;
+  const useVideo = isPainterly && !!character.painterlyVideo;
+
+  // Sailor-Moon style transformation between modes
+  const [transforming, setTransforming] = useState(false);
+  const firstRender = useRef(true);
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    setTransforming(true);
+    const t = window.setTimeout(() => setTransforming(false), 1000);
+    return () => window.clearTimeout(t);
+  }, [isPainterly]);
 
   return (
     <div className="relative flex items-end justify-center w-full h-full">
@@ -71,18 +86,72 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
         </div>
       )}
 
-      <img
-        src={src}
-        alt={`${character.name}, ${character.className} sprite`}
-        className={cn(
-          "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
-          sizeMap[size],
-          isPainterly ? "anim-wind" : "pixelated anim-idle",
-        )}
-        loading="lazy"
-        width={512}
-        height={512}
-      />
+      {useVideo ? (
+        <video
+          key={character.painterlyVideo}
+          src={character.painterlyVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={cn(
+            "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
+            sizeMap[size],
+            transforming && "anim-transform-in",
+          )}
+          width={512}
+          height={512}
+        />
+      ) : (
+        <img
+          src={src}
+          alt={`${character.name}, ${character.className} sprite`}
+          className={cn(
+            "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
+            sizeMap[size],
+            isPainterly ? "anim-wind" : "pixelated anim-idle",
+            transforming && "anim-transform-in",
+          )}
+          loading="lazy"
+          width={512}
+          height={512}
+        />
+      )}
+
+      {/* Sailor-Moon transformation flash + sparkles */}
+      {transforming && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0 anim-transform-flash"
+            style={{
+              background: `radial-gradient(circle at 50% 55%, ${color} 0%, color-mix(in oklab, ${color} 40%, transparent) 30%, transparent 65%)`,
+              mixBlendMode: "screen",
+            }}
+          />
+          {Array.from({ length: 14 }).map((_, i) => {
+            const angle = (i / 14) * Math.PI * 2;
+            const dist = 120 + (i % 3) * 30;
+            const sx = Math.cos(angle) * dist;
+            const sy = Math.sin(angle) * dist;
+            const sz = 4 + (i % 3) * 2;
+            return (
+              <span
+                key={i}
+                className="absolute top-1/2 left-1/2 rounded-full anim-sparkle"
+                style={{
+                  width: sz,
+                  height: sz,
+                  background: "white",
+                  boxShadow: `0 0 12px 2px ${color}, 0 0 4px white`,
+                  animationDelay: `${(i % 5) * 40}ms`,
+                  ["--sx" as string]: `${sx}px`,
+                  ["--sy" as string]: `${sy}px`,
+                }}
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
