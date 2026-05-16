@@ -14,7 +14,7 @@ export function ThemeToggle() {
         className="size-1.5 rounded-full transition-colors"
         style={{ background: isDark ? "var(--creator)" : "var(--primary)" }}
       />
-      <span>{isDark ? "Save 02 · Dark" : "Save 01 · Light"}</span>
+      <span>{isDark ? "Save 01 · Dark" : "Save 02 · Light"}</span>
     </button>
   );
 }
