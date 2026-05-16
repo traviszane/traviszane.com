@@ -6,19 +6,21 @@ import { FlipbookOrbit } from "@/components/FlipbookOrbit";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Origin Story — Choose Your Story" },
+      { title: "Origin Story — Travis Zane" },
       {
         name: "description",
         content:
-          "The character autobio behind the three sprites: who I am, what I do, and how to get in touch.",
+          "The character autobio behind the three sprites: who Travis Zane is, what he does, and how to get in touch for collaborations.",
       },
-      { property: "og:title", content: "Origin Story" },
+      { property: "og:title", content: "Origin Story — Travis Zane" },
       {
         property: "og:description",
         content:
-          "The character autobio behind the three sprites: who I am, what I do, and how to get in touch.",
+          "The character autobio behind the three sprites: who Travis Zane is, what he does, and how to get in touch for collaborations.",
       },
+      { property: "og:url", content: "https://traviszane.com/about" },
     ],
+    links: [{ rel: "canonical", href: "https://traviszane.com/about" }],
   }),
   component: AboutPage,
 });

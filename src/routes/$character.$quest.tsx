@@ -14,13 +14,22 @@ export const Route = createFileRoute("/$character/$quest")({
     const c = characters[params.character as CharacterId];
     const ch = c?.chapters.find((q) => q.slug === params.quest);
     if (!c || !ch) return { meta: [{ title: "Not found" }] };
+    const base = ch.description.slice(0, 155);
+    const desc =
+      base.length >= 50
+        ? base
+        : `${ch.title} — a ${c.className.toLowerCase()} quest by Travis Zane. ${base}`.slice(0, 160);
+    const url = `https://traviszane.com/${params.character}/${params.quest}`;
     return {
       meta: [
         { title: `${ch.title} — ${c.name}` },
-        { name: "description", content: ch.description.slice(0, 155) },
+        { name: "description", content: desc },
         { property: "og:title", content: `${ch.title} — ${c.name}` },
-        { property: "og:description", content: ch.description.slice(0, 155) },
+        { property: "og:description", content: desc },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: QuestPage,
