@@ -46,11 +46,13 @@ export function Flipbook() {
               src={src}
               alt=""
               aria-hidden={idx !== i}
-              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out"
               style={{
                 opacity: idx === i ? 1 : 0,
               }}
-              loading="lazy"
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
+              {...(idx === 0 ? { fetchPriority: "high" as const } : {})}
               draggable={false}
             />
           ))}
