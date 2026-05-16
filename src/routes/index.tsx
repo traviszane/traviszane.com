@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterCard } from "@/components/CharacterCard";
+import { useTheme } from "@/components/ThemeProvider";
 import { characterList, type CharacterId } from "@/lib/characters";
 
 export const Route = createFileRoute("/")({
@@ -26,6 +27,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [hovered, setHovered] = useState<CharacterId | null>(null);
+  const { theme } = useTheme();
+  const slot = theme === "dark" ? "01" : "02";
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -36,7 +39,7 @@ function Index() {
         <section className="mb-4 max-w-3xl anim-fade-up md:mb-6">
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             <span className="size-1.5 bg-primary anim-blink" />
-            New Game — Slot 01
+            New Game — Slot {slot}
           </div>
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-7xl leading-[0.9] tracking-tight text-foreground">
             Choose your{" "}
