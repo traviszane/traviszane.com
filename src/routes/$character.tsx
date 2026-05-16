@@ -120,50 +120,88 @@ function CharacterPage() {
               <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
                 ◆ Quest Log
               </div>
-              <h2 className="mt-2 font-display uppercase italic text-3xl md:text-5xl tracking-tight">The Journey</h2>
+              <h2 className="mt-2 font-display uppercase italic text-3xl md:text-5xl tracking-tight">Experience</h2>
             </div>
             <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-              {c.chapters.length} chapters
+              {c.chapters.length} completed quests
             </span>
           </div>
 
           <ol className="mt-8 space-y-4">
-            {c.chapters.map((ch, i) => (
-              <li
-                key={ch.title}
-                className="group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
-                <div
-                  className="font-display italic text-3xl tabular-nums"
-                  style={{ color }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <div>
-                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                    {ch.meta}
+            {c.chapters.map((ch, i) => {
+              const inner = (
+                <>
+                  <div
+                    className="font-display italic text-3xl tabular-nums"
+                    style={{ color }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="mt-1 font-display uppercase italic text-2xl text-foreground tracking-tight">{ch.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground max-w-2xl">
-                    {ch.description}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {ch.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                      {ch.meta}
+                    </div>
+                    <h3 className="mt-1 font-display uppercase italic text-2xl text-foreground tracking-tight">{ch.title}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground max-w-2xl">
+                      {ch.description}
+                    </p>
+                    {(ch.goal || ch.outcome) && (
+                      <dl className="mt-3 grid gap-2 sm:grid-cols-2 max-w-2xl">
+                        {ch.goal && (
+                          <div className="rounded-sm border border-border/70 bg-background/40 px-3 py-2">
+                            <dt className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
+                              Goal
+                            </dt>
+                            <dd className="mt-0.5 text-xs text-foreground/85 leading-snug">{ch.goal}</dd>
+                          </div>
+                        )}
+                        {ch.outcome && (
+                          <div className="rounded-sm border border-border/70 bg-background/40 px-3 py-2">
+                            <dt className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
+                              Outcome
+                            </dt>
+                            <dd className="mt-0.5 text-xs text-foreground/85 leading-snug">{ch.outcome}</dd>
+                          </div>
+                        )}
+                      </dl>
+                    )}
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {ch.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div className="hidden md:block font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
-                  Open →
-                </div>
-              </li>
-            ))}
+                  <div className="hidden md:block font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
+                    Open →
+                  </div>
+                </>
+              );
+              const cls =
+                "group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up";
+              return (
+                <li key={ch.title} style={{ animationDelay: `${i * 80}ms` }} className="contents">
+                  {ch.slug ? (
+                    <Link
+                      to="/$character/$quest"
+                      params={{ character: id, quest: ch.slug }}
+                      className={cls}
+                      style={{ animationDelay: `${i * 80}ms` }}
+                    >
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div className={cls} style={{ animationDelay: `${i * 80}ms` }}>
+                      {inner}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ol>
         </section>
 
