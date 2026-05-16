@@ -87,21 +87,30 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
       )}
 
       {useVideo ? (
-        <video
-          key={character.painterlyVideo}
-          src={character.painterlyVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={cn(
-            "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
-            sizeMap[size],
-            transforming && "anim-transform-in",
-          )}
-          width={512}
-          height={512}
-        />
+        <div className={cn("relative group", sizeMap[size])}>
+          <img
+            key={src}
+            src={src}
+            alt={`${character.name}, ${character.className} sprite`}
+            className={cn(
+              "relative h-full w-auto max-h-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] anim-wind transition-opacity duration-500 group-hover:opacity-0",
+              transforming && "anim-transform-in",
+            )}
+            width={512}
+            height={512}
+          />
+          <video
+            key={character.painterlyVideo}
+            src={character.painterlyVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            width={512}
+            height={512}
+          />
+        </div>
       ) : (
         <img
           key={src}
