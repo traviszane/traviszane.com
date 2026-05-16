@@ -30,6 +30,27 @@ export const Route = createFileRoute("/$character/$quest")({
         { property: "og:url", content: url },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: ch.title,
+            headline: ch.title,
+            description: desc,
+            url,
+            inLanguage: "en",
+            keywords: ch.tags.join(", "),
+            author: {
+              "@type": "Person",
+              name: "Travis Zane",
+              url: "https://traviszane.com/",
+            },
+            about: c.name,
+          }),
+        },
+      ],
     };
   },
   component: QuestPage,
