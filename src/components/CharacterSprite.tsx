@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Character } from "@/lib/characters";
 import { useTheme } from "./ThemeProvider";
@@ -23,17 +24,21 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const src = character.sprite;
   const hasVideo = !!character.painterlyVideo;
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const handleEnter = () => {
+  const [muted, setMuted] = useState(true);
+
+  // Drive playback from card hover (`active`)
+  useEffect(() => {
     const v = videoRef.current;
-    if (!v) return;
-    v.currentTime = 0;
-    void v.play();
-  };
-  const handleLeave = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.pause();
-  };
+    if (!v || !hasVideo) return;
+    if (active) {
+      v.currentTime = 0;
+      v.muted = muted;
+      void v.play().catch(() => {});
+    } else {
+      v.pause();
+    }
+  }, [active, hasVideo, muted]);
+
 
   // Sailor-Moon style transformation between modes
   const [transforming, setTransforming] = useState(false);
