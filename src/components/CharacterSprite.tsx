@@ -37,13 +37,13 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
     const v = videoRef.current;
     if (!v || !hasVideo) return;
     if (showVideo) {
-      v.currentTime = 0;
+      try { v.currentTime = 0; } catch {}
       v.muted = muted;
       void v.play().catch(() => {});
     } else {
       v.pause();
     }
-  }, [showVideo, hasVideo, muted]);
+  }, [showVideo, hasVideo, muted, videoSrc]);
 
   const replay = () => {
     setOnceShowing(true);
@@ -63,7 +63,13 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
       return;
     }
     setTransforming(true);
-    if (playOnce && hasVideo) setOnceShowing(true);
+    if (playOnce && hasVideo) {
+      // Force a re-trigger even if already showing
+      setOnceShowing(false);
+      const r = window.setTimeout(() => setOnceShowing(true), 16);
+      const t = window.setTimeout(() => setTransforming(false), 1000);
+      return () => { window.clearTimeout(t); window.clearTimeout(r); };
+    }
     const t = window.setTimeout(() => setTransforming(false), 1000);
     return () => window.clearTimeout(t);
   }, [isPainterly, playOnce, hasVideo]);
