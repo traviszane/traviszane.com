@@ -17,8 +17,9 @@ const sizeMap = {
 export function CharacterSprite({ character, size = "lg", active = false }: Props) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const isPainterly = !isDark;
   const color = `var(${character.colorVar})`;
-  const src = isDark ? character.spriteDark : character.sprite;
+  const src = isPainterly ? character.spriteDark : character.sprite;
 
   return (
     <div className="relative flex items-end justify-center w-full">
