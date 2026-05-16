@@ -11,13 +11,18 @@ export const Route = createFileRoute("/$character")({
   head: ({ params }) => {
     const c = characters[params.character as CharacterId];
     if (!c) return { meta: [{ title: "Not found" }] };
+    const base = c.blurb.slice(0, 155);
+    const desc = base.length >= 50 ? base : `${c.name}, ${c.className} — ${base}`.slice(0, 160);
+    const url = `https://traviszane.com/${params.character}`;
     return {
       meta: [
         { title: `${c.name} — ${c.className}'s Journey` },
-        { name: "description", content: c.blurb.slice(0, 155) },
+        { name: "description", content: desc },
         { property: "og:title", content: `${c.name} — ${c.className}'s Journey` },
-        { property: "og:description", content: c.blurb.slice(0, 155) },
+        { property: "og:description", content: desc },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: CharacterPage,
