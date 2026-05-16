@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
-import { Flipbook } from "@/components/Flipbook";
+import { FlipbookOrbit } from "@/components/FlipbookOrbit";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
