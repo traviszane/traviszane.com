@@ -275,11 +275,11 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "10,000+ subscribers and growing. A body of work that treats YouTube as a creative medium, not a distribution channel.",
       },
       {
-        title: "Mexico City: In-Person Experiences",
+        title: "In Person Experiences (NYC, SF, CDMX)",
         meta: "Quest III — Experience",
         description: "Five events. One city. Real people in a room together.",
         tags: ["Events", "Community"],
-        goal: "Take the online community offline — create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships.",
+        goal: "Take the online community offline — create physical spaces amidst urban life for creative expression, connection, and honest conversation around sexuality and relationships.",
         outcome: "5+ events produced independently. Showcased local creative talent. Hosted educational workshops on sexuality and relationships. Proof that community lives beyond the feed.",
       },
     ],
