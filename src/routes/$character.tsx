@@ -286,7 +286,7 @@ function CharacterPage() {
                 Ready to start a quest together?
               </h3>
               <p className="mt-1 text-muted-foreground max-w-lg">
-                For collaborations, ideas, or a pensive chat, my inbox is open.
+                If something here resonates—a project, a collaboration, a conversation—send a note. I read everything.
               </p>
             </div>
             <a
