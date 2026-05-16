@@ -236,7 +236,7 @@ function CharacterPage() {
                     </div>
                   </div>
                   <div className="hidden md:block font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
-                    {ch.href ? "Read ↗" : "Open →"}
+                    {ch.href ? "↗" : "Open →"}
                   </div>
                 </>
               );
