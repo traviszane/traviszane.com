@@ -79,7 +79,7 @@ export function Flipbook() {
           {photos.map((src, idx) => {
             const isCurrent = idx === i;
             const isLoaded = loaded.has(idx);
-            const showPixel = !isLoaded || pixelating.has(idx);
+            const showPixel = isCurrent && (!isLoaded || pixelating.has(idx));
             return (
               <img
                 key={src}
@@ -87,16 +87,15 @@ export function Flipbook() {
                 alt=""
                 aria-hidden={!isCurrent}
                 onLoad={() => handleLoad(idx)}
-                className="absolute inset-0 h-full w-full object-cover transition-[opacity,filter,transform] duration-500 ease-out"
+                className="absolute inset-0 h-full w-full object-cover transition-[opacity,filter] duration-300 ease-out"
                 style={{
                   opacity: isCurrent ? 1 : 0,
                   filter: showPixel
-                    ? "saturate(1.1) contrast(1.15) blur(6px)"
+                    ? "saturate(1.1) contrast(1.1) blur(2px)"
                     : "saturate(0.9) contrast(1.05)",
                   imageRendering: showPixel ? "pixelated" : "auto",
-                  transform: showPixel ? "scale(1.06)" : "scale(1)",
                 }}
-                loading={idx < 2 ? "eager" : "lazy"}
+                loading="eager"
                 fetchPriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
                 draggable={false}
