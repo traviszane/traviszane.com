@@ -43,7 +43,7 @@ export function CharacterCard({ character, index, active, onHover }: Props) {
       </div>
 
       <div className="px-2 pb-2 pt-1 sm:px-4 sm:pb-4 sm:pt-2">
-        <h3 className="font-display uppercase italic text-base sm:text-2xl md:text-3xl text-foreground leading-tight">
+        <h2 className="font-display uppercase italic text-base sm:text-2xl md:text-3xl text-foreground leading-tight">
           {character.name}
         </h3>
         <p className="mt-0.5 hidden sm:block text-xs sm:text-sm text-muted-foreground italic line-clamp-2">{character.tagline}</p>
