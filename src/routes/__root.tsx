@@ -73,13 +73,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Choose Your Character — A Portfolio" },
+      { title: "Travis Zane" },
       {
         name: "description",
         content:
           "A choose-your-character portfolio. Pick the Writer, the Marketer, or the Creator and explore the work each path has shipped.",
       },
-      { property: "og:title", content: "Choose Your Character — A Portfolio" },
+      { property: "og:title", content: "Travis Zane" },
       {
         property: "og:description",
         content:
@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Travis Zane" },
+      { name: "description", content: "Creator, writer, and marketer." },
+      { property: "og:description", content: "Creator, writer, and marketer." },
+      { name: "twitter:description", content: "Creator, writer, and marketer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/kVgE0nI6qJXi9UjjYZXSSaoF9no1/social-images/social-1778962791665-New_Travis_Zane_Artist_Logo_(Profile_(1).webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/kVgE0nI6qJXi9UjjYZXSSaoF9no1/social-images/social-1778962791665-New_Travis_Zane_Artist_Logo_(Profile_(1).webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
