@@ -76,21 +76,33 @@ export function Flipbook() {
     <div className="mx-auto w-full max-w-[240px]">
       <div className="relative aspect-[3/4] overflow-hidden rounded-md border border-border bg-card/60 shadow-[0_0_30px_color-mix(in_oklab,var(--primary)_20%,transparent)]">
         <div className="absolute inset-0">
-          {photos.map((src, idx) => (
-            <img
-              key={src}
-              src={src}
-              alt=""
-              aria-hidden={idx !== i}
-              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
-              style={{
-                opacity: idx === i ? 1 : 0,
-                filter: "saturate(0.9) contrast(1.05)",
-              }}
-              loading="lazy"
-              draggable={false}
-            />
-          ))}
+          {photos.map((src, idx) => {
+            const isCurrent = idx === i;
+            const isLoaded = loaded.has(idx);
+            const showPixel = !isLoaded || pixelating.has(idx);
+            return (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                aria-hidden={!isCurrent}
+                onLoad={() => handleLoad(idx)}
+                className="absolute inset-0 h-full w-full object-cover transition-[opacity,filter,transform] duration-500 ease-out"
+                style={{
+                  opacity: isCurrent ? 1 : 0,
+                  filter: showPixel
+                    ? "saturate(1.1) contrast(1.15) blur(6px)"
+                    : "saturate(0.9) contrast(1.05)",
+                  imageRendering: showPixel ? "pixelated" : "auto",
+                  transform: showPixel ? "scale(1.06)" : "scale(1)",
+                }}
+                loading={idx < 2 ? "eager" : "lazy"}
+                fetchPriority={idx === 0 ? "high" : "auto"}
+                decoding="async"
+                draggable={false}
+              />
+            );
+          })}
         </div>
 
         <div
