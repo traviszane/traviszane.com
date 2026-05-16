@@ -15,11 +15,11 @@ function SubstackIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const links: { href: string; label: string; Icon: ComponentType<SVGProps<SVGSVGElement>> }[] = [
-  { href: "https://x.com/travontheweb", label: "X / Twitter", Icon: Twitter },
   { href: "https://www.instagram.com/travis_zane/", label: "Instagram", Icon: Instagram },
+  { href: "https://sleepoverxyz.substack.com", label: "Substack newsletter", Icon: SubstackIcon },
+  { href: "https://x.com/travontheweb", label: "X / Twitter", Icon: Twitter },
   { href: "https://www.youtube.com/@TravisZane", label: "YouTube", Icon: Youtube },
   { href: "https://www.linkedin.com/in/traviszane/", label: "LinkedIn", Icon: Linkedin },
-  { href: "https://sleepoverxyz.substack.com", label: "Substack newsletter", Icon: SubstackIcon },
 ];
 
 export function SocialLinks({ className = "" }: { className?: string }) {
