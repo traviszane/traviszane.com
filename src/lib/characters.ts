@@ -7,7 +7,9 @@ import spriteCreatorDark from "@/assets/sprite-creator-dark.png";
 import spriteMarketerVideoDark from "@/assets/sprite-marketer-dark.mp4";
 import spriteMarketerVideoLight from "@/assets/sprite-marketer-light.mp4";
 import spriteWriterVideoLight from "@/assets/sprite-writer-light.mp4";
+import spriteWriterVideoDark from "@/assets/sprite-writer-dark.mp4";
 import spriteCreatorVideoLight from "@/assets/sprite-creator-light.mp4";
+import spriteCreatorVideoDark from "@/assets/sprite-creator-dark.mp4";
 
 export type CharacterId = "writer" | "marketer" | "creator";
 
@@ -81,6 +83,7 @@ export const characters: Record<CharacterId, Character> = {
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     painterlyVideo: spriteWriterVideoLight,
+    painterlyVideoDark: spriteWriterVideoDark,
     colorVar: "--writer",
     xp: [
       { label: "Stories written", value: "20+" },
@@ -267,6 +270,7 @@ export const characters: Record<CharacterId, Character> = {
     sprite: spriteCreator,
     spriteDark: spriteCreatorDark,
     painterlyVideo: spriteCreatorVideoLight,
+    painterlyVideoDark: spriteCreatorVideoDark,
     colorVar: "--creator",
     xp: [
       { label: "Audience", value: "30,000+" },
