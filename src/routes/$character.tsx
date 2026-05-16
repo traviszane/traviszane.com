@@ -78,6 +78,43 @@ function CharacterPage() {
             <div>
               <div className="flex items-baseline justify-between mb-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                  Stats
+                </div>
+                <div className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
+                  MAX
+                </div>
+              </div>
+              <div className="space-y-2">
+                {c.skills.map((s) => (
+                  <div key={s.label}>
+                    <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.2em]">
+                      <span className="text-foreground/80">{s.label}</span>
+                      <span style={{ color }}>{s.tier} · 100</span>
+                    </div>
+                    <div
+                      className="mt-1 h-2 w-full overflow-hidden rounded-sm border"
+                      style={{
+                        borderColor: `color-mix(in oklab, ${color} 30%, transparent)`,
+                        background: `color-mix(in oklab, ${color} 8%, transparent)`,
+                      }}
+                    >
+                      <div
+                        className="h-full"
+                        style={{
+                          width: "100%",
+                          background: `linear-gradient(90deg, color-mix(in oklab, ${color} 60%, transparent), ${color})`,
+                          boxShadow: `0 0 12px color-mix(in oklab, ${color} 50%, transparent)`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-baseline justify-between mb-3">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                   XP Earned
                 </div>
                 <div className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
