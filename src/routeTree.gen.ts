@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CharacterRouteImport } from './routes/$character'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CharacterQuestRouteImport } from './routes/$character.$quest'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -34,37 +35,56 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CharacterQuestRoute = CharacterQuestRouteImport.update({
+  id: '/$quest',
+  path: '/$quest',
+  getParentRoute: () => CharacterRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/$character': typeof CharacterRoute
+  '/$character': typeof CharacterRouteWithChildren
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$character/$quest': typeof CharacterQuestRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/$character': typeof CharacterRoute
+  '/$character': typeof CharacterRouteWithChildren
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$character/$quest': typeof CharacterQuestRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/$character': typeof CharacterRoute
+  '/$character': typeof CharacterRouteWithChildren
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$character/$quest': typeof CharacterQuestRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$character' | '/about' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/$character'
+    | '/about'
+    | '/sitemap.xml'
+    | '/$character/$quest'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$character' | '/about' | '/sitemap.xml'
-  id: '__root__' | '/' | '/$character' | '/about' | '/sitemap.xml'
+  to: '/' | '/$character' | '/about' | '/sitemap.xml' | '/$character/$quest'
+  id:
+    | '__root__'
+    | '/'
+    | '/$character'
+    | '/about'
+    | '/sitemap.xml'
+    | '/$character/$quest'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CharacterRoute: typeof CharacterRoute
+  CharacterRoute: typeof CharacterRouteWithChildren
   AboutRoute: typeof AboutRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -99,12 +119,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$character/$quest': {
+      id: '/$character/$quest'
+      path: '/$quest'
+      fullPath: '/$character/$quest'
+      preLoaderRoute: typeof CharacterQuestRouteImport
+      parentRoute: typeof CharacterRoute
+    }
   }
 }
 
+interface CharacterRouteChildren {
+  CharacterQuestRoute: typeof CharacterQuestRoute
+}
+
+const CharacterRouteChildren: CharacterRouteChildren = {
+  CharacterQuestRoute: CharacterQuestRoute,
+}
+
+const CharacterRouteWithChildren = CharacterRoute._addFileChildren(
+  CharacterRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CharacterRoute: CharacterRoute,
+  CharacterRoute: CharacterRouteWithChildren,
   AboutRoute: AboutRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
