@@ -27,6 +27,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [hovered, setHovered] = useState<CharacterId | null>(null);
+  const { theme } = useTheme();
+  const slot = theme === "dark" ? "01" : "02";
 
   return (
     <div className="relative min-h-screen overflow-hidden">
