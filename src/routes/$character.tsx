@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterSprite } from "@/components/CharacterSprite";
-import { characters, type CharacterId } from "@/lib/characters";
+import { characters, characterList, type CharacterId } from "@/lib/characters";
 
 export const Route = createFileRoute("/$character")({
   beforeLoad: ({ params }) => {
