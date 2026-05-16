@@ -214,7 +214,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Took a token from concept to nine-figure valuation at launch.",
         tags: ["Token Launch", "GTM", "Partnerships", "PR"],
         goal: "Build the narrative, community, and distribution infrastructure to launch $LA at scale — coordinating PR, exchange, and financial partners across a single rollout.",
-        outcome: "$1B+ valuation at launch. 71K+ airdrop registrations. 1.7M+ views across retail-focused launch content. Coordinated cross-functional GTM across PR, exchange, and financial partners simultaneously.",
+        outcome: "$500M+ valuation at launch. 71K+ airdrop registrations. 1.7M+ views across retail-focused launch content. Coordinated cross-functional GTM across PR, exchange, and financial partners simultaneously.",
       },
       {
         href: "https://x.com/lagrangedev",
