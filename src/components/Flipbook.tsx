@@ -19,7 +19,7 @@ import p16 from "@/assets/about/p16.jpg";
 
 const photos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16];
 
-const INTERVAL_MS = 3400;
+const INTERVAL_MS = 3500;
 
 export function Flipbook() {
   const [i, setI] = useState(0);
@@ -49,46 +49,12 @@ export function Flipbook() {
               className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
               style={{
                 opacity: idx === i ? 1 : 0,
-                filter: "saturate(0.9) contrast(1.05)",
               }}
               loading="lazy"
               draggable={false}
             />
           ))}
         </div>
-
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 mix-blend-color opacity-25"
-          style={{
-            background:
-              "linear-gradient(135deg, color-mix(in oklab, var(--primary) 70%, transparent), color-mix(in oklab, var(--primary) 30%, transparent))",
-          }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 mix-blend-overlay opacity-30"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(to bottom, rgba(0,0,0,0.35) 0px, rgba(0,0,0,0.35) 1px, transparent 1px, transparent 3px)",
-          }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%)",
-          }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 h-8 opacity-25 flipbook-sweep"
-          style={{
-            background:
-              "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--primary) 50%, transparent), transparent)",
-          }}
-        />
 
         <span aria-hidden className="absolute top-1.5 left-1.5 size-2.5 border-t border-l border-primary/70" />
         <span aria-hidden className="absolute top-1.5 right-1.5 size-2.5 border-t border-r border-primary/70" />
