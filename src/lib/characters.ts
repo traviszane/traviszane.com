@@ -31,11 +31,16 @@ export interface Chapter {
   };
 }
 
-export type SkillTier = "S-TIER" | "EXPERT" | "SIGNATURE";
+export type SkillTier = "S-TIER" | "A-TIER";
 
 export interface Skill {
   label: string;
   tier: SkillTier;
+}
+
+export interface Stat {
+  label: string;
+  value: number;
 }
 
 export interface XPStat {
@@ -54,6 +59,7 @@ export interface Character {
   colorVar: string;
   xp: XPStat[];
   skills: Skill[];
+  stats: Stat[];
   abilities: string[];
   chapters: Chapter[];
 }
@@ -63,24 +69,29 @@ export const characters: Record<CharacterId, Character> = {
     id: "writer",
     name: "The Writer",
     className: "Storyteller",
-    tagline: "Master of syntax and narrative architecture.",
+    tagline: "Master of syntax and narrative.",
     blurb:
-      "Long-form essays, technical docs, and brand voice work for teams that take language seriously. The Writer turns tangled ideas into prose that reads like a current — quiet, deliberate, hard to put down.",
+      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current—quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     colorVar: "--writer",
     xp: [
-      { label: "Novels drafted", value: "2" },
-      { label: "Stories written", value: "10+" },
-      { label: "Publications created", value: "2" },
+      { label: "Stories written", value: "20+" },
+      { label: "Publications shipped", value: "5" },
       { label: "Awards granted", value: "5" },
+      { label: "Novels drafted", value: "2" },
     ],
     skills: [
+      { label: "Voice", tier: "S-TIER" },
       { label: "Narrative", tier: "S-TIER" },
-      { label: "Clarity", tier: "SIGNATURE" },
-      { label: "Voice", tier: "EXPERT" },
+      { label: "World-Building", tier: "A-TIER" },
     ],
-    abilities: ["Long-form essays", "Brand voice", "UX writing", "DevRel"],
+    stats: [
+      { label: "Voice", value: 98 },
+      { label: "Narrative", value: 94 },
+      { label: "World-Building", value: 91 },
+    ],
+    abilities: ["Essay", "Memoir", "Literary Fiction", "Editing", "Newsletter"],
     chapters: [
       {
         href: "https://example.com/essays/syntax-of-silence",
@@ -157,9 +168,9 @@ export const characters: Record<CharacterId, Character> = {
     id: "marketer",
     name: "The Marketer",
     className: "Tactician",
-    tagline: "Architect of growth loops and brand positioning.",
+    tagline: "Architect of branding and growth.",
     blurb:
-      "Campaigns, lifecycle, and positioning that compound — not vanity metrics. The Marketer treats marketing as a system: measurable inputs, honest outputs, no theater.",
+      "Campaigns and positioning built to compound, not just perform. The Marketer treats growth as a system: clear messaging, viral outputs, and data-driven storytelling. He is obsessed with making complex technology legible to the humans its meant to serve.",
     sprite: spriteMarketer,
     spriteDark: spriteMarketerDark,
     colorVar: "--marketer",
@@ -171,10 +182,15 @@ export const characters: Record<CharacterId, Character> = {
     ],
     skills: [
       { label: "Strategy", tier: "S-TIER" },
-      { label: "Positioning", tier: "SIGNATURE" },
-      { label: "Growth", tier: "EXPERT" },
+      { label: "Positioning", tier: "S-TIER" },
+      { label: "Growth", tier: "A-TIER" },
     ],
-    abilities: ["GTM strategy", "Lifecycle", "Positioning", "Performance"],
+    stats: [
+      { label: "Strategy", value: 97 },
+      { label: "Positioning", value: 95 },
+      { label: "Growth", value: 92 },
+    ],
+    abilities: ["GTM Strategy", "Product", "Content", "Lifecycle", "Performance"],
     chapters: [
       {
         slug: "hyperloop-launch",
@@ -287,24 +303,29 @@ export const characters: Record<CharacterId, Character> = {
     id: "creator",
     name: "The Creator",
     className: "Maker",
-    tagline: "Polymath building digital experiences end-to-end.",
+    tagline: "Chronicler of culture and community.",
     blurb:
-      "Side projects, visual identity, and small interactive worlds shipped on the open web. The Creator draws the line between a moodboard and a shippable artifact, then crosses it.",
+      "Worlds built at the intersection of image, language, and experience. The Creator invents narrative from visuals, community from ideas, and categories where there are none. He masters not only how to make things, but how to ship them, too.",
     sprite: spriteCreator,
     spriteDark: spriteCreatorDark,
     colorVar: "--creator",
     xp: [
-      { label: "Audience built", value: "30,000+" },
+      { label: "Audience", value: "30,000+" },
       { label: "Brand collaborations", value: "20+" },
       { label: "Worlds built", value: "8+" },
-      { label: "Projects shipped", value: "∞" },
+      { label: "Years of video experience", value: "16+" },
     ],
     skills: [
-      { label: "Vision", tier: "S-TIER" },
-      { label: "Craft", tier: "SIGNATURE" },
-      { label: "Range", tier: "EXPERT" },
+      { label: "Community Building", tier: "S-TIER" },
+      { label: "Creative Direction", tier: "S-TIER" },
+      { label: "Taste", tier: "A-TIER" },
     ],
-    abilities: ["Creative coding", "Visual identity", "Motion", "Web direction"],
+    stats: [
+      { label: "Community Building", value: 96 },
+      { label: "Taste", value: 94 },
+      { label: "Aesthetic", value: 91 },
+    ],
+    abilities: ["UX", "Creative Code", "Photography", "Video", "Zine-Making"],
     chapters: [
       {
         href: "https://github.com/example/voidjs",
