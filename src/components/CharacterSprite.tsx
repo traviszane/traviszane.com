@@ -20,8 +20,20 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const isDark = theme === "dark";
   const isPainterly = !isDark;
   const color = `var(${character.colorVar})`;
-  const src = isPainterly ? character.spriteDark : character.sprite;
-  const useVideo = isPainterly && !!character.painterlyVideo;
+  const src = character.sprite;
+  const hasVideo = !!character.painterlyVideo;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleEnter = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.currentTime = 0;
+    void v.play();
+  };
+  const handleLeave = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.pause();
+  };
 
   // Sailor-Moon style transformation between modes
   const [transforming, setTransforming] = useState(false);
@@ -86,26 +98,31 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
         </div>
       )}
 
-      {useVideo ? (
-        <div className={cn("relative group", sizeMap[size])}>
+      {hasVideo ? (
+        <div
+          className={cn("relative group", sizeMap[size])}
+          onMouseEnter={handleEnter}
+          onMouseLeave={handleLeave}
+        >
           <img
             key={src}
             src={src}
             alt={`${character.name}, ${character.className} sprite`}
             className={cn(
-              "relative h-full w-auto max-h-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] anim-wind transition-opacity duration-500 group-hover:opacity-0",
+              "relative h-full w-auto max-h-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] pixelated anim-idle transition-opacity duration-500 group-hover:opacity-0",
               transforming && "anim-transform-in",
             )}
             width={512}
             height={512}
           />
           <video
+            ref={videoRef}
             key={character.painterlyVideo}
             src={character.painterlyVideo}
-            autoPlay
             loop
             muted
             playsInline
+            preload="auto"
             className="absolute inset-0 h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             width={512}
             height={512}
@@ -117,9 +134,8 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
           src={src}
           alt={`${character.name}, ${character.className} sprite`}
           className={cn(
-            "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
+            "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] pixelated anim-idle",
             sizeMap[size],
-            isPainterly ? "anim-wind" : "pixelated anim-idle",
             transforming && "anim-transform-in",
           )}
           width={512}
