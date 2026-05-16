@@ -19,7 +19,7 @@ import p16 from "@/assets/about/p16.jpg";
 
 const photos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16];
 
-const INTERVAL_MS = 3500;
+const INTERVAL_MS = 3400;
 
 export function Flipbook() {
   const [i, setI] = useState(0);
