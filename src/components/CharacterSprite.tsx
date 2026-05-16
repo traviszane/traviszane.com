@@ -144,6 +144,8 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
             src={videoSrc}
             loop={!playOnce}
             playsInline
+            muted
+            autoPlay
             preload="auto"
             onEnded={handleEnded}
             className={cn(
