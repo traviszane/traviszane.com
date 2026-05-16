@@ -6,6 +6,8 @@ import spriteMarketerDark from "@/assets/sprite-marketer-dark.png";
 import spriteCreatorDark from "@/assets/sprite-creator-dark.png";
 import spriteMarketerVideoDark from "@/assets/sprite-marketer-dark.mp4";
 import spriteMarketerVideoLight from "@/assets/sprite-marketer-light.mp4";
+import spriteWriterVideoLight from "@/assets/sprite-writer-light.mp4";
+import spriteCreatorVideoLight from "@/assets/sprite-creator-light.mp4";
 
 export type CharacterId = "writer" | "marketer" | "creator";
 
@@ -78,6 +80,7 @@ export const characters: Record<CharacterId, Character> = {
       "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current—quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
+    painterlyVideo: spriteWriterVideoLight,
     colorVar: "--writer",
     xp: [
       { label: "Stories written", value: "20+" },
@@ -263,6 +266,7 @@ export const characters: Record<CharacterId, Character> = {
       "Worlds built at the intersection of image, language, and experience. The Creator invents narrative from visuals, community from ideas, and categories where there are none. He masters not only how to make things, but how to ship them, too.",
     sprite: spriteCreator,
     spriteDark: spriteCreatorDark,
+    painterlyVideo: spriteCreatorVideoLight,
     colorVar: "--creator",
     xp: [
       { label: "Audience", value: "30,000+" },
