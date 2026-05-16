@@ -21,6 +21,8 @@ export const Route = createFileRoute("/$character")({
         { property: "og:title", content: `${c.name} — ${c.className}'s Journey` },
         { property: "og:description", content: desc },
         { property: "og:url", content: url },
+        { name: "twitter:title", content: `${c.name} — ${c.className}'s Journey` },
+        { name: "twitter:description", content: desc },
       ],
       links: [{ rel: "canonical", href: url }],
     };

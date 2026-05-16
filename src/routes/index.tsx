@@ -22,6 +22,12 @@ export const Route = createFileRoute("/")({
           "A portfolio shaped like a character-select screen. Pick the Writer, Marketer, or Creator to explore each body of work.",
       },
       { property: "og:url", content: "https://traviszane.com/" },
+      { name: "twitter:title", content: "Choose Your Story — A Portfolio in Three Classes" },
+      {
+        name: "twitter:description",
+        content:
+          "A portfolio shaped like a character-select screen. Pick the Writer, Marketer, or Creator to explore each body of work.",
+      },
     ],
     links: [{ rel: "canonical", href: "https://traviszane.com/" }],
   }),

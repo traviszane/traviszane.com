@@ -28,6 +28,8 @@ export const Route = createFileRoute("/$character/$quest")({
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
+        { name: "twitter:title", content: `${ch.title} — ${c.name}` },
+        { name: "twitter:description", content: desc },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
