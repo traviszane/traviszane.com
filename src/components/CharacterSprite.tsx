@@ -170,8 +170,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
             src={videoSrc}
             loop={!playOnce}
             playsInline
-            // @ts-expect-error - non-standard attribute for iOS Safari
-            webkit-playsinline="true"
+            {...({ "webkit-playsinline": "true" } as Record<string, string>)}
             muted
             autoPlay
             preload="auto"
