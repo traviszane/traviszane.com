@@ -10,7 +10,7 @@ interface Props {
 
 const sizeMap = {
   md: "h-56",
-  lg: "h-24 sm:h-32 md:h-44 lg:h-56",
+  lg: "h-full w-auto max-h-full",
   xl: "h-[28rem]",
 };
 
