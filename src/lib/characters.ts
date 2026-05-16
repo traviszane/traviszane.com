@@ -83,6 +83,7 @@ export const characters: Record<CharacterId, Character> = {
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     painterlyVideo: spriteWriterVideoLight,
+    painterlyVideoDark: spriteWriterVideoDark,
     colorVar: "--writer",
     xp: [
       { label: "Stories written", value: "20+" },
@@ -269,6 +270,7 @@ export const characters: Record<CharacterId, Character> = {
     sprite: spriteCreator,
     spriteDark: spriteCreatorDark,
     painterlyVideo: spriteCreatorVideoLight,
+    painterlyVideoDark: spriteCreatorVideoDark,
     colorVar: "--creator",
     xp: [
       { label: "Audience", value: "30,000+" },
