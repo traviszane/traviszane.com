@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import p1 from "@/assets/about/p1.png";
 import p2 from "@/assets/about/p2.png";
@@ -19,11 +19,16 @@ import p16 from "@/assets/about/p16.jpg";
 
 const photos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16];
 
-const INTERVAL_MS = 3400;
+const INTERVAL_MS = 3500;
+const PIXEL_HOLD_MS = 220;
 
 export function Flipbook() {
   const [i, setI] = useState(0);
   const [playing, setPlaying] = useState(true);
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set());
+  // Indices that just changed and should briefly show the pixelated state
+  const [pixelating, setPixelating] = useState<Set<number>>(() => new Set([0]));
+  const timeoutsRef = useRef<number[]>([]);
 
   useEffect(() => {
     if (!playing) return;
@@ -32,6 +37,37 @@ export function Flipbook() {
     }, INTERVAL_MS);
     return () => window.clearInterval(id);
   }, [playing]);
+
+  // Trigger pixelate-on-enter for the current index
+  useEffect(() => {
+    setPixelating((s) => {
+      const next = new Set(s);
+      next.add(i);
+      return next;
+    });
+    const t = window.setTimeout(() => {
+      setPixelating((s) => {
+        const next = new Set(s);
+        next.delete(i);
+        return next;
+      });
+    }, PIXEL_HOLD_MS);
+    timeoutsRef.current.push(t);
+    return () => window.clearTimeout(t);
+  }, [i]);
+
+  useEffect(() => () => {
+    timeoutsRef.current.forEach((t) => window.clearTimeout(t));
+  }, []);
+
+  const handleLoad = (idx: number) => {
+    setLoaded((s) => {
+      if (s.has(idx)) return s;
+      const next = new Set(s);
+      next.add(idx);
+      return next;
+    });
+  };
 
   const prev = () => setI((v) => (v - 1 + photos.length) % photos.length);
   const next = () => setI((v) => (v + 1) % photos.length);
