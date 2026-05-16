@@ -77,7 +77,7 @@ function AboutPage() {
           <div className="md:sticky md:top-24">
             <Flipbook />
             <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              ◆ Player Reel · Auto-Loop
+              ◆ Character Reel
             </p>
           </div>
         </div>
