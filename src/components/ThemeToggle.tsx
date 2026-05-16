@@ -12,9 +12,9 @@ export function ThemeToggle() {
     >
       <span
         className="size-1.5 rounded-full transition-colors"
-        style={{ background: isDark ? "var(--creator)" : "var(--primary)" }}
+        style={{ background: isDark ? "oklch(0.78 0.16 75)" : "oklch(0.5 0.22 300)" }}
       />
-      <span>{isDark ? "Save 01 · Dark" : "Save 02 · Light"}</span>
+      <span>{isDark ? "Slot 01 · Dark" : "Slot 02 · Light"}</span>
     </button>
   );
 }
