@@ -104,6 +104,7 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
         />
       ) : (
         <img
+          key={src}
           src={src}
           alt={`${character.name}, ${character.className} sprite`}
           className={cn(
@@ -112,7 +113,6 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
             isPainterly ? "anim-wind" : "pixelated anim-idle",
             transforming && "anim-transform-in",
           )}
-          loading="lazy"
           width={512}
           height={512}
         />
