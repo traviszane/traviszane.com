@@ -73,6 +73,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "google-site-verification", content: "HoqfDjfrDreGN0DfBn_vF3VZUkQOigd-UlS1Ry70al4" },
       { title: "Travis Zane — Writer, Marketer & Creator Portfolio" },
       {
         name: "description",
