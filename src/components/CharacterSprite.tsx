@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { Play, Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Character } from "@/lib/characters";
 import { useTheme } from "./ThemeProvider";
@@ -8,6 +8,8 @@ interface Props {
   character: Character;
   size?: "md" | "lg" | "xl";
   active?: boolean;
+  /** Play video once on mount, then revert to sprite. Adds a replay button. */
+  playOnce?: boolean;
 }
 
 const sizeMap = {
@@ -16,7 +18,7 @@ const sizeMap = {
   xl: "h-[28rem]",
 };
 
-export function CharacterSprite({ character, size = "lg", active = false }: Props) {
+export function CharacterSprite({ character, size = "lg", active = false, playOnce = false }: Props) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const isPainterly = !isDark;
@@ -25,19 +27,30 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const hasVideo = !!character.painterlyVideo;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
+  const [onceShowing, setOnceShowing] = useState(playOnce);
 
-  // Drive playback from card hover (`active`)
+  const showVideo = playOnce ? onceShowing : active;
+
+  // Drive playback
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !hasVideo) return;
-    if (active) {
+    if (showVideo) {
       v.currentTime = 0;
       v.muted = muted;
       void v.play().catch(() => {});
     } else {
       v.pause();
     }
-  }, [active, hasVideo, muted]);
+  }, [showVideo, hasVideo, muted]);
+
+  const replay = () => {
+    setOnceShowing(true);
+  };
+  const handleEnded = () => {
+    if (playOnce) setOnceShowing(false);
+  };
+
 
 
   // Sailor-Moon style transformation between modes
