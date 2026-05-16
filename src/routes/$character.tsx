@@ -85,11 +85,11 @@ function CharacterPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                {c.skills.map((s) => (
+                {c.stats.map((s) => (
                   <div key={s.label}>
                     <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.2em]">
                       <span className="text-foreground/80">{s.label}</span>
-                      <span style={{ color }}>{s.tier} · 100</span>
+                      <span style={{ color }}>{s.value}</span>
                     </div>
                     <div
                       className="mt-1 h-2 w-full overflow-hidden rounded-sm border"
@@ -101,7 +101,7 @@ function CharacterPage() {
                       <div
                         className="h-full"
                         style={{
-                          width: "100%",
+                          width: `${s.value}%`,
                           background: `linear-gradient(90deg, color-mix(in oklab, ${color} 60%, transparent), ${color})`,
                           boxShadow: `0 0 12px color-mix(in oklab, ${color} 50%, transparent)`,
                         }}
