@@ -37,6 +37,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(globalMuted);
   const [onceShowing, setOnceShowing] = useState(playOnce);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const fn = (m: boolean) => setMuted(m);
