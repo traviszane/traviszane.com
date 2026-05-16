@@ -70,7 +70,7 @@ function AboutPage() {
               real outcomes. Pick whichever one is most useful to you.
             </p>
             <p>
-              For collaborations, ideas, or a quiet chat, my inbox is open.
+              For collaborations, ideas, or a pensive chat, my inbox is open.
             </p>
           </div>
 
