@@ -19,6 +19,12 @@ export const Route = createFileRoute("/about")({
           "The character autobio behind the three sprites: who Travis Zane is, what he does, and how to get in touch for collaborations.",
       },
       { property: "og:url", content: "https://traviszane.com/about" },
+      { name: "twitter:title", content: "Origin Story — Travis Zane" },
+      {
+        name: "twitter:description",
+        content:
+          "The character autobio behind the three sprites: who Travis Zane is, what he does, and how to get in touch for collaborations.",
+      },
     ],
     links: [{ rel: "canonical", href: "https://traviszane.com/about" }],
   }),
