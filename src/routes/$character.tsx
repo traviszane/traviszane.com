@@ -85,11 +85,11 @@ function CharacterPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                {c.skills.map((s) => (
+                {c.stats.map((s) => (
                   <div key={s.label}>
                     <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.2em]">
                       <span className="text-foreground/80">{s.label}</span>
-                      <span style={{ color }}>{s.tier} · 100</span>
+                      <span style={{ color }}>{s.value}</span>
                     </div>
                     <div
                       className="mt-1 h-2 w-full overflow-hidden rounded-sm border"
@@ -101,7 +101,7 @@ function CharacterPage() {
                       <div
                         className="h-full"
                         style={{
-                          width: "100%",
+                          width: `${s.value}%`,
                           background: `linear-gradient(90deg, color-mix(in oklab, ${color} 60%, transparent), ${color})`,
                           boxShadow: `0 0 12px color-mix(in oklab, ${color} 50%, transparent)`,
                         }}
@@ -175,7 +175,7 @@ function CharacterPage() {
               <h2 className="mt-2 font-display uppercase italic text-3xl md:text-5xl tracking-tight">Experience</h2>
             </div>
             <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-              {c.chapters.length} completed quests
+              Completed quests
             </span>
           </div>
 
@@ -277,7 +277,7 @@ function CharacterPage() {
                 Ready to start a quest together?
               </h3>
               <p className="mt-1 text-muted-foreground max-w-lg">
-                If anything here lines up with what you're building, send a note. I read everything.
+                If something here resonates — a project, a collaboration, a conversation — send a note. I read everything.
               </p>
             </div>
             <a
