@@ -74,9 +74,9 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="md:sticky md:top-20">
-            <Flipbook />
-            <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          <div className="md:sticky md:top-20 flex flex-col items-center">
+            <FlipbookOrbit />
+            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               ◆ Character Reel
             </p>
           </div>
