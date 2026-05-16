@@ -38,7 +38,7 @@ function AboutPage() {
         </h1>
 
         <div className="mt-5 grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-start">
-          <div className="space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
+          <div className="space-y-4 text-sm md:text-[15px] leading-relaxed text-foreground/80">
             <p>
               In a bar in New York designed to look like a bathroom, a friend
               once screamed—at the pitch of a starving seagull—that I was a
@@ -50,13 +50,10 @@ function AboutPage() {
             </p>
             <p>
               Though I wanted to snap her out of our generational psychosis, I
-              realized that she was right.
-            </p>
-            <p>
-              I've spent my whole life connecting people with other people.
-              It's my favorite thing to do. I suppose that's why I care about
-              stories—why I craft them for brands, readers, and anyone willing
-              to follow me down a rabbit hole.
+              realized that she was right. I've spent my whole life connecting
+              people with other people. It's my favorite thing to do. I suppose
+              that's why I care about stories—why I craft them for brands,
+              readers, and anyone willing to follow me down a rabbit hole.
             </p>
             <p>
               I split my time across three crafts that share one obsession:
