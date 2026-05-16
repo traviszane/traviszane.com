@@ -198,3 +198,13 @@
 .anim-blink { animation: blink 1.1s steps(2) infinite; }
 .anim-wind { animation: wind-sway 4.5s ease-in-out infinite; transform-origin: 50% 90%; }
 .anim-drift { animation: drift-particle 6s ease-in-out infinite; }
+
+/* Flipbook duotone: orange in dark mode, purple/white in light */
+.flipbook-duotone { filter: url(#duotone-dark); }
+:root:not(.dark) .flipbook-duotone { filter: url(#duotone-light); }
+
+@keyframes flipbook-sweep {
+  0% { transform: translateY(-2rem); }
+  100% { transform: translateY(28rem); }
+}
+.flipbook-sweep { animation: flipbook-sweep 4.5s linear infinite; }
