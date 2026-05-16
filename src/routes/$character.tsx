@@ -48,9 +48,9 @@ function CharacterPage() {
           </span>
         </div>
 
-        <section className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
+        <section className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
-            className="relative flex items-end justify-center rounded-md border border-border bg-card/60 backdrop-blur-sm overflow-hidden min-h-[26rem]"
+            className="relative flex items-end justify-center rounded-md border border-border bg-card/60 backdrop-blur-sm overflow-hidden min-h-[20rem] lg:min-h-[22rem]"
             style={{
               background: `radial-gradient(ellipse at 50% 80%, color-mix(in oklab, ${color} 30%, transparent) 0%, transparent 70%), color-mix(in oklab, var(--card) 80%, transparent)`,
             }}
@@ -62,24 +62,24 @@ function CharacterPage() {
               <span>Profile</span>
               <span style={{ color }}>● Active</span>
             </div>
-            <div className="px-4 pt-12">
-              <CharacterSprite character={c} size="xl" active />
+            <div className="px-4 pt-10">
+              <CharacterSprite character={c} size="lg" active />
             </div>
             <Brackets />
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
                 {c.className} · Lvl 99
               </div>
-              <h1 className="mt-2 font-display uppercase italic text-5xl md:text-7xl leading-[0.9] tracking-tight text-foreground">
+              <h1 className="mt-1 font-display uppercase italic text-4xl md:text-6xl leading-[0.9] tracking-tight text-foreground">
                 {c.name}
               </h1>
-              <p className="mt-3 italic text-lg" style={{ color }}>
+              <p className="mt-2 italic text-base" style={{ color }}>
                 {c.tagline}
               </p>
-              <p className="mt-5 max-w-xl text-muted-foreground leading-relaxed">{c.blurb}</p>
+              <p className="mt-3 max-w-xl text-sm text-muted-foreground leading-relaxed">{c.blurb}</p>
             </div>
 
             <div>
@@ -173,7 +173,7 @@ function CharacterPage() {
           </div>
         </section>
 
-        <section className="mt-24">
+        <section className="mt-12">
           <div className="flex items-end justify-between gap-6 border-b border-border pb-4">
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">

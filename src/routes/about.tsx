@@ -29,16 +29,16 @@ function AboutPage() {
       <SceneBackdrop />
       <SiteHeader />
 
-      <main className="relative z-10 mx-auto max-w-5xl px-6 py-20">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+      <main className="relative z-10 mx-auto max-w-5xl px-6 py-8 md:py-10">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.35em] text-primary">
           File 04 · Character Autobio
         </p>
-        <h1 className="font-display uppercase italic text-5xl md:text-7xl leading-none tracking-tight">
+        <h1 className="font-display uppercase italic text-4xl md:text-5xl leading-none tracking-tight">
           Origin Story
         </h1>
 
-        <div className="mt-10 grid gap-12 md:grid-cols-[1.4fr_1fr] md:items-start">
-          <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
+        <div className="mt-5 grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-start">
+          <div className="space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
             <p>
               In a bar in New York designed to look like a bathroom, a friend
               once screamed—at the pitch of a starving seagull—that I was a
@@ -74,24 +74,24 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="md:sticky md:top-24">
+          <div className="md:sticky md:top-20">
             <Flipbook />
-            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               ◆ Character Reel
             </p>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4 font-mono text-xs uppercase tracking-[0.25em]">
+        <div className="mt-6 flex flex-wrap gap-3 font-mono text-[11px] uppercase tracking-[0.25em]">
           <a
             href="mailto:hello@example.com"
-            className="border border-primary/50 text-primary px-5 py-3 transition-colors hover:bg-primary/10"
+            className="border border-primary/50 text-primary px-4 py-2.5 transition-colors hover:bg-primary/10"
           >
             Open Inbox →
           </a>
           <Link
             to="/"
-            className="border border-border px-5 py-3 text-foreground/60 transition-colors hover:text-foreground"
+            className="border border-border px-4 py-2.5 text-foreground/60 transition-colors hover:text-foreground"
           >
             ← Back to Select
           </Link>
