@@ -208,3 +208,18 @@
   100% { transform: translateY(28rem); }
 }
 .flipbook-sweep { animation: flipbook-sweep 4.5s linear infinite; }
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-counter {
+  to { transform: rotate(-360deg); }
+}
+@keyframes orbit-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.anim-orbit { animation: orbit-spin 60s linear infinite; }
+.anim-orbit-counter { animation: orbit-counter 60s linear infinite; }
+.anim-orbit-bob { animation: orbit-bob 3.5s ease-in-out infinite; }
+
