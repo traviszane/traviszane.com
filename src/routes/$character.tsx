@@ -50,19 +50,19 @@ function CharacterPage() {
 
         <section className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
-            className="relative flex items-end justify-center rounded-md border border-border bg-card/60 backdrop-blur-sm overflow-hidden min-h-[20rem] lg:min-h-[22rem]"
+            className="relative flex flex-col rounded-md border border-border bg-card/60 backdrop-blur-sm overflow-hidden min-h-[22rem] lg:min-h-[28rem]"
             style={{
               background: `radial-gradient(ellipse at 50% 80%, color-mix(in oklab, ${color} 30%, transparent) 0%, transparent 70%), color-mix(in oklab, var(--card) 80%, transparent)`,
             }}
           >
             <div
               aria-hidden
-              className="absolute top-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground"
+              className="absolute top-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground z-10"
             >
               <span>Profile</span>
               <span style={{ color }}>● Active</span>
             </div>
-            <div className="px-4 pt-10">
+            <div className="relative flex-1 flex items-end justify-center px-4 pt-10 pb-4 min-h-0">
               <CharacterSprite character={c} size="lg" active />
             </div>
             <Brackets />

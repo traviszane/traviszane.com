@@ -10,7 +10,7 @@ interface Props {
 
 const sizeMap = {
   md: "h-56",
-  lg: "h-24 sm:h-32 md:h-44 lg:h-56",
+  lg: "h-full w-auto max-h-full",
   xl: "h-[28rem]",
 };
 
@@ -22,7 +22,7 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const src = isPainterly ? character.spriteDark : character.sprite;
 
   return (
-    <div className="relative flex items-end justify-center w-full">
+    <div className="relative flex items-end justify-center w-full h-full">
       <div
         aria-hidden
         className={cn(

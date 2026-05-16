@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
-import { Flipbook } from "@/components/Flipbook";
+import { FlipbookOrbit } from "@/components/FlipbookOrbit";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -74,9 +74,9 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="md:sticky md:top-20">
-            <Flipbook />
-            <p className="mt-2 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          <div className="md:sticky md:top-20 flex flex-col items-center">
+            <FlipbookOrbit />
+            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               ◆ Character Reel
             </p>
           </div>
