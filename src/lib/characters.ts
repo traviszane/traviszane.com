@@ -312,18 +312,18 @@ export const characters: Record<CharacterId, Character> = {
     xp: [
       { label: "Audience", value: "30,000+" },
       { label: "Brand collaborations", value: "20+" },
+      { label: "Years of video experience", value: "15+" },
       { label: "Worlds built", value: "8+" },
-      { label: "Years of video experience", value: "16+" },
     ],
     skills: [
       { label: "Community Building", tier: "S-TIER" },
-      { label: "Creative Direction", tier: "S-TIER" },
-      { label: "Taste", tier: "A-TIER" },
+      { label: "Aesthetic & Taste", tier: "S-TIER" },
+      { label: "Creative Direction", tier: "A-TIER" },
     ],
     stats: [
       { label: "Community Building", value: 96 },
-      { label: "Taste", value: 94 },
-      { label: "Aesthetic", value: 91 },
+      { label: "Aesthetic & Taste", value: 94 },
+      { label: "Creative Direction", value: 91 },
     ],
     abilities: ["UX", "Creative Code", "Photography", "Video", "Zine-Making"],
     chapters: [
