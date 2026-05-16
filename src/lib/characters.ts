@@ -275,7 +275,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "10,000+ subscribers and growing. A body of work that treats YouTube as a creative medium, not a distribution channel.",
       },
       {
-        title: "In Person Experiences (NYC, SF, CDMX)",
+        title: "NYC, SF, CDMX: In Person Experiences",
         meta: "Quest III — Experience",
         description: "Five events. One city. Real people in a room together.",
         tags: ["Events", "Community"],
