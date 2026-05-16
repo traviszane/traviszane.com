@@ -2,18 +2,22 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import p1 from "@/assets/about/p1.png";
 import p2 from "@/assets/about/p2.png";
-import p3 from "@/assets/about/p3.png";
-import p4 from "@/assets/about/p4.jpeg";
-import p5 from "@/assets/about/p5.jpg";
-import p6 from "@/assets/about/p6.jpg";
+import p3 from "@/assets/about/p3.jpeg";
+import p4 from "@/assets/about/p4.jpg";
+import p5 from "@/assets/about/p5.png";
+import p6 from "@/assets/about/p6.jpeg";
 import p7 from "@/assets/about/p7.jpg";
-import p8 from "@/assets/about/p8.jpeg";
+import p8 from "@/assets/about/p8.jpg";
 import p9 from "@/assets/about/p9.jpg";
 import p10 from "@/assets/about/p10.jpg";
 import p11 from "@/assets/about/p11.jpg";
 import p12 from "@/assets/about/p12.jpg";
+import p13 from "@/assets/about/p13.jpg";
+import p14 from "@/assets/about/p14.jpg";
+import p15 from "@/assets/about/p15.jpg";
+import p16 from "@/assets/about/p16.jpg";
 
-const photos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
+const photos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16];
 
 const INTERVAL_MS = 3500;
 
