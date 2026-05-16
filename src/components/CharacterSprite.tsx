@@ -204,7 +204,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  setMuted((m) => !m);
+                  setGlobalMuted(!muted);
                 }}
                 aria-label={muted ? "Unmute video" : "Mute video"}
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-border bg-background/80 text-foreground/80 backdrop-blur-sm transition-colors hover:text-primary"
