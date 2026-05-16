@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { Character } from "@/lib/characters";
+import { useTheme } from "./ThemeProvider";
 
 interface Props {
   character: Character;
@@ -14,7 +15,10 @@ const sizeMap = {
 };
 
 export function CharacterSprite({ character, size = "lg", active = false }: Props) {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
   const color = `var(${character.colorVar})`;
+  const src = isDark ? character.spriteDark : character.sprite;
 
   return (
     <div className="relative flex items-end justify-center w-full">
@@ -36,12 +40,43 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
           background: `radial-gradient(ellipse, ${color} 0%, transparent 70%)`,
         }}
       />
+
+      {/* Ambient drifting particles (dark mode painterly atmosphere) */}
+      {isDark && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          {[
+            { left: "20%", top: "70%", dx: "30px", dy: "-180px", delay: "0s", size: 3 },
+            { left: "35%", top: "85%", dx: "-40px", dy: "-220px", delay: "1.4s", size: 2 },
+            { left: "60%", top: "75%", dx: "50px", dy: "-200px", delay: "2.6s", size: 3 },
+            { left: "75%", top: "80%", dx: "-20px", dy: "-260px", delay: "3.8s", size: 2 },
+            { left: "50%", top: "65%", dx: "20px", dy: "-240px", delay: "5s", size: 2 },
+          ].map((p, i) => (
+            <span
+              key={i}
+              className="absolute rounded-full anim-drift"
+              style={{
+                left: p.left,
+                top: p.top,
+                width: p.size,
+                height: p.size,
+                background: color,
+                boxShadow: `0 0 8px ${color}`,
+                ["--dx" as string]: p.dx,
+                ["--dy" as string]: p.dy,
+                animationDelay: p.delay,
+              }}
+            />
+          ))}
+        </div>
+      )}
+
       <img
-        src={character.sprite}
+        src={src}
         alt={`${character.name}, ${character.className} sprite`}
         className={cn(
-          "relative pixelated object-contain anim-idle drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]",
+          "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
           sizeMap[size],
+          isDark ? "anim-wind" : "pixelated anim-idle",
         )}
         loading="lazy"
         width={512}

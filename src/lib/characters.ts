@@ -1,6 +1,9 @@
 import spriteWriter from "@/assets/sprite-writer.png";
 import spriteMarketer from "@/assets/sprite-marketer.png";
 import spriteCreator from "@/assets/sprite-creator.png";
+import spriteWriterDark from "@/assets/sprite-writer-dark.png";
+import spriteMarketerDark from "@/assets/sprite-marketer-dark.png";
+import spriteCreatorDark from "@/assets/sprite-creator-dark.png";
 
 export type CharacterId = "writer" | "marketer" | "creator";
 
@@ -35,6 +38,11 @@ export interface Skill {
   tier: SkillTier;
 }
 
+export interface XPStat {
+  label: string;
+  value: string;
+}
+
 export interface Character {
   id: CharacterId;
   name: string;
@@ -42,8 +50,9 @@ export interface Character {
   tagline: string;
   blurb: string;
   sprite: string;
+  spriteDark: string;
   colorVar: string;
-  stats: { label: string; value: number }[];
+  xp: XPStat[];
   skills: Skill[];
   abilities: string[];
   chapters: Chapter[];
@@ -52,18 +61,19 @@ export interface Character {
 export const characters: Record<CharacterId, Character> = {
   writer: {
     id: "writer",
-    name: "The Scribe",
-    className: "Writer",
+    name: "The Writer",
+    className: "Storyteller",
     tagline: "Master of syntax and narrative architecture.",
     blurb:
-      "Long-form essays, technical docs, and brand voice work for teams that take language seriously. The Scribe turns tangled ideas into prose that reads like a current — quiet, deliberate, hard to put down.",
+      "Long-form essays, technical docs, and brand voice work for teams that take language seriously. The Writer turns tangled ideas into prose that reads like a current — quiet, deliberate, hard to put down.",
     sprite: spriteWriter,
+    spriteDark: spriteWriterDark,
     colorVar: "--writer",
-    stats: [
-      { label: "Clarity", value: 92 },
-      { label: "Voice", value: 88 },
-      { label: "Range", value: 80 },
-      { label: "Depth", value: 86 },
+    xp: [
+      { label: "Novels drafted", value: "2" },
+      { label: "Stories written", value: "10+" },
+      { label: "Publications created", value: "2" },
+      { label: "Awards granted", value: "5" },
     ],
     skills: [
       { label: "Narrative", tier: "S-TIER" },
@@ -145,18 +155,19 @@ export const characters: Record<CharacterId, Character> = {
   },
   marketer: {
     id: "marketer",
-    name: "The Strategist",
-    className: "Marketer",
+    name: "The Marketer",
+    className: "Tactician",
     tagline: "Architect of growth loops and brand positioning.",
     blurb:
-      "Campaigns, lifecycle, and positioning that compound — not vanity metrics. The Strategist treats marketing as a system: measurable inputs, honest outputs, no theater.",
+      "Campaigns, lifecycle, and positioning that compound — not vanity metrics. The Marketer treats marketing as a system: measurable inputs, honest outputs, no theater.",
     sprite: spriteMarketer,
+    spriteDark: spriteMarketerDark,
     colorVar: "--marketer",
-    stats: [
-      { label: "Strategy", value: 90 },
-      { label: "Growth", value: 95 },
-      { label: "Reach", value: 86 },
-      { label: "Positioning", value: 92 },
+    xp: [
+      { label: "Campaigns planned", value: "100+" },
+      { label: "Years in marketing", value: "10+" },
+      { label: "Markets reached", value: "12+" },
+      { label: "Products launched", value: "10+" },
     ],
     skills: [
       { label: "Strategy", tier: "S-TIER" },
@@ -180,18 +191,9 @@ export const characters: Record<CharacterId, Character> = {
           summary:
             "A six-week sprint from blank doc to 25k waitlist. We replaced the standard 'coming soon' page with a single sharp thesis, then built every asset around defending it.",
           sections: [
-            {
-              heading: "Strategy",
-              body: "Anchored on one contrarian claim about the category. Everything — landing page, founder posts, demo video — pointed at the same wedge. No 'features' page until week five.",
-            },
-            {
-              heading: "Execution",
-              body: "Shipped a manifesto-style landing page, a 90-second demo, and a 12-post founder narrative arc on X. Seeded with 30 hand-picked operators before any paid spend.",
-            },
-            {
-              heading: "Results",
-              body: "25,012 signups, 41% organic referral rate, covered in 3 industry newsletters, 2 podcast invites. Closed seed round inside the window.",
-            },
+            { heading: "Strategy", body: "Anchored on one contrarian claim about the category. Everything — landing page, founder posts, demo video — pointed at the same wedge. No 'features' page until week five." },
+            { heading: "Execution", body: "Shipped a manifesto-style landing page, a 90-second demo, and a 12-post founder narrative arc on X. Seeded with 30 hand-picked operators before any paid spend." },
+            { heading: "Results", body: "25,012 signups, 41% organic referral rate, covered in 3 industry newsletters, 2 podcast invites. Closed seed round inside the window." },
           ],
           metrics: [
             { label: "Signups", value: "25,012" },
@@ -216,18 +218,9 @@ export const characters: Record<CharacterId, Character> = {
           summary:
             "The activation funnel was leaking at three known seams. We rebuilt it as a single coherent narrative across in-app, email, and sales touch.",
           sections: [
-            {
-              heading: "Diagnosis",
-              body: "Mapped every trial event to a job-to-be-done. Found 3 seams where users hit a decision point with no support.",
-            },
-            {
-              heading: "Build",
-              body: "Rewrote 14 lifecycle emails, added 6 in-app nudges tied to behavior, and re-cut the sales handoff trigger to fire on intent — not day count.",
-            },
-            {
-              heading: "Results",
-              body: "Trial→paid lifted 38% in 90 days. Support tickets in the first 7 days dropped 22%. Net new MRR per trial up 1.6x.",
-            },
+            { heading: "Diagnosis", body: "Mapped every trial event to a job-to-be-done. Found 3 seams where users hit a decision point with no support." },
+            { heading: "Build", body: "Rewrote 14 lifecycle emails, added 6 in-app nudges tied to behavior, and re-cut the sales handoff trigger to fire on intent — not day count." },
+            { heading: "Results", body: "Trial→paid lifted 38% in 90 days. Support tickets in the first 7 days dropped 22%. Net new MRR per trial up 1.6x." },
           ],
           metrics: [
             { label: "Trial→Paid", value: "+38%" },
@@ -251,18 +244,9 @@ export const characters: Record<CharacterId, Character> = {
           summary:
             "The product was being benchmarked against 6 incumbents on a feature checklist they would never win. We renamed the game.",
           sections: [
-            {
-              heading: "Reframe",
-              body: "Wrote the category POV essay, defined the 4 capabilities that bound it, and gave it a name a buyer could repeat.",
-            },
-            {
-              heading: "Rollout",
-              body: "Pushed the language through the website, sales deck, pricing page, and a 6-post technical content arc. Briefed 4 analysts on the shape of the category.",
-            },
-            {
-              heading: "Results",
-              body: "ACV moved 2.4x as deals stopped being feature comparisons. 4 analyst mentions, 1 named report. Sales cycle shortened by 19 days on average.",
-            },
+            { heading: "Reframe", body: "Wrote the category POV essay, defined the 4 capabilities that bound it, and gave it a name a buyer could repeat." },
+            { heading: "Rollout", body: "Pushed the language through the website, sales deck, pricing page, and a 6-post technical content arc. Briefed 4 analysts on the shape of the category." },
+            { heading: "Results", body: "ACV moved 2.4x as deals stopped being feature comparisons. 4 analyst mentions, 1 named report. Sales cycle shortened by 19 days on average." },
           ],
           metrics: [
             { label: "ACV", value: "2.4x" },
@@ -286,18 +270,9 @@ export const characters: Record<CharacterId, Character> = {
           summary:
             "Built a sustainable POV engine: 90 minutes of CEO time per week produced 4 long posts, 1 essay, and a steady inbound channel.",
           sections: [
-            {
-              heading: "System",
-              body: "One weekly recorded conversation. I edited the transcript into a long-form X post, an essay outline, and 3 reusable angles. CEO approves, ships.",
-            },
-            {
-              heading: "Voice",
-              body: "Resisted the urge to sound like a thread guy. Kept the cadence slow, the claims specific, the receipts attached.",
-            },
-            {
-              heading: "Results",
-              body: "200k+ monthly impressions inside one quarter. Inbound: 3 investor intros, 11 enterprise leads, 2 hires sourced from replies.",
-            },
+            { heading: "System", body: "One weekly recorded conversation. I edited the transcript into a long-form X post, an essay outline, and 3 reusable angles. CEO approves, ships." },
+            { heading: "Voice", body: "Resisted the urge to sound like a thread guy. Kept the cadence slow, the claims specific, the receipts attached." },
+            { heading: "Results", body: "200k+ monthly impressions inside one quarter. Inbound: 3 investor intros, 11 enterprise leads, 2 hires sourced from replies." },
           ],
           metrics: [
             { label: "Impressions/mo", value: "200k+" },
@@ -310,18 +285,19 @@ export const characters: Record<CharacterId, Character> = {
   },
   creator: {
     id: "creator",
-    name: "The Maker",
-    className: "Creator",
+    name: "The Creator",
+    className: "Maker",
     tagline: "Polymath building digital experiences end-to-end.",
     blurb:
-      "Side projects, visual identity, and small interactive worlds shipped on the open web. The Maker draws the line between a moodboard and a shippable artifact, then crosses it.",
+      "Side projects, visual identity, and small interactive worlds shipped on the open web. The Creator draws the line between a moodboard and a shippable artifact, then crosses it.",
     sprite: spriteCreator,
+    spriteDark: spriteCreatorDark,
     colorVar: "--creator",
-    stats: [
-      { label: "Vision", value: 96 },
-      { label: "Craft", value: 88 },
-      { label: "Range", value: 84 },
-      { label: "Motion", value: 87 },
+    xp: [
+      { label: "Audience built", value: "30,000+" },
+      { label: "Brand collaborations", value: "20+" },
+      { label: "Worlds built", value: "8+" },
+      { label: "Projects shipped", value: "∞" },
     ],
     skills: [
       { label: "Vision", tier: "S-TIER" },

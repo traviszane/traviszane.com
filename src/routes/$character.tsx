@@ -75,21 +75,36 @@ function CharacterPage() {
               <p className="mt-5 max-w-xl text-muted-foreground leading-relaxed">{c.blurb}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-              {c.stats.map((s) => (
-                <div key={s.label}>
-                  <div className="flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
-                    <span>{s.label}</span>
-                    <span style={{ color }}>{s.value}</span>
-                  </div>
-                  <div className="h-[3px] w-full bg-secondary overflow-hidden">
-                    <div
-                      className="h-full anim-fade-up"
-                      style={{ width: `${s.value}%`, background: color }}
-                    />
-                  </div>
+            <div>
+              <div className="flex items-baseline justify-between mb-3">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                  XP Earned
                 </div>
-              ))}
+                <div className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
+                  ▲ Receipts
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {c.xp.map((s) => (
+                  <div
+                    key={s.label}
+                    className="rounded-sm border border-border bg-background/30 px-3 py-2.5"
+                    style={{
+                      boxShadow: `inset 0 0 0 1px color-mix(in oklab, ${color} 10%, transparent)`,
+                    }}
+                  >
+                    <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground leading-tight">
+                      {s.label}
+                    </div>
+                    <div
+                      className="mt-1 font-display italic text-3xl tabular-nums leading-none"
+                      style={{ color }}
+                    >
+                      {s.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div>
