@@ -22,7 +22,7 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const src = isPainterly ? character.spriteDark : character.sprite;
 
   return (
-    <div className="relative flex items-end justify-center w-full">
+    <div className="relative flex items-end justify-center w-full h-full">
       <div
         aria-hidden
         className={cn(
