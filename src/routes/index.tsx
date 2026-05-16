@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterCard } from "@/components/CharacterCard";
+import { useTheme } from "@/components/ThemeProvider";
 import { characterList, type CharacterId } from "@/lib/characters";
 
 export const Route = createFileRoute("/")({
