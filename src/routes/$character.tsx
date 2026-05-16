@@ -63,7 +63,7 @@ function CharacterPage() {
               <span style={{ color }}>● Active</span>
             </div>
             <div className="relative flex-1 flex items-end justify-center px-4 pt-10 pb-4 min-h-0">
-              <CharacterSprite character={c} size="lg" active />
+              <CharacterSprite character={c} size="lg" active playOnce />
             </div>
             <Brackets />
           </div>
