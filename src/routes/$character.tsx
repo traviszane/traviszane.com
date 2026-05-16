@@ -175,7 +175,7 @@ function CharacterPage() {
               <h2 className="mt-2 font-display uppercase italic text-3xl md:text-5xl tracking-tight">Experience</h2>
             </div>
             <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-              {c.chapters.length} completed quests
+              Completed quests
             </span>
           </div>
 
