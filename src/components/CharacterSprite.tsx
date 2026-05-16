@@ -20,8 +20,20 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const isDark = theme === "dark";
   const isPainterly = !isDark;
   const color = `var(${character.colorVar})`;
-  const src = isPainterly ? character.spriteDark : character.sprite;
-  const useVideo = isPainterly && !!character.painterlyVideo;
+  const src = character.sprite;
+  const hasVideo = !!character.painterlyVideo;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleEnter = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.currentTime = 0;
+    void v.play();
+  };
+  const handleLeave = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.pause();
+  };
 
   // Sailor-Moon style transformation between modes
   const [transforming, setTransforming] = useState(false);
