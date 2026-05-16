@@ -58,6 +58,39 @@ export function Flipbook() {
           ))}
         </div>
 
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 mix-blend-color opacity-30"
+          style={{
+            background:
+              "linear-gradient(135deg, color-mix(in oklab, var(--primary) 75%, transparent), color-mix(in oklab, var(--primary) 35%, transparent))",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 mix-blend-overlay opacity-30"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to bottom, rgba(0,0,0,0.35) 0px, rgba(0,0,0,0.35) 1px, transparent 1px, transparent 3px)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 h-8 opacity-25 flipbook-sweep"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, color-mix(in oklab, var(--primary) 50%, transparent), transparent)",
+          }}
+        />
+
         <span aria-hidden className="absolute top-1.5 left-1.5 size-2.5 border-t border-l border-primary/70" />
         <span aria-hidden className="absolute top-1.5 right-1.5 size-2.5 border-t border-r border-primary/70" />
         <span aria-hidden className="absolute bottom-1.5 left-1.5 size-2.5 border-b border-l border-primary/70" />
