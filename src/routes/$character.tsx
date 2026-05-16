@@ -27,6 +27,8 @@ function CharacterPage() {
   const { character: id } = Route.useParams();
   const c = characters[id as CharacterId];
   const color = `var(${c.colorVar})`;
+  const fileIndex = characterList.findIndex((ch) => ch.id === id);
+  const fileNumber = String(fileIndex + 1).padStart(2, "0");
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -34,12 +36,17 @@ function CharacterPage() {
       <SiteHeader />
 
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-10">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span>←</span> Change&nbsp;character
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
+          >
+            <span>←</span> Change&nbsp;character
+          </Link>
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
+            File {fileNumber} · {c.className}
+          </span>
+        </div>
 
         <section className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
