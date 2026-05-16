@@ -42,8 +42,8 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
         }}
       />
 
-      {/* Ambient drifting particles (dark mode painterly atmosphere) */}
-      {isDark && (
+      {/* Ambient drifting particles (painterly atmosphere) */}
+      {isPainterly && (
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           {[
             { left: "20%", top: "70%", dx: "30px", dy: "-180px", delay: "0s", size: 3 },
@@ -77,7 +77,7 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
         className={cn(
           "relative object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)]",
           sizeMap[size],
-          isDark ? "anim-wind" : "pixelated anim-idle",
+          isPainterly ? "anim-wind" : "pixelated anim-idle",
         )}
         loading="lazy"
         width={512}
