@@ -98,7 +98,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   }, [isPainterly, playOnce, hasVideo]);
 
   return (
-    <div className="relative flex items-end justify-center w-full h-full">
+    <div className="relative flex items-end justify-center w-full aspect-square">
       <div
         aria-hidden
         className={cn(
