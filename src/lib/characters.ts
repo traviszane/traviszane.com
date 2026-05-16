@@ -11,6 +11,7 @@ export interface QuestSection {
 
 export interface Chapter {
   slug?: string;
+  href?: string;
   title: string;
   meta: string;
   description: string;
@@ -72,28 +73,73 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["Long-form essays", "Brand voice", "UX writing", "DevRel"],
     chapters: [
       {
+        href: "https://example.com/essays/syntax-of-silence",
         title: "The Syntax of Silence",
         meta: "Chapter I — Essay",
         description: "A long essay on negative space in technical documentation.",
         tags: ["Essay", "Editorial"],
+        goal: "Argue that what docs leave out is as important as what they say.",
+        outcome: "Featured in two engineering newsletters; cited in 4 internal style guides.",
       },
       {
+        slug: "onboarding-rewrite",
         title: "Onboarding Rewrite — Fintech SaaS",
         meta: "Chapter II — Product",
         description: "Cut activation friction by rewriting 40+ in-app moments.",
         tags: ["UX Writing", "Product"],
+        goal: "Reduce drop-off in the first 7 days without changing the product.",
+        outcome: "Activation +27%; support tickets -31% in the first session.",
+        details: {
+          client: "Fintech SaaS, Series B",
+          role: "UX writing lead",
+          timeframe: "8 weeks",
+          summary:
+            "Audited every word a new user encountered in the first 7 days, then rewrote the 40+ moments that were costing activation.",
+          sections: [
+            { heading: "Audit", body: "Mapped 40+ in-app strings against the JTBD they served. Tagged each as clarifying, blocking, or noise." },
+            { heading: "Rewrite", body: "Cut every modal that wasn't load-bearing. Reframed errors as next actions. Standardized verb tense across the funnel." },
+            { heading: "Results", body: "Activation +27%, first-session tickets -31%, NPS at day 14 up 9 points." },
+          ],
+          metrics: [
+            { label: "Activation", value: "+27%" },
+            { label: "Tickets", value: "-31%" },
+            { label: "NPS Δ", value: "+9" },
+          ],
+        },
       },
       {
+        href: "https://example.com/series/field-notes",
         title: "Field Notes from a Quiet API",
         meta: "Chapter III — Series",
         description: "Developer storytelling series read by 80k engineers.",
         tags: ["Series", "DevRel"],
+        goal: "Make a niche infra product feel inevitable to senior engineers.",
+        outcome: "80k+ readers across 12 posts; 6 community PRs sourced from the series.",
       },
       {
+        slug: "brand-voice-playbook",
         title: "A Brand Voice Playbook",
         meta: "Chapter IV — Brand",
         description: "End-to-end voice guidelines, lexicon, and examples.",
         tags: ["Brand", "Strategy"],
+        goal: "Give a 40-person team one defensible voice across every surface.",
+        outcome: "Adopted across product, marketing, and support; cut copy review cycles in half.",
+        details: {
+          client: "Climate-tech scaleup",
+          role: "Voice strategist",
+          timeframe: "6 weeks",
+          summary:
+            "Wrote a working voice playbook the team would actually use — principles, lexicon, do/don'ts, and 30+ before/after examples drawn from their own surfaces.",
+          sections: [
+            { heading: "Principles", body: "Four voice principles, each with a tension it resolves and a failure mode it prevents." },
+            { heading: "Lexicon", body: "On-brand and off-brand word lists, with rationale. No empty rules." },
+            { heading: "Examples", body: "30+ before/after rewrites pulled from real product, marketing, and support copy." },
+          ],
+          metrics: [
+            { label: "Surfaces", value: "All" },
+            { label: "Review time", value: "-50%" },
+          ],
+        },
       },
     ],
   },
@@ -285,28 +331,72 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["Creative coding", "Visual identity", "Motion", "Web direction"],
     chapters: [
       {
+        href: "https://github.com/example/voidjs",
         title: "Void.js — Tiny Canvas Library",
         meta: "Artifact I — OSS",
         description: "A 4kb creative-coding helper. 1.2k GitHub stars.",
         tags: ["Code", "OSS"],
+        goal: "Make creative-coding setup disappear so artists can start in one line.",
+        outcome: "1.2k stars, 40+ contributors, used in 3 published generative art books.",
       },
       {
+        slug: "field-recorder",
         title: "Field Recorder",
         meta: "Artifact II — Audio",
         description: "Generative audio sketches released as a monthly drop.",
         tags: ["Sound", "Audio"],
+        goal: "Treat sound design as a sketch practice — short, weird, finished.",
+        outcome: "24 monthly drops, 6k subscribers, two pieces licensed for indie games.",
+        details: {
+          role: "Solo author",
+          timeframe: "2 years, monthly",
+          summary:
+            "Each month: pick a constraint, record a generative piece, ship it as a downloadable patch + notes. No drafts, no deletions.",
+          sections: [
+            { heading: "Practice", body: "One constraint per month — a single oscillator, only field recordings, max 90 seconds." },
+            { heading: "Format", body: "Each drop ships with the patch file, a short essay, and a downloadable .wav. The constraints are the marketing." },
+            { heading: "Reach", body: "6k subscribers without paid promotion. Two pieces licensed by indie games; one used in a museum installation." },
+          ],
+          metrics: [
+            { label: "Drops", value: "24" },
+            { label: "Subs", value: "6k" },
+            { label: "Licenses", value: "2" },
+          ],
+        },
       },
       {
+        href: "https://example.com/slow-web-zine",
         title: "Slow Web Zine",
         meta: "Artifact III — Web",
         description: "An interactive editorial site about computing slowness.",
         tags: ["Web", "Editorial"],
+        goal: "Make a website that defends slowness by being slow on purpose.",
+        outcome: "Awwwards SOTD; 90k unique readers in launch month.",
       },
       {
+        slug: "glyph-type-family",
         title: "Glyph — Pixel Type Family",
         meta: "Artifact IV — Type",
         description: "A 6-weight bitmap typeface used in 30+ indie games.",
         tags: ["Type", "Design"],
+        goal: "Build a bitmap family that survives modern displays without losing its grid.",
+        outcome: "6 weights, 30+ shipped indie games, 4k commercial licenses sold.",
+        details: {
+          role: "Type designer",
+          timeframe: "9 months",
+          summary:
+            "Drew Glyph on a 12-unit grid then expanded to 6 weights without breaking the bitmap logic. Shipped with kerning tables and a small specimen site.",
+          sections: [
+            { heading: "Grid", body: "Anchored every glyph to a 12-unit baseline; kept stems on integer pixels at every weight." },
+            { heading: "Range", body: "6 weights from Hairline to Black, plus an italic and a stencil cut for UI labels." },
+            { heading: "Use", body: "Adopted by 30+ indie games and a generation of itch.io UI. 4k commercial licenses sold direct." },
+          ],
+          metrics: [
+            { label: "Weights", value: "6" },
+            { label: "Games", value: "30+" },
+            { label: "Licenses", value: "4k" },
+          ],
+        },
       },
     ],
   },
