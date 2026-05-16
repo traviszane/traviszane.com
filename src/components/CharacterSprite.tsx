@@ -63,9 +63,10 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
       return;
     }
     setTransforming(true);
+    if (playOnce && hasVideo) setOnceShowing(true);
     const t = window.setTimeout(() => setTransforming(false), 1000);
     return () => window.clearTimeout(t);
-  }, [isPainterly]);
+  }, [isPainterly, playOnce, hasVideo]);
 
   return (
     <div className="relative flex items-end justify-center w-full h-full">
