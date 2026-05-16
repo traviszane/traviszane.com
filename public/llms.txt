@@ -1,0 +1,17 @@
+# Travis Zane
+
+> Portfolio of Travis Zane — writer, marketer, and creator. A character-select interface mapping three crafts: writing, marketing, and content/creation work.
+
+The site presents itself as a game-style character selection screen. Each character represents a distinct body of professional work with real projects and outcomes.
+
+## Pages
+
+- [Home](/): Character-select landing page introducing The Writer, The Marketer, and The Creator.
+- [About](/about): Personal bio and the story behind the character-select frame.
+- [The Writer](/writer): Writing work — essays, long-form, and editorial projects.
+- [The Marketer](/marketer): Marketing work — launches, positioning, and campaigns.
+- [The Creator](/creator): Creator work — NYC, SF, and CDMX in-person experiences and content.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Machine-readable list of all routes.
