@@ -4,6 +4,7 @@ import spriteCreator from "@/assets/sprite-creator.png";
 import spriteWriterDark from "@/assets/sprite-writer-dark.png";
 import spriteMarketerDark from "@/assets/sprite-marketer-dark.png";
 import spriteCreatorDark from "@/assets/sprite-creator-dark.png";
+import spriteMarketerVideo from "@/assets/sprite-marketer-dark.mp4";
 
 export type CharacterId = "writer" | "marketer" | "creator";
 
@@ -56,6 +57,7 @@ export interface Character {
   blurb: string;
   sprite: string;
   spriteDark: string;
+  painterlyVideo?: string;
   colorVar: string;
   xp: XPStat[];
   skills: Skill[];
@@ -173,6 +175,7 @@ export const characters: Record<CharacterId, Character> = {
       "Campaigns and positioning built to compound, not just perform. The Marketer treats growth as a system: clear messaging, viral outputs, and data-driven storytelling. He is obsessed with making complex technology legible to the humans its meant to serve.",
     sprite: spriteMarketer,
     spriteDark: spriteMarketerDark,
+    painterlyVideo: spriteMarketerVideo,
     colorVar: "--marketer",
     xp: [
       { label: "Campaigns planned", value: "100+" },
