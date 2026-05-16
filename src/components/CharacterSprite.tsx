@@ -37,6 +37,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(globalMuted);
   const [onceShowing, setOnceShowing] = useState(playOnce);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const fn = (m: boolean) => setMuted(m);
@@ -154,7 +155,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
             alt={`${character.name}, ${character.className} sprite`}
             className={cn(
               "relative h-full w-auto max-h-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] pixelated anim-idle transition-opacity duration-500",
-              showVideo && "opacity-0",
+              showVideo && videoReady && "opacity-0",
               transforming && "anim-transform-in",
             )}
             width={512}
@@ -169,17 +170,21 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
             src={videoSrc}
             loop={!playOnce}
             playsInline
+            {...({ "webkit-playsinline": "true" } as Record<string, string>)}
             muted
             autoPlay
             preload="auto"
+            onPlaying={() => setVideoReady(true)}
+            onPause={() => setVideoReady(false)}
             onEnded={handleEnded}
             className={cn(
               "absolute inset-0 h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] transition-opacity duration-500",
-              showVideo ? "opacity-100" : "opacity-0",
+              showVideo && videoReady ? "opacity-100" : "opacity-0",
             )}
             width={512}
             height={512}
           />
+
           <div
             className={cn(
               "absolute bottom-2 right-2 z-10 flex items-center gap-1.5 transition-opacity",
