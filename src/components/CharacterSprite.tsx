@@ -24,7 +24,8 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   const isPainterly = !isDark;
   const color = `var(${character.colorVar})`;
   const src = character.sprite;
-  const hasVideo = !!character.painterlyVideo;
+  const videoSrc = isDark ? (character.painterlyVideoDark ?? character.painterlyVideo) : character.painterlyVideo;
+  const hasVideo = !!videoSrc;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
   const [onceShowing, setOnceShowing] = useState(playOnce);
@@ -132,8 +133,8 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
           />
           <video
             ref={videoRef}
-            key={character.painterlyVideo}
-            src={character.painterlyVideo}
+            key={videoSrc}
+            src={videoSrc}
             loop={!playOnce}
             playsInline
             preload="auto"
