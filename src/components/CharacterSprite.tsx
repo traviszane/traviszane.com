@@ -18,6 +18,14 @@ const sizeMap = {
   xl: "h-[28rem]",
 };
 
+// Shared mute preference across all video instances
+let globalMuted = true;
+const muteListeners = new Set<(m: boolean) => void>();
+function setGlobalMuted(m: boolean) {
+  globalMuted = m;
+  muteListeners.forEach((fn) => fn(m));
+}
+
 export function CharacterSprite({ character, size = "lg", active = false, playOnce = false }: Props) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
@@ -27,12 +35,18 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   const videoSrc = isDark ? (character.painterlyVideoDark ?? character.painterlyVideo) : character.painterlyVideo;
   const hasVideo = !!videoSrc;
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(globalMuted);
   const [onceShowing, setOnceShowing] = useState(playOnce);
+
+  useEffect(() => {
+    const fn = (m: boolean) => setMuted(m);
+    muteListeners.add(fn);
+    return () => { muteListeners.delete(fn); };
+  }, []);
 
   const showVideo = playOnce ? onceShowing : active;
 
-  // Drive playback
+  // Drive playback (intentionally excludes `muted` so toggling volume doesn't restart)
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !hasVideo) return;
@@ -43,7 +57,15 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
     } else {
       v.pause();
     }
-  }, [showVideo, hasVideo, muted, videoSrc]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showVideo, hasVideo, videoSrc]);
+
+  // Apply mute changes without restarting playback
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = muted;
+  }, [muted]);
 
   const replay = () => {
     setOnceShowing(true);
