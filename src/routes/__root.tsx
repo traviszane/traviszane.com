@@ -107,6 +107,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://traviszane.com/#website",
+              url: "https://traviszane.com/",
+              name: "Travis Zane",
+              description:
+                "A choose-your-character portfolio by Travis Zane: Writer, Marketer, and Creator paths.",
+              inLanguage: "en",
+              publisher: { "@id": "https://traviszane.com/#person" },
+            },
+            {
+              "@type": "Person",
+              "@id": "https://traviszane.com/#person",
+              name: "Travis Zane",
+              url: "https://traviszane.com/",
+              jobTitle: "Writer, Marketer, and Creator",
+              description:
+                "Writer, marketer, and creator working across essays, launches, and content that moves people.",
+              image:
+                "https://storage.googleapis.com/gpt-engineer-file-uploads/kVgE0nI6qJXi9UjjYZXSSaoF9no1/social-images/social-1778962791665-New_Travis_Zane_Artist_Logo_(Profile_(1).webp",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
