@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { Play, Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Character } from "@/lib/characters";
 import { useTheme } from "./ThemeProvider";
@@ -8,6 +8,8 @@ interface Props {
   character: Character;
   size?: "md" | "lg" | "xl";
   active?: boolean;
+  /** Play video once on mount, then revert to sprite. Adds a replay button. */
+  playOnce?: boolean;
 }
 
 const sizeMap = {
@@ -16,7 +18,7 @@ const sizeMap = {
   xl: "h-[28rem]",
 };
 
-export function CharacterSprite({ character, size = "lg", active = false }: Props) {
+export function CharacterSprite({ character, size = "lg", active = false, playOnce = false }: Props) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const isPainterly = !isDark;
@@ -25,19 +27,30 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
   const hasVideo = !!character.painterlyVideo;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
+  const [onceShowing, setOnceShowing] = useState(playOnce);
 
-  // Drive playback from card hover (`active`)
+  const showVideo = playOnce ? onceShowing : active;
+
+  // Drive playback
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !hasVideo) return;
-    if (active) {
+    if (showVideo) {
       v.currentTime = 0;
       v.muted = muted;
       void v.play().catch(() => {});
     } else {
       v.pause();
     }
-  }, [active, hasVideo, muted]);
+  }, [showVideo, hasVideo, muted]);
+
+  const replay = () => {
+    setOnceShowing(true);
+  };
+  const handleEnded = () => {
+    if (playOnce) setOnceShowing(false);
+  };
+
 
 
   // Sailor-Moon style transformation between modes
@@ -111,7 +124,7 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
             alt={`${character.name}, ${character.className} sprite`}
             className={cn(
               "relative h-full w-auto max-h-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] pixelated anim-idle transition-opacity duration-500",
-              active && "opacity-0",
+              showVideo && "opacity-0",
               transforming && "anim-transform-in",
             )}
             width={512}
@@ -121,31 +134,53 @@ export function CharacterSprite({ character, size = "lg", active = false }: Prop
             ref={videoRef}
             key={character.painterlyVideo}
             src={character.painterlyVideo}
-            loop
+            loop={!playOnce}
             playsInline
             preload="auto"
+            onEnded={handleEnded}
             className={cn(
               "absolute inset-0 h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.45)] transition-opacity duration-500",
-              active ? "opacity-100" : "opacity-0",
+              showVideo ? "opacity-100" : "opacity-0",
             )}
             width={512}
             height={512}
           />
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setMuted((m) => !m);
-            }}
-            aria-label={muted ? "Unmute video" : "Mute video"}
+          <div
             className={cn(
-              "absolute bottom-2 right-2 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-border bg-background/80 text-foreground/80 backdrop-blur-sm transition-opacity hover:text-primary",
-              active ? "opacity-100" : "opacity-0 pointer-events-none",
+              "absolute bottom-2 right-2 z-10 flex items-center gap-1.5 transition-opacity",
+              showVideo || playOnce ? "opacity-100" : "opacity-0 pointer-events-none",
             )}
           >
-            {muted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
-          </button>
+            {playOnce && !showVideo && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  replay();
+                }}
+                aria-label="Replay video"
+                className="flex h-7 items-center gap-1.5 rounded-full border border-border bg-background/80 px-2.5 font-mono text-[9px] uppercase tracking-[0.2em] text-foreground/80 backdrop-blur-sm transition-colors hover:text-primary"
+              >
+                <Play className="h-3 w-3" />
+                Replay
+              </button>
+            )}
+            {showVideo && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setMuted((m) => !m);
+                }}
+                aria-label={muted ? "Unmute video" : "Mute video"}
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-border bg-background/80 text-foreground/80 backdrop-blur-sm transition-colors hover:text-primary"
+              >
+                {muted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
+              </button>
+            )}
+          </div>
         </div>
       ) : (
         <img
