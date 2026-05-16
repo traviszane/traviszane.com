@@ -229,6 +229,9 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
           )}
           width={512}
           height={512}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
       )}
 
