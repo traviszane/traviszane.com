@@ -7,7 +7,7 @@ export function SiteHeader() {
         to="/"
         className="font-display text-xl uppercase italic tracking-wide text-foreground hover:text-primary transition-colors"
       >
-        <span className="text-primary">◆</span>&nbsp;CHOOSE&nbsp;YOUR&nbsp;CHARACTER
+        <span className="text-primary">◆</span>&nbsp;TRAVIS&nbsp;ZANE
       </Link>
       <nav className="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
         <Link to="/about" className="hover:text-foreground transition-colors">

@@ -76,9 +76,9 @@
   --rune: oklch(0.85 0.1 90);
 
   /* Character class colors (kept from CRT arcade direction) */
-  --writer: oklch(0.7 0.22 40);
-  --marketer: oklch(0.85 0.15 210);
-  --creator: oklch(0.7 0.24 320);
+  --writer: oklch(0.75 0.18 145);
+  --marketer: oklch(0.68 0.24 28);
+  --creator: oklch(0.78 0.14 230);
 }
 
 @layer base {

@@ -180,7 +180,7 @@ export const characters: Record<CharacterId, Character> = {
 };
 
 export const characterList: Character[] = [
-  characters.writer,
   characters.marketer,
+  characters.writer,
   characters.creator,
 ];
