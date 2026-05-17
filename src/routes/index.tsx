@@ -76,7 +76,7 @@ function Index() {
             <span><span className="text-foreground">↹</span> Tab to cycle</span>
             <span><span className="text-foreground">↵</span> Enter to select</span>
           </div>
-          <span className="text-primary anim-flicker">Hover a character to focus</span>
+          <span className="text-primary anim-flicker">Hover to focus</span>
           <span>© 2026 Travis Zane</span>
         </footer>
         <footer className="relative z-20 mt-3 flex shrink-0 items-center justify-center border-t border-border bg-background/70 pt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground backdrop-blur-sm md:hidden">
