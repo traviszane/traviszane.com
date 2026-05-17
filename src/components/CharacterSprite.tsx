@@ -158,7 +158,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
       )}
 
       {hasVideo ? (
-        <div className={cn("relative", sizeMap[size])}>
+        <div className={cn("relative flex items-end justify-center", sizeMap[size])}>
           <img
             key={src}
             src={src}
