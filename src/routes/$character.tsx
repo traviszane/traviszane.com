@@ -50,8 +50,8 @@ function CharacterPage() {
           >
             <span>←</span> Change&nbsp;character
           </Link>
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary text-right shrink-0">
-            File {fileNumber} · {c.className}
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground text-right shrink-0">
+            Class <span style={{ color }}>{fileNumber}</span>
           </span>
         </div>
 
