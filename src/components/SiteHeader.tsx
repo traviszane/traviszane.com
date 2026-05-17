@@ -17,7 +17,7 @@ export function SiteHeader() {
       <div className="flex items-center gap-3">
         <Link
           to="/about"
-          className="hidden md:inline font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors"
+          className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors"
         >
           About
         </Link>
