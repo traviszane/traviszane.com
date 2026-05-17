@@ -50,8 +50,8 @@ function CharacterPage() {
           >
             <span>←</span> Change&nbsp;character
           </Link>
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary text-right shrink-0">
-            File {fileNumber} · {c.className}
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground text-right shrink-0">
+            Class <span style={{ color }}>{fileNumber}</span>
           </span>
         </div>
 
@@ -78,7 +78,7 @@ function CharacterPage() {
           <div className="flex flex-col gap-4">
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-                {c.className} · Lvl 99
+                Class <span style={{ color }}>{fileNumber}</span> · Lvl 99
               </div>
               <h1 className="mt-1 font-display uppercase italic text-4xl md:text-6xl leading-[0.9] tracking-tight text-foreground">
                 {c.name}
