@@ -29,8 +29,8 @@ export function CharacterCard({ character, index, active, onHover }: Props) {
       style={{ animationDelay: `${index * 120}ms` }}
     >
       <div className="flex items-center justify-between px-2 pt-2 sm:px-4 sm:pt-3 font-mono text-[8px] sm:text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-        <span>0{index + 1}</span>
-        <span style={{ color }}>{character.className}</span>
+        <span>Class</span>
+        <span style={{ color }}>0{index + 1}</span>
       </div>
 
       <div
