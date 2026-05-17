@@ -58,7 +58,7 @@ function Index() {
 
         <section
           aria-label="Character select"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-3 md:flex-1 md:gap-5"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5"
         >
           {characterList.map((c, i) => (
             <CharacterCard
