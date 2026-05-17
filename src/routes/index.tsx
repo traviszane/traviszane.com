@@ -44,7 +44,7 @@ function Index() {
       <SceneBackdrop />
       <SiteHeader />
 
-      <main className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col px-4 pb-4 pt-2 md:px-8">
+      <main className="relative z-10 mx-auto flex max-w-7xl flex-col px-4 pb-4 pt-2 md:min-h-[calc(100svh-5.5rem)] md:px-8">
         <section className="mb-4 max-w-3xl anim-fade-up md:mb-6">
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             <span className="size-1.5 bg-primary anim-blink" />
@@ -58,7 +58,7 @@ function Index() {
 
         <section
           aria-label="Character select"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5"
+          className="grid min-h-0 grid-cols-1 gap-3 sm:grid-cols-3 md:auto-rows-fr md:gap-5"
         >
           {characterList.map((c, i) => (
             <CharacterCard
@@ -71,7 +71,7 @@ function Index() {
           ))}
         </section>
 
-        <footer className="mt-3 hidden md:flex items-center justify-between border-t border-border pt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        <footer className="relative z-20 mt-3 hidden shrink-0 items-center justify-between border-t border-border bg-background/70 pt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground backdrop-blur-sm md:flex">
           <div className="flex flex-wrap gap-6">
             <span><span className="text-foreground">↹</span> Tab to cycle</span>
             <span><span className="text-foreground">↵</span> Enter to select</span>
