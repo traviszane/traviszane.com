@@ -38,6 +38,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   const [muted, setMuted] = useState(globalMuted);
   const [onceShowing, setOnceShowing] = useState(playOnce);
   const [videoReady, setVideoReady] = useState(false);
+  const [coarsePointer, setCoarsePointer] = useState(false);
 
   useEffect(() => {
     const fn = (m: boolean) => setMuted(m);
@@ -45,7 +46,16 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
     return () => { muteListeners.delete(fn); };
   }, []);
 
-  const showVideo = playOnce ? onceShowing : active;
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(hover: none), (pointer: coarse)");
+    setCoarsePointer(mq.matches);
+    const fn = (e: MediaQueryListEvent) => setCoarsePointer(e.matches);
+    mq.addEventListener?.("change", fn);
+    return () => mq.removeEventListener?.("change", fn);
+  }, []);
+
+  const showVideo = playOnce ? onceShowing : (active || coarsePointer);
 
   // Drive playback (intentionally excludes `muted` so toggling volume doesn't restart)
   useEffect(() => {
