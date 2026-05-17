@@ -13,9 +13,9 @@ interface Props {
 }
 
 const sizeMap = {
-  md: "h-56",
-  lg: "h-full w-full max-h-full",
-  xl: "h-[28rem]",
+  md: "h-56 max-h-full",
+  lg: "h-full w-full max-h-full max-w-full",
+  xl: "h-[28rem] max-h-full",
 };
 
 // Shared mute preference across all video instances
@@ -98,7 +98,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
   }, [isPainterly, playOnce, hasVideo]);
 
   return (
-    <div className="relative flex items-end justify-center w-full aspect-square">
+    <div className="relative flex h-full max-h-full min-h-0 w-full items-end justify-center overflow-hidden">
       <div
         aria-hidden
         className={cn(
