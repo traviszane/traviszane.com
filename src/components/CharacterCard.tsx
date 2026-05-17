@@ -22,7 +22,7 @@ export function CharacterCard({ character, index, active, onHover }: Props) {
       onFocus={() => onHover(character.id)}
       onBlur={() => onHover(null)}
       className={cn(
-        "group relative flex flex-col items-stretch overflow-hidden rounded-md border bg-card/70 backdrop-blur-sm transition-all duration-500 anim-fade-up",
+        "group relative flex min-h-0 flex-col items-stretch overflow-hidden rounded-md border bg-card/70 backdrop-blur-sm transition-all duration-500 anim-fade-up",
         "hover:-translate-y-2 focus:-translate-y-2 focus:outline-none",
         active ? "border-primary/70 shadow-[0_30px_80px_-30px_var(--ember)]" : "border-border",
       )}
@@ -34,7 +34,7 @@ export function CharacterCard({ character, index, active, onHover }: Props) {
       </div>
 
       <div
-        className="relative mt-1 px-2 pt-1 pb-2 sm:px-4 sm:pb-4"
+        className="relative mt-1 min-h-0 h-[clamp(10.5rem,34svh,20rem)] overflow-hidden px-2 pt-1 pb-2 sm:h-[clamp(12rem,32svh,18rem)] sm:px-4 sm:pb-4"
         style={{
           background: `radial-gradient(ellipse at 50% 90%, color-mix(in oklab, ${color} 35%, transparent) 0%, transparent 65%)`,
         }}
