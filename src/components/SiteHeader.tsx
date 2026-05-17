@@ -12,12 +12,21 @@ export function SiteHeader() {
         <span className="text-primary">◆</span>&nbsp;TRAVIS&nbsp;ZANE
       </Link>
 
-      <SocialLinks className="absolute left-1/2 -translate-x-1/2 hidden sm:flex" />
+      <nav className="absolute left-1/2 -translate-x-1/2 hidden sm:flex items-center gap-4">
+        <SocialLinks />
+        <span aria-hidden className="h-4 w-px bg-border" />
+        <Link
+          to="/about"
+          className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors"
+        >
+          About
+        </Link>
+      </nav>
 
       <div className="flex items-center gap-3">
         <Link
           to="/about"
-          className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors"
+          className="sm:hidden font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors"
         >
           About
         </Link>
