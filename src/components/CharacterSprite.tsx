@@ -55,7 +55,9 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
     return () => mq.removeEventListener?.("change", fn);
   }, []);
 
-  const showVideo = playOnce ? onceShowing : (active || coarsePointer);
+  // On coarse-pointer (mobile) homepage cards, never auto-play — show sprite only.
+  // The click-in page uses playOnce, which still triggers playback there.
+  const showVideo = playOnce ? onceShowing : (active && !coarsePointer);
 
   // Drive playback (intentionally excludes `muted` so toggling volume doesn't restart)
   useEffect(() => {
