@@ -242,9 +242,9 @@ function CharacterPage() {
                       ))}
                     </div>
                   </div>
-                  {(ch.href || ch.slug) && (
+                  {ch.slug && (
                     <div className="hidden md:block font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
-                      {ch.href ? "↗" : "Open →"}
+                      Open →
                     </div>
                   )}
                 </>
@@ -253,17 +253,7 @@ function CharacterPage() {
                 "group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up";
               return (
                 <li key={ch.title} style={{ animationDelay: `${i * 80}ms` }} className="contents">
-                  {ch.href ? (
-                    <a
-                      href={ch.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={cls}
-                      style={{ animationDelay: `${i * 80}ms` }}
-                    >
-                      {inner}
-                    </a>
-                  ) : ch.slug ? (
+                  {ch.slug ? (
                     <Link
                       to="/$character/$quest"
                       params={{ character: id, quest: ch.slug }}
