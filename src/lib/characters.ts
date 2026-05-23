@@ -182,6 +182,9 @@ export const characters: Record<CharacterId, Character> = {
           attachments: [
             { label: "Read Sleepover ↗", href: "https://sleepoverxyz.substack.com" },
           ],
+          gallery: [
+            { src: sleepoverHome, alt: "Sleepover homepage on Substack" },
+          ],
         },
       },
       {
