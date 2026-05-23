@@ -276,7 +276,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "10,000+ subscribers and growing. Three fellowships awarded based on video work (Quanta, Kakehashi, Duttenhaver).",
       },
       {
-        title: "20+ Brand Collaborations",
+        title: "Branded Content Collaborations",
         meta: "Quest III — Brand",
         description: "Partnering with brands small and large.",
         tags: ["Brand Partnerships", "Content", "Creative Direction"],
