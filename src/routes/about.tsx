@@ -97,7 +97,7 @@ function AboutPage() {
             to="/"
             className="border border-border px-4 py-2.5 text-foreground transition-colors hover:text-primary"
           >
-            ← Back to Select
+            ← Back to Character Select
           </Link>
         </div>
       </main>
