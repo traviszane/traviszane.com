@@ -64,14 +64,13 @@ function AboutPage() {
               readers, and anyone willing to follow me down a rabbit hole.
             </p>
             <p>
-              I spend my time mastering three crafts that share one obsession:
+              I work across three crafts that share one obsession:
               making things that move people. Some days that's a 3,000-word
               essay. Other days it's a launch plan, or a small piece of copy
               designed to make the world fall in love with a product.
             </p>
             <p>
-              The character-select frame you see here isn't a gimmick. It's an
-              honest map. Each path on this site is a real body of work with
+              The character-select frame you see here is an honest map of my life. Each path on this site is a real body of work with
               real outcomes. Pick whichever one is most useful to you.
             </p>
             <p>
