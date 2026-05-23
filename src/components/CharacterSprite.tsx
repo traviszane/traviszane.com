@@ -183,7 +183,7 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
             loop={!playOnce}
             playsInline
             {...({ "webkit-playsinline": "true" } as Record<string, string>)}
-            muted
+            muted={muted}
             autoPlay
             preload="auto"
             onPlaying={() => setVideoReady(true)}
