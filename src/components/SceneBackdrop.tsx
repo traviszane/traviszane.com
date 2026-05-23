@@ -6,6 +6,11 @@ export function SceneBackdrop() {
       <img
         src={backdrop}
         alt=""
+        width={1920}
+        height={1080}
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover opacity-15 dark:opacity-55 pixelated"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background dark:from-background/40 dark:via-background/70 dark:to-background" />

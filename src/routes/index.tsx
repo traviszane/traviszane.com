@@ -5,6 +5,7 @@ import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterCard } from "@/components/CharacterCard";
 import { useTheme } from "@/components/ThemeProvider";
 import { characterList, type CharacterId } from "@/lib/characters";
+import backdropUrl from "@/assets/scene-backdrop.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +30,10 @@ export const Route = createFileRoute("/")({
           "A portfolio shaped like a character-select screen. Pick the Writer, Marketer, or Creator to explore each body of work.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://traviszane.com/" }],
+    links: [
+      { rel: "canonical", href: "https://traviszane.com/" },
+      { rel: "preload", as: "image", href: backdropUrl, fetchpriority: "high" },
+    ],
   }),
   component: Index,
 });
