@@ -35,6 +35,9 @@ import gather2 from "@/assets/quests/gatherings/event-2.jpg";
 import gather3 from "@/assets/quests/gatherings/event-3.jpg";
 import gather4 from "@/assets/quests/gatherings/event-4.jpg";
 
+// Sleepover
+import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.png";
+
 import type { Embed } from "@/components/QuestEmbed";
 
 export type CharacterId = "writer" | "marketer" | "creator";
