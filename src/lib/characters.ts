@@ -783,26 +783,24 @@ export const characters: Record<CharacterId, Character> = {
         },
       },
       {
-        slug: "experiences",
+        slug: "ayem",
         title: "ayem: An Experiment in Queer Education",
-        meta: "Quest V — Experiences",
-        description: "Five events. One city. Real people in a room together.",
-        tags: ["Events", "Community", "Education"],
-        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation.",
-        outcome: "5+ events independently produced in Mexico City, plus a printed relationship anarchy zine.",
+        meta: "Quest V — Education",
+        description: "A queer education project built in public.",
+        tags: ["Education", "Community", "Publishing"],
+        goal: "Create a platform for honest, accessible education around sexuality, relationships, and identity.",
+        outcome: "A body of educational content, workshops, and a printed relationship anarchy zine.",
         details: {
-          role: "Producer & Host",
-          timeframe: "2023",
+          role: "Founder & Educator",
+          timeframe: "2022–2024",
           situation:
-            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+            "Build a queer education project that could live online and offline—giving people language, frameworks, and community around sexuality, relationships, and identity.",
           approach:
-            "Produced a series of in-person events under the ayem banner in Mexico City—including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
+            "Created ayem as an ongoing educational platform: visual content, workshops, and printed materials—including a zine on relationship anarchy designed to deconstruct how we relate to others and build our own models of love.",
           workItems: [
-            "5+ events produced independently in Mexico City",
-            "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
             "Educational workshops on sexuality, relationships, and identity",
+            "Visual identity and content design across event flyers and digital assets",
             "Relationship anarchy zine produced and distributed",
-            "Sleepover community party",
           ],
           embeds: [
             yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
@@ -813,16 +811,40 @@ export const characters: Record<CharacterId, Character> = {
             { src: ayemShot1, alt: "ayem event design" },
             { src: ayemShot2, alt: "ayem event design" },
             { src: ayemShot3, alt: "ayem event design" },
-            { src: gather1, alt: "ayem gathering" },
-            { src: gather2, alt: "ayem gathering" },
-            { src: gather3, alt: "ayem gathering" },
-            { src: gather4, alt: "ayem gathering" },
           ],
           attachments: [
             {
               label: "Download the Relationship Anarchy zine (PDF) ↗",
               href: "/quest-assets/ayem-relationship-anarchy-zine.pdf",
             },
+          ],
+        },
+      },
+      {
+        slug: "gatherings",
+        title: "Gatherings: Taking Community Offline",
+        meta: "Quest VI — Gatherings",
+        description: "Five events. One city. Real people in a room together.",
+        tags: ["Events", "Community", "Production"],
+        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation.",
+        outcome: "5+ events independently produced in Mexico City, including the Sleepover community party.",
+        details: {
+          role: "Producer & Host",
+          timeframe: "2023",
+          situation:
+            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation. Build something that could only exist in a room.",
+          approach:
+            "Produced a series of in-person events in Mexico City—including 'Exploring Relationship Anarchy' at HAAB Project, and Sleepover, a recurring community party. Each gathering designed to bring online conversations into shared physical space.",
+          workItems: [
+            "5+ events produced independently in Mexico City",
+            "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
+            "Sleepover community party",
+          ],
+          gallery: [
+            { src: gather1, alt: "Gathering in Mexico City" },
+            { src: gather2, alt: "Gathering in Mexico City" },
+            { src: gather3, alt: "Gathering in Mexico City" },
+            { src: gather4, alt: "Gathering in Mexico City" },
           ],
         },
       },
