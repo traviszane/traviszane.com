@@ -332,16 +332,19 @@ function QuestPage() {
           </section>
         )}
 
-        <div className="mt-16 flex flex-wrap gap-2">
-          {ch.tags.map((t) => (
-            <span
-              key={t}
-              className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
+        {ch.href && (
+          <div className="mt-16 flex justify-center">
+            <a
+              href={ch.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
+              style={{ borderColor: `color-mix(in oklab, ${color} 50%, transparent)`, color }}
             >
-              {t}
-            </span>
-          ))}
-        </div>
+              Visit&nbsp;the&nbsp;quest <span aria-hidden>↗</span>
+            </a>
+          </div>
+        )}
 
         <QuestFooterNav
           characterId={id as CharacterId}
