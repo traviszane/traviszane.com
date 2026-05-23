@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
+import { QuestEmbed } from "@/components/QuestEmbed";
 import { characters, type CharacterId } from "@/lib/characters";
 
 
