@@ -276,8 +276,16 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "10,000+ subscribers and growing. Three fellowships awarded based on video work (Quanta, Kakehashi, Duttenhaver).",
       },
       {
+        title: "20+ Brand Collaborations",
+        meta: "Quest III — Brand",
+        description: "Partnering with brands small and large.",
+        tags: ["Brand Partnerships", "Content", "Creative Direction"],
+        goal: "Build a body of brand partnership work that spans industries, creating content that feels genuine, as opposed to sales-focused.",
+        outcome: "20+ collaborations with brands small and large, including Google, Spotify, and Adobe.",
+      },
+      {
         title: "Community Events: NYC, SF, CDMX",
-        meta: "Quest III — Experience",
+        meta: "Quest IV — Experience",
         description: "Bringing people together to create and share.",
         tags: ["Events", "Community"],
         goal: "Take the online community offline by creating physical spaces in urban environments for creative expression, connection, and honest conversation.",
