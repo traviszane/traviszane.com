@@ -9,7 +9,7 @@ export function SiteHeader() {
         to="/"
         className="font-display text-xl uppercase italic tracking-wide text-foreground hover:text-primary transition-colors"
       >
-        <span className="text-primary">☷</span>&nbsp;TRAVIS&nbsp;ZANE
+        <span className="text-primary not-italic inline-block align-middle -translate-y-[0.5px]">☷</span>&nbsp;TRAVIS&nbsp;ZANE
       </Link>
 
       <nav className="absolute left-1/2 -translate-x-1/2 hidden sm:flex items-center gap-4">
