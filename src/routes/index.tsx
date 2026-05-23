@@ -30,7 +30,10 @@ export const Route = createFileRoute("/")({
           "A portfolio shaped like a character-select screen. Pick the Writer, Marketer, or Creator to explore each body of work.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://traviszane.com/" }],
+    links: [
+      { rel: "canonical", href: "https://traviszane.com/" },
+      { rel: "preload", as: "image", href: backdropUrl, fetchpriority: "high" },
+    ],
   }),
   component: Index,
 });
