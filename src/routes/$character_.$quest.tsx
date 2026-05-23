@@ -127,44 +127,194 @@ function QuestPage() {
               {d.timeframe && <Meta label="Timeframe" value={d.timeframe} />}
             </section>
 
-            <section className="mt-10 anim-fade-up">
-              <p className="text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                {d.summary}
-              </p>
-            </section>
+            {d.situation && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ The Situation
+                </h2>
+                <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
+                  {d.situation}
+                </p>
+              </section>
+            )}
 
-            {d.metrics && d.metrics.length > 0 && (
-              <section className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 anim-fade-up">
-                {d.metrics.map((m) => (
-                  <div
-                    key={m.label}
-                    className="rounded-md border border-border bg-card/60 px-4 py-4 backdrop-blur-sm"
+            {d.approach && (
+              <section className="mt-10 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ The Approach
+                </h2>
+                <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
+                  {d.approach}
+                </p>
+              </section>
+            )}
+
+            {d.summary && !d.situation && (
+              <section className="mt-10 anim-fade-up">
+                <p className="text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
+                  {d.summary}
+                </p>
+              </section>
+            )}
+
+            {d.workItems && d.workItems.length > 0 && (
+              <section className="mt-10 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ The Work
+                </h2>
+                <ul className="mt-4 space-y-2 max-w-2xl">
+                  {d.workItems.map((w) => (
+                    <li
+                      key={w}
+                      className="flex gap-3 text-sm md:text-base text-foreground/85 leading-relaxed"
+                    >
+                      <span aria-hidden style={{ color }}>▸</span>
+                      <span>{w}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {d.sections && d.sections.length > 0 && (
+              <section className="mt-12 space-y-8">
+                {d.sections.map((s, i) => (
+                  <article
+                    key={s.heading}
+                    className="anim-fade-up"
+                    style={{ animationDelay: `${i * 80}ms` }}
                   >
-                    <div className="font-display italic text-3xl tabular-nums" style={{ color }}>
-                      {m.value}
-                    </div>
-                    <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                      {m.label}
-                    </div>
-                  </div>
+                    <h3 className="font-display uppercase italic text-2xl md:text-3xl tracking-tight" style={{ color }}>
+                      {s.heading}
+                    </h3>
+                    <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{s.body}</p>
+                  </article>
                 ))}
               </section>
             )}
 
-            <section className="mt-12 space-y-8">
-              {d.sections.map((s, i) => (
-                <article
-                  key={s.heading}
-                  className="anim-fade-up"
-                  style={{ animationDelay: `${i * 80}ms` }}
-                >
-                  <h2 className="font-display uppercase italic text-2xl md:text-3xl tracking-tight" style={{ color }}>
-                    {s.heading}
-                  </h2>
-                  <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{s.body}</p>
-                </article>
-              ))}
-            </section>
+            {d.metrics && d.metrics.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ The Outcome
+                </h2>
+                <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {d.metrics.map((m) => (
+                    <div
+                      key={m.label}
+                      className="rounded-md border border-border bg-card/60 px-4 py-4 backdrop-blur-sm"
+                    >
+                      <div className="font-display italic text-3xl tabular-nums" style={{ color }}>
+                        {m.value}
+                      </div>
+                      <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                        {m.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {d.embeds && d.embeds.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ Receipts
+                </h2>
+                <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                  {d.embeds.map((e, i) => (
+                    <QuestEmbed key={`${e.type}-${i}-${e.url}`} embed={e} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {d.gallery && d.gallery.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ Gallery
+                </h2>
+                <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {d.gallery.map((g, i) => (
+                    <a
+                      key={i}
+                      href={g.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block overflow-hidden rounded-md border border-border bg-card/40"
+                    >
+                      <img
+                        src={g.src}
+                        alt={g.alt}
+                        loading="lazy"
+                        className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {d.testimonials && d.testimonials.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ What Readers Say
+                </h2>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 max-w-3xl">
+                  {d.testimonials.map((t, i) => (
+                    <blockquote
+                      key={i}
+                      className="rounded-md border border-border bg-card/60 px-4 py-3 italic text-foreground/85 text-sm leading-relaxed"
+                      style={{ borderLeftColor: color, borderLeftWidth: 3 }}
+                    >
+                      “{t}”
+                    </blockquote>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {d.pressLinks && d.pressLinks.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ Press
+                </h2>
+                <ul className="mt-3 space-y-2 max-w-2xl">
+                  {d.pressLinks.map((p) => (
+                    <li key={p.url}>
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm md:text-base text-foreground/90 hover:text-foreground underline-offset-4 hover:underline"
+                      >
+                        {p.label} <span aria-hidden>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {d.attachments && d.attachments.length > 0 && (
+              <section className="mt-10 flex flex-wrap gap-3 anim-fade-up">
+                {d.attachments.map((a) => (
+                  <a
+                    key={a.href}
+                    href={a.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
+                    style={{
+                      borderColor: `color-mix(in oklab, ${color} 50%, transparent)`,
+                      color,
+                    }}
+                  >
+                    {a.label}
+                  </a>
+                ))}
+              </section>
+            )}
           </>
         ) : (
           <section
