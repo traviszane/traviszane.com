@@ -46,7 +46,7 @@ export function ChangeCharacterMenu({ currentId }: { currentId?: CharacterId }) 
               >
                 <span
                   aria-hidden
-                  className={`inline-block rounded-full ${isCurrent ? "size-2.5" : "size-2"}`}
+                  className={`inline-block rounded-full ${isCurrent ? "size-2" : "size-1.5"}`}
                   style={{
                     background: chColor,
                     boxShadow: isCurrent
