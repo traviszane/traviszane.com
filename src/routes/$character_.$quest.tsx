@@ -225,11 +225,17 @@ function QuestFooterNav({
       <Link
         to="/$character"
         params={{ character: characterId }}
-        className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-primary transition-colors"
+        className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground transition-colors"
       >
         <span aria-hidden>←</span>
         <span>
-          Back&nbsp;to&nbsp;<span className="text-foreground group-hover:text-primary transition-colors">{characterName}</span>
+          Back&nbsp;to&nbsp;
+          <span
+            className="font-semibold transition-opacity group-hover:opacity-80"
+            style={{ color }}
+          >
+            {characterName}
+          </span>
         </span>
       </Link>
 
@@ -249,11 +255,12 @@ function QuestFooterNav({
           }}
           aria-haspopup="menu"
           aria-expanded={open}
-          className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-primary transition-colors"
+          className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
         >
           <span>More&nbsp;quests</span>
-          <span aria-hidden>→</span>
+          <span aria-hidden className={`transition-transform ${open ? "translate-y-0.5" : ""}`}>↓</span>
         </button>
+
 
         <div
           role="menu"
