@@ -83,7 +83,7 @@ function QuestPage() {
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.3em]">
             <span className="font-semibold" style={{ color }}>{c.name}</span>
             <span className="text-muted-foreground/40">·</span>
-            <span className="text-muted-foreground/60">{ch.meta}</span>
+            <span style={{ color }}>{ch.meta}</span>
           </div>
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
             {ch.title}
