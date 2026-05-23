@@ -276,7 +276,7 @@ function CharacterPage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary">
-                ✦ End of path
+                ☷ End of path
               </div>
               <h3 className="mt-2 font-display uppercase italic text-2xl md:text-4xl tracking-tight">
                 Ready to start a quest together?
