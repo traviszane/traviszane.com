@@ -91,6 +91,16 @@ function QuestPage() {
           </h1>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{ch.description}</p>
 
+          <div className="mt-5 flex flex-wrap gap-2">
+            {ch.tags.map((t) => (
+              <span
+                key={t}
+                className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
 
           <dl className="mt-6 grid gap-3 sm:grid-cols-2 max-w-2xl">
             {ch.goal && (
@@ -106,18 +116,6 @@ function QuestPage() {
               </div>
             )}
           </dl>
-
-          {ch.href && (
-            <a
-              href={ch.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
-              style={{ borderColor: `color-mix(in oklab, ${color} 50%, transparent)`, color }}
-            >
-              Visit&nbsp;the&nbsp;quest <span aria-hidden>↗</span>
-            </a>
-          )}
         </header>
 
         {d ? (
@@ -334,16 +332,19 @@ function QuestPage() {
           </section>
         )}
 
-        <div className="mt-16 flex flex-wrap gap-2">
-          {ch.tags.map((t) => (
-            <span
-              key={t}
-              className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border rounded px-2 py-0.5"
+        {ch.href && (
+          <div className="mt-16 flex justify-center">
+            <a
+              href={ch.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
+              style={{ borderColor: `color-mix(in oklab, ${color} 50%, transparent)`, color }}
             >
-              {t}
-            </span>
-          ))}
-        </div>
+              Visit&nbsp;the&nbsp;quest <span aria-hidden>↗</span>
+            </a>
+          </div>
+        )}
 
         <QuestFooterNav
           characterId={id as CharacterId}
