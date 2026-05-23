@@ -73,14 +73,6 @@ function QuestPage() {
       <SiteHeader />
 
       <main className="relative z-10 mx-auto max-w-4xl px-6 pb-24 md:px-10">
-        <Link
-          to="/$character"
-          params={{ character: id }}
-          className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span>←</span> Back&nbsp;to&nbsp;quest&nbsp;log
-        </Link>
-
         <header className="mt-8 anim-fade-up">
           <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em]" style={{ color }}>
             <span className="font-semibold">{c.name}</span>
