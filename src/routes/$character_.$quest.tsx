@@ -2,7 +2,9 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
+import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
 import { characters, type CharacterId } from "@/lib/characters";
+
 
 export const Route = createFileRoute("/$character_/$quest")({
   beforeLoad: ({ params }) => {
