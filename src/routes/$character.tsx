@@ -251,18 +251,18 @@ function CharacterPage() {
               const cls =
                 "group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up";
               return (
-                <li key={ch.title} style={{ animationDelay: `${i * 80}ms` }} className="contents">
+                <li key={ch.title} style={{ animationDelay: `${i * 35}ms` }} className="contents">
                   {ch.slug ? (
                     <Link
                       to="/$character/$quest"
                       params={{ character: id, quest: ch.slug }}
                       className={cls}
-                      style={{ animationDelay: `${i * 80}ms` }}
+                      style={{ animationDelay: `${i * 35}ms` }}
                     >
                       {inner}
                     </Link>
                   ) : (
-                    <div className={cls} style={{ animationDelay: `${i * 80}ms` }}>
+                    <div className={cls} style={{ animationDelay: `${i * 35}ms` }}>
                       {inner}
                     </div>
                   )}

@@ -174,9 +174,10 @@
   52% { opacity: 1; }
 }
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -194,7 +195,7 @@
 .anim-idle { animation: float-y 3.2s ease-in-out infinite; }
 .anim-glow { animation: glow-pulse 2.4s ease-in-out infinite; }
 .anim-flicker { animation: flicker 3s linear infinite; }
-.anim-fade-up { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.anim-fade-up { animation: fade-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .anim-blink { animation: blink 1.1s steps(2) infinite; }
 .anim-wind { animation: wind-sway 4.5s ease-in-out infinite; transform-origin: 50% 90%; }
 .anim-drift { animation: drift-particle 6s ease-in-out infinite; }
