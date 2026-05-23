@@ -260,36 +260,39 @@ function QuestFooterNav({
 
         <div
           role="menu"
-          className={`absolute right-0 bottom-full mb-3 w-72 rounded-md border border-border bg-card/95 p-2 backdrop-blur-md shadow-lg transition-all origin-bottom-right ${
-            questOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"
+          className={`absolute right-0 bottom-full pb-3 w-72 origin-bottom-right transition-opacity ${
+            questOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
         >
-          <div className="px-3 pt-2 pb-1 font-mono text-[9px] uppercase tracking-[0.28em]" style={{ color }}>
-            ◆ {characterName} · Quests
+          <div className="rounded-md border border-border bg-card/95 p-2 backdrop-blur-md shadow-lg">
+            <div className="px-3 pt-2 pb-1 font-mono text-[9px] uppercase tracking-[0.28em]" style={{ color }}>
+              ◆ {characterName} · Quests
+            </div>
+            <ul className="mt-1">
+              {otherQuests.map((q) =>
+                q.slug ? (
+                  <li key={q.slug}>
+                    <Link
+                      to="/$character/$quest"
+                      params={{ character: characterId, quest: q.slug }}
+                      role="menuitem"
+                      className="block rounded-sm px-3 py-2 transition-colors hover:bg-background/60 focus:bg-background/60 outline-none"
+                    >
+                      <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
+                        {q.meta}
+                      </div>
+                      <div className="mt-0.5 font-display italic text-base leading-tight text-foreground">
+                        {q.title}
+                      </div>
+                    </Link>
+                  </li>
+                ) : null,
+              )}
+            </ul>
           </div>
-          <ul className="mt-1">
-            {otherQuests.map((q) =>
-              q.slug ? (
-                <li key={q.slug}>
-                  <Link
-                    to="/$character/$quest"
-                    params={{ character: characterId, quest: q.slug }}
-                    role="menuitem"
-                    className="block rounded-sm px-3 py-2 transition-colors hover:bg-background/60 focus:bg-background/60 outline-none"
-                  >
-                    <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
-                      {q.meta}
-                    </div>
-                    <div className="mt-0.5 font-display italic text-base leading-tight text-foreground">
-                      {q.title}
-                    </div>
-                  </Link>
-                </li>
-              ) : null,
-            )}
-          </ul>
         </div>
       </div>
+
     </nav>
   );
 }
