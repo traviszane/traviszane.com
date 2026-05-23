@@ -96,7 +96,7 @@ function AboutPage() {
           </a>
           <Link
             to="/"
-            className="border border-border px-4 py-2.5 text-foreground/60 transition-colors hover:text-foreground"
+            className="border border-border px-4 py-2.5 text-foreground transition-colors hover:text-primary"
           >
             ← Back to Select
           </Link>
