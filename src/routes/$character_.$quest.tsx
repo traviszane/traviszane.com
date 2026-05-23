@@ -75,16 +75,21 @@ function QuestPage() {
       <SiteHeader />
 
       <main className="relative z-10 mx-auto max-w-4xl px-6 pb-24 md:px-10">
-        <header className="mt-8 anim-fade-up">
-          <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em]" style={{ color }}>
-            <span className="font-semibold">{c.name}</span>
-            <span className="text-muted-foreground/60">·</span>
-            <span>{ch.meta}</span>
+        <div className="mt-2">
+          <ChangeCharacterMenu currentId={id as CharacterId} />
+        </div>
+
+        <header className="mt-6 anim-fade-up">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.3em]">
+            <span className="font-semibold" style={{ color }}>{c.name}</span>
+            <span className="text-muted-foreground/40">·</span>
+            <span className="text-muted-foreground/60">{ch.meta}</span>
           </div>
-          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-foreground">
+          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
             {ch.title}
           </h1>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{ch.description}</p>
+
 
           <dl className="mt-6 grid gap-3 sm:grid-cols-2 max-w-2xl">
             {ch.goal && (
