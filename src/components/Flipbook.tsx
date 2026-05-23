@@ -106,7 +106,7 @@ export function Flipbook() {
           type="button"
           onClick={prev}
           aria-label="Previous photo"
-          className="flex h-7 w-7 items-center justify-center border border-border text-foreground/70 transition-colors hover:border-primary hover:text-primary"
+          className="flex h-7 w-7 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary"
         >
           <ChevronLeft className="h-3.5 w-3.5" />
         </button>
@@ -114,7 +114,7 @@ export function Flipbook() {
           type="button"
           onClick={() => setPlaying((p) => !p)}
           aria-label={playing ? "Pause auto-loop" : "Play auto-loop"}
-          className="flex h-7 items-center gap-1.5 border border-border px-2.5 font-mono text-[9px] uppercase tracking-[0.25em] text-foreground/70 transition-colors hover:border-primary hover:text-primary"
+          className="flex h-7 items-center gap-1.5 border border-border px-2.5 font-mono text-[9px] uppercase tracking-[0.25em] text-foreground transition-colors hover:border-primary hover:text-primary"
         >
           {playing ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
           {playing ? "Auto" : "Paused"}
@@ -123,7 +123,7 @@ export function Flipbook() {
           type="button"
           onClick={next}
           aria-label="Next photo"
-          className="flex h-7 w-7 items-center justify-center border border-border text-foreground/70 transition-colors hover:border-primary hover:text-primary"
+          className="flex h-7 w-7 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary"
         >
           <ChevronRight className="h-3.5 w-3.5" />
         </button>
