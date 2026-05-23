@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { characters, type CharacterId } from "@/lib/characters";
 
-export const Route = createFileRoute("/$character/$quest")({
+export const Route = createFileRoute("/$character_/$quest")({
   beforeLoad: ({ params }) => {
     const c = characters[params.character as CharacterId];
     if (!c) throw notFound();
