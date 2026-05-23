@@ -41,12 +41,12 @@ export function ChangeCharacterMenu({ currentId }: { currentId?: CharacterId }) 
                 params={{ character: ch.id }}
                 role="menuitem"
                 className={`flex items-center gap-2 rounded-sm px-3 py-2 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-background/60 ${
-                  isCurrent ? "opacity-100" : "opacity-50 hover:opacity-80"
+                  isCurrent ? "opacity-100 font-bold" : "opacity-50 hover:opacity-80"
                 }`}
               >
                 <span
                   aria-hidden
-                  className={`inline-block rounded-full ${isCurrent ? "size-2" : "size-1.5"}`}
+                  className="inline-block rounded-full size-1.5"
                   style={{
                     background: chColor,
                     boxShadow: isCurrent
