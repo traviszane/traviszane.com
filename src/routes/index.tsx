@@ -5,6 +5,7 @@ import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterCard } from "@/components/CharacterCard";
 import { useTheme } from "@/components/ThemeProvider";
 import { characterList, type CharacterId } from "@/lib/characters";
+import backdropUrl from "@/assets/scene-backdrop.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
