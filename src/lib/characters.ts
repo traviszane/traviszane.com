@@ -87,9 +87,9 @@ export const characters: Record<CharacterId, Character> = {
     colorVar: "--writer",
     xp: [
       { label: "Stories written", value: "20+" },
-      { label: "Publications shipped", value: "5" },
       { label: "Awards granted", value: "5" },
-      { label: "Novels drafted", value: "2" },
+      { label: "Novels drafted", value: "4" },
+      { label: "Publications shipped", value: "3" },
     ],
     skills: [
       { label: "Voice", tier: "S-TIER" },
@@ -155,9 +155,9 @@ export const characters: Record<CharacterId, Character> = {
     colorVar: "--marketer",
     xp: [
       { label: "Campaigns planned", value: "100+" },
-      { label: "Years in marketing", value: "10+" },
+      { label: "Products launched", value: "15+" },
       { label: "Markets reached", value: "12+" },
-      { label: "Products launched", value: "10+" },
+      { label: "Years in marketing", value: "10+" },
     ],
     skills: [
       { label: "Strategy", tier: "S-TIER" },
