@@ -46,16 +46,12 @@ function CharacterPage() {
 
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-10">
         <div className="flex items-center justify-between gap-6 sm:gap-10">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors shrink-0"
-          >
-            <span>←</span> Change&nbsp;character
-          </Link>
+          <ChangeCharacterMenu currentId={id as CharacterId} />
           <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground text-right shrink-0">
             Class <span style={{ color }}>{fileNumber}</span>
           </span>
         </div>
+
 
         <section className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
