@@ -266,7 +266,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "25,000+ followers across California and Mexico City. A community that has grown alongside the work since college.",
       },
       {
-        href: "https://youtube.com/@travontheweb",
+        href: "https://www.youtube.com/@traviszane",
         title: "YouTube: Experimental Docs",
         meta: "Quest II — Video",
         description: "Moving image as a medium for ideas, not just content.",
