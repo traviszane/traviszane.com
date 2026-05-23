@@ -14,17 +14,17 @@ export function ThemeToggle() {
     >
       <SlotButton
         slot="01"
-        label="Light"
-        icon={<Sun className="h-3.5 w-3.5" strokeWidth={2.5} />}
-        active={!isDark}
-        onClick={() => { if (isDark) toggle(); }}
-      />
-      <SlotButton
-        slot="02"
         label="Dark"
         icon={<Moon className="h-3.5 w-3.5" strokeWidth={2.5} />}
         active={isDark}
         onClick={() => { if (!isDark) toggle(); }}
+      />
+      <SlotButton
+        slot="02"
+        label="Light"
+        icon={<Sun className="h-3.5 w-3.5" strokeWidth={2.5} />}
+        active={!isDark}
+        onClick={() => { if (isDark) toggle(); }}
       />
     </div>
   );
