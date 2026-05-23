@@ -1,8 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterSprite } from "@/components/CharacterSprite";
 import { characters, characterList, type CharacterId } from "@/lib/characters";
+
 
 export const Route = createFileRoute("/$character")({
   beforeLoad: ({ params }) => {
@@ -44,16 +46,12 @@ function CharacterPage() {
 
       <main className="relative z-10 mx-auto max-w-7xl px-6 pb-24 md:px-10">
         <div className="flex items-center justify-between gap-6 sm:gap-10">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors shrink-0"
-          >
-            <span>←</span> Change&nbsp;character
-          </Link>
+          <ChangeCharacterMenu currentId={id as CharacterId} />
           <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground text-right shrink-0">
             Class <span style={{ color }}>{fileNumber}</span>
           </span>
         </div>
+
 
         <section className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr] anim-fade-up">
           <div
@@ -298,6 +296,64 @@ function CharacterPage() {
     </div>
   );
 }
+
+function ChangeCharacterMenu({ currentId }: { currentId: CharacterId }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className="relative shrink-0"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpen(false);
+      }}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        onFocus={() => setOpen(true)}
+        className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
+        aria-haspopup="menu"
+        aria-expanded={open}
+      >
+        <span>←</span> Change&nbsp;character <span aria-hidden>↓</span>
+      </button>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-0 top-full mt-2 min-w-[12rem] rounded-md border border-border bg-card/95 backdrop-blur-sm p-1 shadow-lg z-30"
+        >
+          {characterList.map((ch) => {
+            const chColor = `var(${ch.colorVar})`;
+            const isCurrent = ch.id === currentId;
+            return (
+              <Link
+                key={ch.id}
+                to="/$character"
+                params={{ character: ch.id }}
+                role="menuitem"
+                className={`flex items-center gap-2 rounded-sm px-3 py-2 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-background/60 ${
+                  isCurrent ? "opacity-60" : ""
+                }`}
+              >
+                <span
+                  aria-hidden
+                  className="inline-block size-2 rounded-full"
+                  style={{ background: chColor, boxShadow: `0 0 8px ${chColor}` }}
+                />
+                <span style={{ color: chColor }}>{ch.name}</span>
+                {isCurrent && (
+                  <span className="ml-auto text-[9px] text-muted-foreground">current</span>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 
 function Brackets() {
   const cls = "absolute size-4 border-primary/70";
