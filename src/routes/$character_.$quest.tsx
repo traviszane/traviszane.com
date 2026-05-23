@@ -209,57 +209,101 @@ function QuestFooterNav({
   color: string;
   otherQuests: { slug?: string; title: string; meta: string }[];
 }) {
-  const [open, setOpen] = useState(false);
+  const [charOpen, setCharOpen] = useState(false);
+  const [questOpen, setQuestOpen] = useState(false);
+  const characterList = Object.values(characters);
 
   return (
     <nav
       aria-label="Quest navigation"
       className="mt-20 border-t border-border pt-6 flex items-center justify-between gap-4"
     >
-      <Link
-        to="/$character"
-        params={{ character: characterId }}
-        className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground transition-colors"
-      >
-        <span aria-hidden>←</span>
-        <span>
-          Back&nbsp;to&nbsp;
-          <span
-            className="font-semibold transition-opacity group-hover:opacity-80"
-            style={{ color }}
-          >
-            {characterName}
-          </span>
-        </span>
-      </Link>
-
       <div
         className="relative"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        onMouseEnter={() => setCharOpen(true)}
+        onMouseLeave={() => setCharOpen(false)}
       >
         <button
           type="button"
-          onClick={() => setOpen((v) => !v)}
-          onFocus={() => setOpen(true)}
+          onClick={() => setCharOpen((v) => !v)}
+          onFocus={() => setCharOpen(true)}
           onBlur={(e) => {
             if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) {
-              setOpen(false);
+              setCharOpen(false);
             }
           }}
           aria-haspopup="menu"
-          aria-expanded={open}
+          aria-expanded={charOpen}
+          className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <span aria-hidden>←</span>
+          <span>Change&nbsp;character</span>
+          <span
+            aria-hidden
+            className={`transition-transform ${charOpen ? "-rotate-90" : ""}`}
+          >
+            ↓
+          </span>
+        </button>
+
+        <div
+          role="menu"
+          className={`absolute left-0 bottom-full mb-3 w-64 rounded-md border border-border bg-card/95 p-2 backdrop-blur-md shadow-lg transition-all origin-bottom-left ${
+            charOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"
+          }`}
+        >
+          <ul className="mt-1">
+            {characterList.map((c) => (
+              <li key={c.id}>
+                <Link
+                  to="/$character"
+                  params={{ character: c.id }}
+                  role="menuitem"
+                  className="flex items-center gap-3 rounded-sm px-3 py-2.5 transition-colors hover:bg-background/60 focus:bg-background/60 outline-none"
+                >
+                  <span
+                    className="inline-block h-2 w-2 rounded-full"
+                    style={{ backgroundColor: `var(${c.colorVar})` }}
+                  />
+                  <span
+                    className="font-display italic text-base leading-tight"
+                    style={{ color: `var(${c.colorVar})` }}
+                  >
+                    {c.name}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        className="relative"
+        onMouseEnter={() => setQuestOpen(true)}
+        onMouseLeave={() => setQuestOpen(false)}
+      >
+        <button
+          type="button"
+          onClick={() => setQuestOpen((v) => !v)}
+          onFocus={() => setQuestOpen(true)}
+          onBlur={(e) => {
+            if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) {
+              setQuestOpen(false);
+            }
+          }}
+          aria-haspopup="menu"
+          aria-expanded={questOpen}
           className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
         >
           <span>More&nbsp;quests</span>
-          <span aria-hidden className={`transition-transform ${open ? "translate-y-0.5" : ""}`}>↓</span>
+          <span aria-hidden className={`transition-transform ${questOpen ? "translate-y-0.5" : ""}`}>↓</span>
         </button>
-
 
         <div
           role="menu"
           className={`absolute right-0 bottom-full mb-3 w-72 rounded-md border border-border bg-card/95 p-2 backdrop-blur-md shadow-lg transition-all origin-bottom-right ${
-            open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"
+            questOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"
           }`}
         >
           <div className="px-3 pt-2 pb-1 font-mono text-[9px] uppercase tracking-[0.28em]" style={{ color }}>
