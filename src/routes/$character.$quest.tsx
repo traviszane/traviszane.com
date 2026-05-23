@@ -18,17 +18,17 @@ export const Route = createFileRoute("/$character/$quest")({
     const desc =
       base.length >= 50
         ? base
-        : `${ch.title} — a ${c.className.toLowerCase()} quest by Travis Zane. ${base}`.slice(0, 160);
+        : `${ch.title}—a ${c.className.toLowerCase()} quest by Travis Zane. ${base}`.slice(0, 160);
     const url = `https://traviszane.com/${params.character}/${params.quest}`;
     return {
       meta: [
-        { title: `${ch.title} — ${c.name}` },
+        { title: `${ch.title}—${c.name}` },
         { name: "description", content: desc },
-        { property: "og:title", content: `${ch.title} — ${c.name}` },
+        { property: "og:title", content: `${ch.title}—${c.name}` },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { name: "twitter:title", content: `${ch.title} — ${c.name}` },
+        { name: "twitter:title", content: `${ch.title}—${c.name}` },
         { name: "twitter:description", content: desc },
       ],
       links: [{ rel: "canonical", href: url }],

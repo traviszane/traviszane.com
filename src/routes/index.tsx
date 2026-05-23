@@ -10,11 +10,11 @@ import backdropUrl from "@/assets/scene-backdrop.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Choose your character. — Travis Zane" },
+      { title: "Choose your character.—Travis Zane" },
       {
         name: "description",
         content:
-          "Pick a character — Writer, Marketer, or Creator — and explore the work behind each path of Travis Zane's portfolio.",
+          "Pick a character—Writer, Marketer, or Creator—and explore the work behind each path of Travis Zane's portfolio.",
       },
       { property: "og:title", content: "Choose your character." },
       {
@@ -52,7 +52,7 @@ function Index() {
         <section className="mb-4 max-w-3xl anim-fade-up md:mb-6">
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             <span className="size-1.5 bg-primary anim-blink" />
-            New Game — Slot {slot}
+            New Game—Slot {slot}
           </div>
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-7xl leading-[0.9] tracking-tight text-foreground">
             Choose your{" "}
