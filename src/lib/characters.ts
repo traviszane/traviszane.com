@@ -281,7 +281,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Partnering with brands small and large.",
         tags: ["Brand Partnerships", "Content", "Creative Direction"],
         goal: "Build a body of brand partnership work that spans industries, creating content that feels genuine, as opposed to sales-focused.",
-        outcome: "20+ collaborations with brands small and large, including Google, Spotify, and Adobe.",
+        outcome: "Paid collaborations with brands small and large, including Google, Spotify, and Adobe.",
       },
       {
         title: "Community Events: NYC, SF, CDMX",
