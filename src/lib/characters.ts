@@ -104,6 +104,7 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["Essay", "Memoir", "Literary Fiction", "Editing", "Newsletter"],
     chapters: [
       {
+        slug: "sleepover",
         href: "https://sleepoverxyz.substack.com",
         title: "Sleepover",
         meta: "Quest I — Newsletter",
@@ -113,6 +114,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "Growing subscriber base over two years of consistent publishing.",
       },
       {
+        slug: "half-thoughts",
         href: "https://amazon.com/Half-Thoughts-Phrases-Society-Disillusionment-ebook/dp/B0DZKHT2H7",
         title: "Half Thoughts",
         meta: "Quest II — Publication",
@@ -122,6 +124,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "Published March 2025. Available globally on Amazon in print and Kindle.",
       },
       {
+        slug: "revolukin-magazine",
         href: "https://instagram.com/revolukin",
         title: "Revolukin Magazine",
         meta: "Quest III — Print Media",
@@ -131,6 +134,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "$20,000 raised on Kickstarter. 3,000 copies printed and sold. 7,000+ community contributors. Issue 1 explored the human concept of time across 184 pages of personal essays, editorials, and interviews.",
       },
       {
+        slug: "trilogy-in-progress",
         title: "Trilogy in Progress",
         meta: "Quest IV — Long Form",
         description: "700,000+ words written across three manuscripts.",
@@ -172,6 +176,7 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["GTM Strategy", "Product", "Content", "Lifecycle", "Performance"],
     chapters: [
       {
+        slug: "deepprove-gtm",
         href: "https://lagrange.dev/blog/turing-roulette-recap-humanity",
         title: "GTM for AI Product DeepProve",
         meta: "Quest I — Launch",
@@ -181,6 +186,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "144,309 unique users generated 3.75M+ AI proofs. DeepProve launch hit 1.7M views. 30+ enterprise, AI, and finance partners secured.",
       },
       {
+        slug: "la-token-launch",
         href: "https://x.com/LagrangeFndn",
         title: "$LA Token Launch: Zero to $500M+",
         meta: "Quest II — Token Launch",
@@ -190,6 +196,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "$500M+ valuation at launch. 71K+ airdrop registrations. 1.7M+ views across retail-focused launch content. Coordinated cross-functional GTM across PR, exchange, and financial partners simultaneously.",
       },
       {
+        slug: "lagrange-social",
         href: "https://x.com/lagrangedev",
         title: "Lagrange Social Growth: 30K → 100K+",
         meta: "Quest III — Social Growth",
@@ -199,6 +206,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "340% YoY follower growth, 635K+ average monthly impressions. Top mindshare in verifiable AI on X.",
       },
       {
+        slug: "oasis-rebrand",
         href: "https://x.com/OasisProtocol",
         title: "Oasis Rebrand: Privacy Layer → AI Stack",
         meta: "Quest IV — Rebrand",
@@ -208,6 +216,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "767% YoY social growth, 20K → 200K+ on X, 5M+ average monthly impressions, 40K+ Discord community.",
       },
       {
+        slug: "superlayer",
         href: "https://x.com/superlayerio",
         title: "Superlayer Thought Leadership: 9K → 100K+",
         meta: "Quest V — Thought Leadership",
@@ -217,6 +226,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "481% social growth in six months. Thought leadership and newsletter strategy serving a 2M+ user base with 200K+ daily active users.",
       },
       {
+        slug: "rally",
         href: "https://x.com/rally_io",
         title: "Rally PR & Strategy: Fast Company Top 5",
         meta: "Quest VI — PR",
@@ -258,6 +268,7 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["UX", "Creative Code", "Photography", "Video", "Zine-Making"],
     chapters: [
       {
+        slug: "instagram",
         href: "https://instagram.com/travis_zane",
         title: "Instagram: 25K+ Community",
         meta: "Quest I — Community",
@@ -267,6 +278,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "25,000+ followers across the globe. A community that has grown alongside my creative interests since university.",
       },
       {
+        slug: "youtube",
         href: "https://www.youtube.com/@traviszane",
         title: "YouTube: Experimental Storytelling",
         meta: "Quest II — Video",
@@ -276,6 +288,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "10,000+ subscribers and growing. Three fellowships awarded based on video work (Quanta, Kakehashi, Duttenhaver).",
       },
       {
+        slug: "branded-content",
         title: "Branded Content Collaborations",
         meta: "Quest III — Brand",
         description: "Partnering with brands small and large.",
@@ -284,6 +297,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "Paid collaborations with brands small and large, including Google, Spotify, and Adobe.",
       },
       {
+        slug: "community-events",
         title: "Community Events: NYC, SF, CDMX",
         meta: "Quest IV — Experience",
         description: "Bringing people together to create and share.",
