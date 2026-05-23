@@ -1,9 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterSprite } from "@/components/CharacterSprite";
+import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
 import { characters, characterList, type CharacterId } from "@/lib/characters";
+
 
 
 export const Route = createFileRoute("/$character")({
