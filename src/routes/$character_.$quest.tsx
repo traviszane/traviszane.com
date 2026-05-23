@@ -82,8 +82,10 @@ function QuestPage() {
         </Link>
 
         <header className="mt-8 anim-fade-up">
-          <div className="font-mono text-[11px] uppercase tracking-[0.3em]" style={{ color }}>
-            {ch.meta}
+          <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em]" style={{ color }}>
+            <span className="font-semibold">{c.name}</span>
+            <span className="text-muted-foreground/60">·</span>
+            <span>{ch.meta}</span>
           </div>
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-foreground">
             {ch.title}
