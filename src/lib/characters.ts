@@ -106,7 +106,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://sleepoverxyz.substack.com",
         title: "Sleepover",
-        meta: "Quest I—Newsletter",
+        meta: "Quest I — Newsletter",
         description: "A biweekly letter about how to live better—delivered with intention.",
         tags: ["Newsletter", "Essay", "Community"],
         goal: "Build a dedicated readership around modern culture, presence, and the art of living—without the noise of social media.",
@@ -115,7 +115,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://amazon.com/Half-Thoughts-Phrases-Society-Disillusionment-ebook/dp/B0DZKHT2H7",
         title: "Half Thoughts",
-        meta: "Quest II—Publication",
+        meta: "Quest II — Publication",
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Essay", "Publication"],
         goal: "Write and self-publish a debut collection of phrases on self, sex, and society—an experiment in form and sincerity disguised as satire.",
@@ -124,7 +124,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://instagram.com/revolukin",
         title: "Revolukin Magazine",
-        meta: "Quest III—Print Media",
+        meta: "Quest III — Print Media",
         description: "A print magazine about the human experience. Funded, printed, shipped.",
         tags: ["Print", "Zine", "Crowdfunding", "Community", "Publication"],
         goal: "Create an independent print magazine celebrating 'revolutionary kin'—kind people doing meaningful things—at a time when print was supposed to be dead.",
@@ -132,7 +132,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         title: "Three Novels in Progress",
-        meta: "Quest IV—Long Form",
+        meta: "Quest IV — Long Form",
         description: "700,000+ words written. The work continues.",
         tags: ["Autofiction", "Long-Form"],
         goal: "Write three full-length works of autofiction—drawing from real life to find something universal.",
@@ -173,7 +173,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://lagrange.dev/blog/turing-roulette-recap-humanity",
         title: "GTM for AI Product DeepProve",
-        meta: "Quest I—Launch",
+        meta: "Quest I — Launch",
         description: "Launched verifiable AI to the world. Made it a game first.",
         tags: ["GTM Strategy", "Campaign", "Product Launch"],
         goal: "Introduce a technically complex AI product to developer and mainstream audiences without losing either.",
@@ -182,7 +182,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://x.com/LagrangeFndn",
         title: "$LA Token Launch: Zero to $500M+",
-        meta: "Quest II—Token Launch",
+        meta: "Quest II — Token Launch",
         description: "Took a token from concept to nine-figure valuation at launch.",
         tags: ["Token Launch", "GTM", "Partnerships", "PR"],
         goal: "Build the narrative, community, and distribution infrastructure to launch $LA at scale—coordinating PR, exchange, and financial partners across a single rollout.",
@@ -191,7 +191,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://x.com/lagrangedev",
         title: "Lagrange Social Growth: 30K → 100K+",
-        meta: "Quest III—Social Growth",
+        meta: "Quest III — Social Growth",
         description: "340% YoY growth. Built category authority in verifiable AI.",
         tags: ["Social Growth", "Content", "Brand"],
         goal: "Grow @lagrangedev from a niche developer account into a recognized voice in AI and ZK.",
@@ -200,7 +200,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://x.com/OasisProtocol",
         title: "Oasis Rebrand: Privacy Layer → AI Stack",
-        meta: "Quest IV—Rebrand",
+        meta: "Quest IV — Rebrand",
         description: "Repositioned a blockchain project as infrastructure for the AI era.",
         tags: ["Rebrand", "Positioning", "Category Creation"],
         goal: "Escape the crowded L1 narrative and establish Oasis as the privacy layer for AI—a new category entirely.",
@@ -209,7 +209,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://x.com/superlayerio",
         title: "Superlayer Thought Leadership: 9K → 100K+",
-        meta: "Quest V—Thought Leadership",
+        meta: "Quest V — Thought Leadership",
         description: "Built brand authority for an ecosystem nobody had heard of yet.",
         tags: ["Thought Leadership", "Newsletter", "GTM"],
         goal: "Establish Superlayer and its portfolio projects (Unite, Joyride, Hotline) as credible consumer brands from cold start.",
@@ -218,7 +218,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://x.com/rally_io",
         title: "Rally PR & Strategy: Fast Company Top 5",
-        meta: "Quest VI—PR",
+        meta: "Quest VI — PR",
         description: "Turned a creator economy platform into an industry story.",
         tags: ["PR", "Content", "Social"],
         goal: "Build Rally's public narrative and press presence for a creator token platform in a skeptical market.",
@@ -259,7 +259,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://instagram.com/travis_zane",
         title: "Instagram: 25K+ Community",
-        meta: "Quest I—Community",
+        meta: "Quest I — Community",
         description: "A decade of documentary-style living, shared in real time.",
         tags: ["Content", "Photography", "Community"],
         goal: "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm.",
@@ -268,7 +268,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         href: "https://www.youtube.com/@traviszane",
         title: "YouTube: Experimental Docs",
-        meta: "Quest II—Video",
+        meta: "Quest II — Video",
         description: "Moving image as a medium for ideas, not just content.",
         tags: ["Video", "Documentary", "Creative Direction"],
         goal: "Develop a distinct visual voice through experimental video—documentary-style, narrative-driven, built for people who want more than a thumbnail.",
@@ -276,7 +276,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         title: "NYC, SF, CDMX: In Person Experiences",
-        meta: "Quest III—Experience",
+        meta: "Quest III — Experience",
         description: "Five events. One city. Real people in a room together.",
         tags: ["Events", "Community"],
         goal: "Take the online community offline—create physical spaces amidst urban life for creative expression, connection, and honest conversation around sexuality and relationships.",
