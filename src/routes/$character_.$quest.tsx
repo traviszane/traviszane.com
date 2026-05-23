@@ -2,7 +2,9 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
+import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
 import { characters, type CharacterId } from "@/lib/characters";
+
 
 export const Route = createFileRoute("/$character_/$quest")({
   beforeLoad: ({ params }) => {
@@ -73,16 +75,21 @@ function QuestPage() {
       <SiteHeader />
 
       <main className="relative z-10 mx-auto max-w-4xl px-6 pb-24 md:px-10">
-        <header className="mt-8 anim-fade-up">
-          <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em]" style={{ color }}>
-            <span className="font-semibold">{c.name}</span>
-            <span className="text-muted-foreground/60">·</span>
-            <span>{ch.meta}</span>
+        <div className="mt-2">
+          <ChangeCharacterMenu currentId={id as CharacterId} />
+        </div>
+
+        <header className="mt-6 anim-fade-up">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.3em]">
+            <span className="font-semibold" style={{ color }}>{c.name}</span>
+            <span className="text-muted-foreground/40">·</span>
+            <span className="text-muted-foreground/60">{ch.meta}</span>
           </div>
-          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-foreground">
+          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
             {ch.title}
           </h1>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{ch.description}</p>
+
 
           <dl className="mt-6 grid gap-3 sm:grid-cols-2 max-w-2xl">
             {ch.goal && (
@@ -209,74 +216,25 @@ function QuestFooterNav({
   color: string;
   otherQuests: { slug?: string; title: string; meta: string }[];
 }) {
-  const [charOpen, setCharOpen] = useState(false);
   const [questOpen, setQuestOpen] = useState(false);
-  const characterList = Object.values(characters);
 
   return (
     <nav
       aria-label="Quest navigation"
       className="mt-20 border-t border-border pt-6 flex items-center justify-between gap-4"
     >
-      <div
-        className="relative"
-        onMouseEnter={() => setCharOpen(true)}
-        onMouseLeave={() => setCharOpen(false)}
+      <Link
+        to="/$character"
+        params={{ character: characterId }}
+        className="inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:opacity-80 transition-opacity"
       >
-        <button
-          type="button"
-          onClick={() => setCharOpen((v) => !v)}
-          onFocus={() => setCharOpen(true)}
-          onBlur={(e) => {
-            if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) {
-              setCharOpen(false);
-            }
-          }}
-          aria-haspopup="menu"
-          aria-expanded={charOpen}
-          className="group inline-flex items-center gap-2 font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <span aria-hidden>←</span>
-          <span>Change&nbsp;character</span>
-          <span
-            aria-hidden
-            className={`transition-transform ${charOpen ? "-rotate-90" : ""}`}
-          >
-            ↓
-          </span>
-        </button>
+        <span aria-hidden>←</span>
+        <span>
+          Back&nbsp;to&nbsp;
+          <span className="font-semibold" style={{ color }}>{characterName}</span>
+        </span>
+      </Link>
 
-        <div
-          role="menu"
-          className={`absolute left-0 bottom-full mb-3 w-64 rounded-md border border-border bg-card/95 p-2 backdrop-blur-md shadow-lg transition-all origin-bottom-left ${
-            charOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"
-          }`}
-        >
-          <ul className="mt-1">
-            {characterList.map((c) => (
-              <li key={c.id}>
-                <Link
-                  to="/$character"
-                  params={{ character: c.id }}
-                  role="menuitem"
-                  className="flex items-center gap-3 rounded-sm px-3 py-2.5 transition-colors hover:bg-background/60 focus:bg-background/60 outline-none"
-                >
-                  <span
-                    className="inline-block h-2 w-2 rounded-full"
-                    style={{ backgroundColor: `var(${c.colorVar})` }}
-                  />
-                  <span
-                    className="font-display italic text-base leading-tight"
-                    style={{ color: `var(${c.colorVar})` }}
-                  >
-                    {c.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
 
       <div
         className="relative"
