@@ -757,12 +757,12 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "refinery29-unleashed",
-        title: "Refinery29 × UNLEASHED: #ConnectingThread",
+        title: "Refinery29: Documentary Film Release",
         meta: "Quest IX — Creative Direction",
         description: "654K reach. 8.92% engagement. Zero budget.",
-        tags: ["Partnerships", "Content Strategy", "Brand"],
-        goal: "Create genuine hype for a Refinery29 documentary launch with no marketing budget—using nothing but creative leverage.",
-        outcome: "654,852 reach · 733,939 impressions · 8.92% avg engagement.",
+        tags: ["Partnerships", "Content", "Strategy", "Brand"],
+        goal: "Create genuine hype for a Refinery29 documentary launch with no marketing budget, using nothing but creative leverage and organic campaigns.",
+        outcome: "654,852 reach, 733,939 impressions, and 8.92% avg engagement.",
         details: {
           client: "UNLEASHED × Refinery29",
           role: "Campaign Director",
