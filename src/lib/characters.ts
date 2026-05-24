@@ -106,6 +106,8 @@ export interface GalleryImage {
   alt: string;
 }
 
+export type GalleryItem = GalleryImage | Embed;
+
 export interface CTA {
   label: string;
   href: string;
