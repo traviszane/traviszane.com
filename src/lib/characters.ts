@@ -237,6 +237,10 @@ export const characters: Record<CharacterId, Character> = {
             "Essays on modern culture and life",
             "Two years of uninterrupted publishing",
             "Growing subscriber base",
+            "Annual events (parties!) for readers",
+          ],
+          embeds: [
+            yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
           ],
           gallery: [
             { src: sleepoverHome, alt: "Sleepover newsletter homepage on Substack" },
@@ -1010,9 +1014,6 @@ export const characters: Record<CharacterId, Character> = {
             "Educational workshops on sexuality, relationships, and identity",
             "Relationship anarchy zine produced and distributed",
             "Sleepover community party",
-          ],
-          embeds: [
-            yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
           ],
           gallery: [
             { src: ayemFlyer1, alt: "ayem event flyer" },
