@@ -346,7 +346,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Author",
           timeframe: "Ongoing",
           situation:
-            "Write three full-length novels—narratives tied together—drawing from real life experiences.",
+            "Write three full-length novels, narratives tied together, drawing from real life experiences.",
           approach:
             "Over 700,000 words drafted across three manuscripts. Currently in editing and revision phases.",
           workItems: [
