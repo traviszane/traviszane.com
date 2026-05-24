@@ -913,11 +913,11 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "photography",
-        title: "Experiential Stills",
+        title: "EDITORIAL PHOTOGRAPHY",
         meta: "Quest III — Photography",
         description: "Featured at the Japanese American National Museum in Los Angeles.",
         tags: ["Editorial", "Documentary", "Art"],
-        goal: "Document life experience through photography—capturing the textures of culture, environment, technology, and mental health that are quintessential to the 'American experience.'",
+        goal: "Document life experience through photography, capturing the textures of culture, environment, technology, and mental health that are quintessential to the 'American experience.'",
         outcome: "Selected to exhibit photography and writing at the Japanese American National Museum in Los Angeles.",
         details: {
           role: "Photographer",
