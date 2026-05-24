@@ -299,7 +299,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Founder & Editor-in-Chief",
           timeframe: "2019",
           situation:
-            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin'—kind people doing cool things that make the world a better place—through personal essays, editorials, and interviews.",
+            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin' (kind people doing cool things that make the world a better place) through personal essays, editorials, and interviews.",
           approach:
             "Launched a Kickstarter campaign in 2019, raised $20,000, and produced a 184-page debut issue exploring the human concept of time. Three sections: Introspection (personal essays), Invention (editorials with creative influencers), Inquiry (interviews with artists, researchers, and activists).",
           workItems: [
