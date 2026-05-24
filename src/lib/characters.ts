@@ -877,7 +877,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Film",
         description: "Documentary shorts, personal films, and branded content.",
         tags: ["Documentary", "Short Film", "Art"],
-        goal: "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
+        goal: "Develop a distinct visual voice through film and video: documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
         outcome: "A body of work spanning documentary series, personal memoir, and shorts on uncertainty.",
         details: {
           role: "Director / Editor",
