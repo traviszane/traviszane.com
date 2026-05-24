@@ -295,25 +295,6 @@ function QuestPage() {
               </section>
             )}
 
-            {d.attachments && d.attachments.length > 0 && (
-              <section className="mt-10 flex flex-wrap gap-3 anim-fade-up">
-                {d.attachments.map((a) => (
-                  <a
-                    key={a.href}
-                    href={a.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
-                    style={{
-                      borderColor: `color-mix(in oklab, ${color} 50%, transparent)`,
-                      color,
-                    }}
-                  >
-                    {a.label}
-                  </a>
-                ))}
-              </section>
-            )}
           </>
         ) : (
           <section
@@ -327,24 +308,28 @@ function QuestPage() {
               Full case study coming soon
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground leading-relaxed">
-              The receipts—copy, imagery, and breakdowns—are being prepped. Check back shortly, or use the link above to jump straight to the work.
+              The receipts—copy, imagery, and breakdowns—are being prepped. Check back shortly.
             </p>
           </section>
         )}
 
-        {ch.href && (
-          <div className="mt-16 flex justify-center">
-            <a
-              href={ch.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
-              style={{ borderColor: `color-mix(in oklab, ${color} 50%, transparent)`, color }}
-            >
-              Visit&nbsp;the&nbsp;quest <span aria-hidden>↗</span>
-            </a>
+        {ch.ctas && ch.ctas.length > 0 && (
+          <div className="mt-16 flex flex-wrap justify-center gap-3 anim-fade-up">
+            {ch.ctas.map((cta) => (
+              <a
+                key={cta.href}
+                href={cta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] transition-colors hover:bg-card/60"
+                style={{ borderColor: `color-mix(in oklab, ${color} 50%, transparent)`, color }}
+              >
+                {cta.label} <span aria-hidden>↗</span>
+              </a>
+            ))}
           </div>
         )}
+
 
         <QuestFooterNav
           characterId={id as CharacterId}
