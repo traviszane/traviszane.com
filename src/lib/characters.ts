@@ -291,7 +291,7 @@ export const characters: Record<CharacterId, Character> = {
         slug: "revolukin-magazine",
         title: "Revolukin Magazine",
         meta: "Quest III — Publication",
-        description: "$20K raised. 3,000 copies. 7,000+ contributors. Print isn't dead.",
+        description: "$20K raised. 3,000 copies. 7,000+ contributors. Print isn't dead!",
         tags: ["Print", "Editorial", "Community"],
         goal: "Create an independent print magazine at a time when everyone said print was dead—celebrating revolutionary kin: kind people doing cool things that make the world a better place.",
         outcome: "$20K raised on Kickstarter. 3,000 copies printed. 184 pages. 7,000+ community contributors.",
