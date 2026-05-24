@@ -1011,9 +1011,6 @@ export const characters: Record<CharacterId, Character> = {
             "Relationship anarchy zine produced and distributed",
             "Sleepover community party",
           ],
-          embeds: [
-            yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
-          ],
           gallery: [
             { src: ayemFlyer1, alt: "ayem event flyer" },
             { src: ayemFlyer2, alt: "ayem event flyer" },
