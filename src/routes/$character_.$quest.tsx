@@ -229,7 +229,7 @@ function QuestPage() {
                   ◆ The Approach
                 </h2>
                 <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.approach}
+                  {renderLinked(d.approach)}
                 </p>
               </section>
             )}
