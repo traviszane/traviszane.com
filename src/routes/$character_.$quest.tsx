@@ -69,6 +69,7 @@ function QuestPage() {
   const color = `var(${c.colorVar})`;
   const d = ch.details;
   const otherQuests = c.chapters.filter((q) => q.slug !== quest);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -238,12 +239,11 @@ function QuestPage() {
                     "type" in g ? (
                       <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />
                     ) : (
-                      <a
+                      <button
                         key={i}
-                        href={g.src}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block overflow-hidden rounded-md border border-border bg-card/40"
+                        type="button"
+                        onClick={() => setLightbox({ src: g.src, alt: g.alt })}
+                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left"
                       >
                         <img
                           src={g.src}
@@ -251,9 +251,10 @@ function QuestPage() {
                           loading="lazy"
                           className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
                         />
-                      </a>
+                      </button>
                     )
                   ))}
+
                 </div>
               </section>
             )}
@@ -365,8 +366,34 @@ function QuestPage() {
           otherQuests={otherQuests}
         />
       </main>
+
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm anim-fade-up"
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-foreground hover:bg-card"
+          >
+            Close ✕
+          </button>
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[90vh] max-w-[95vw] object-contain rounded-md shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   );
+
 }
 
 function QuestFooterNav({
