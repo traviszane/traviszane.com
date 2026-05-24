@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
@@ -246,10 +247,16 @@ function CharacterPage() {
                       Open →
                     </div>
                   )}
+                  {ch.slug && (
+                    <ArrowUpRight
+                      className="absolute bottom-3 right-3 size-5 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-purple-500 dark:text-orange-400"
+                      strokeWidth={2.5}
+                    />
+                  )}
                 </>
               );
               const cls =
-                "group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/40 hover:-translate-y-0.5 anim-fade-up";
+                "group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 rounded-md border border-border bg-card/60 px-6 py-5 backdrop-blur-sm transition-all hover:border-primary/70 hover:-translate-y-0.5 anim-fade-up";
               return (
                 <li key={ch.title} style={{ animationDelay: `${i * 35}ms` }} className="contents">
                   {ch.slug ? (
