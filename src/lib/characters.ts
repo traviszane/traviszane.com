@@ -22,6 +22,7 @@ import ht2 from "@/assets/quests/half-thoughts/3215E5A3-FC47-4930-B33E-E59B3F0D1
 import ht3 from "@/assets/quests/half-thoughts/7C4BCD6A-0EC6-464F-B327-8FB03D3CD653.webp";
 import ht4 from "@/assets/quests/half-thoughts/BC229B90-D175-489D-B595-1336E52B9225.webp";
 import ht5 from "@/assets/quests/half-thoughts/D643572E-61F1-4186-AD55-110F230AD979.webp";
+import amazonListing from "@/assets/quests/half-thoughts/amazon-listing.png";
 
 // Ayem (+ event gathering photos folded in)
 import ayemFlyer1 from "@/assets/quests/ayem/event-flyers.webp";
@@ -254,7 +255,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Self-Publishing", "Satire"],
         goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
-        outcome: "Ranked #1 New Release in LGBTQ+ Poetry on Amazon. Published March 2025. Available worldwide in print and e-Book.",
+        outcome: "Named \"#1 New Release in LGBTQ+ Poetry.\" 5-star ratings across countries.",
         details: {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
@@ -264,8 +265,8 @@ export const characters: Record<CharacterId, Character> = {
             "Half Thoughts began as a response to a style of social media poetry that felt too simple, and evolved into a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay.",
           workItems: [
             "Conceived, written, designed, and self-published in under a year",
+            "210 pages of poetry and prose",
             "Available globally on Amazon in print and Kindle",
-            "Published March 2025",
           ],
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
@@ -273,6 +274,7 @@ export const characters: Record<CharacterId, Character> = {
             "Full of many 'makes ya think' bits.",
           ],
           gallery: [
+            { src: amazonListing, alt: "Half Thoughts on Amazon — #1 New Release in LGBTQ+ Poetry" },
             { src: ht1, alt: "Half Thoughts — interior spread" },
             { src: ht2, alt: "Half Thoughts — interior spread" },
             { src: ht3, alt: "Half Thoughts — interior spread" },
@@ -913,7 +915,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "photography",
-        title: "EDITORIAL PHOTOGRAPHY",
+        title: "Editorial Photography",
         meta: "Quest III — Photography",
         description: "Featured at the Japanese American National Museum in Los Angeles.",
         tags: ["Editorial", "Documentary", "Art"],
@@ -984,7 +986,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "ayem",
-        title: "ayem community & studio",
+        title: "ayem Community & Studio",
         meta: "Quest V — Experiences",
         description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
