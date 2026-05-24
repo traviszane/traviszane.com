@@ -254,7 +254,7 @@ function QuestPage() {
                       className="flex gap-3 text-sm md:text-base text-foreground/85 leading-relaxed"
                     >
                       <span aria-hidden style={{ color }}>▸</span>
-                      <span>{w}</span>
+                      <span>{renderLinked(w)}</span>
                     </li>
                   ))}
                 </ul>
