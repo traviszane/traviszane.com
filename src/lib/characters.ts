@@ -406,9 +406,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Head of Marketing",
           timeframe: "2024 – 2025",
           situation:
-            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences, without alienating one or the other.",
+            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible (and exciting) to developers and mainstream audiences, without alienating one or the other.",
           approach:
-            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases—teaser, announcement, game seasons, partner amplification, use-case highlights, and ongoing progress updates—each piece building narrative momentum to win and sustain product adoption.",
+            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases (teaser, announcement, game seasons, partner amplification, use-case highlights, and ongoing progress updates), each piece building narrative momentum to win and sustain product adoption.",
           workItems: [
             "Full end-to-end GTM strategy across brand, social, growth, and PR",
             "All hero content and campaign messaging written and directed in-house",
