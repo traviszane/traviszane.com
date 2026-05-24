@@ -451,7 +451,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Took a token from initial concept to nine-figure valuation at launch.",
         tags: ["Token Launch", "GTM", "PR", "Partnerships"],
         goal: "Achieve everything required to launch a new token at scale—narrative, community infrastructure, and distribution—and execute the launch from beginning to end.",
-        outcome: "$1B+ valuation at launch, 71K+ airdrop registrations, and 1.7M+ views across retail-focused launch content.",
+        outcome: "$500M at launch, 71K+ airdrop registrations, and 1.7M+ views across retail-focused launch content.",
         details: {
           client: "Lagrange",
           role: "Head of Marketing",
@@ -470,7 +470,7 @@ export const characters: Record<CharacterId, Character> = {
             "Product positioning in APAC with exclusive experiences and merch",
           ],
           metrics: [
-            { label: "Valuation at launch", value: "$1B+" },
+            { label: "Valuation at launch", value: "$500M at launch" },
             { label: "Airdrop registrations", value: "71K+" },
             { label: "Launch views", value: "1.7M+" },
           ],
