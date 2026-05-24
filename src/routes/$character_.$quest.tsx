@@ -366,8 +366,34 @@ function QuestPage() {
           otherQuests={otherQuests}
         />
       </main>
+
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.alt}
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm anim-fade-up"
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-foreground hover:bg-card"
+          >
+            Close ✕
+          </button>
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[90vh] max-w-[95vw] object-contain rounded-md shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   );
+
 }
 
 function QuestFooterNav({
