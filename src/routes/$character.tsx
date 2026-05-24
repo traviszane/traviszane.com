@@ -249,7 +249,7 @@ function CharacterPage() {
                   )}
                   {ch.slug && (
                     <ArrowRight
-                      className="absolute bottom-3 right-3 size-4 opacity-0 translate-x-1 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-300 text-purple-500 dark:text-orange-400"
+                      className="md:hidden absolute bottom-3 right-3 size-4 opacity-60 text-purple-500 dark:text-orange-400"
                       strokeWidth={1.5}
                     />
                   )}
