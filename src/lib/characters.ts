@@ -253,7 +253,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Self-Publishing", "Satire"],
         goal: "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
-        outcome: "Debut collection. Self-published March 2025. Available worldwide on Amazon in print and Kindle.",
+        outcome: "Published March 2025. Available worldwide on Amazon in print and Kindle.",
         details: {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
