@@ -94,6 +94,57 @@ function QuestPage() {
     [galleryImages.length],
   );
 
+  // Build inline-link map from pressLinks: any @handle in a label maps to its URL,
+  // and any "demo archive" phrase in a label maps to its URL. Those entries are
+  // then suppressed from the Links section since they're linked in the copy.
+  const { inlineLinks, displayedPressLinks } = useMemo(() => {
+    const map = new Map<string, string>();
+    const consumed = new Set<string>();
+    for (const p of d?.pressLinks ?? []) {
+      let used = false;
+      const handles = p.label.match(/@[A-Za-z0-9_.]+/g);
+      if (handles) {
+        for (const h of handles) {
+          if (!map.has(h.toLowerCase())) map.set(h.toLowerCase(), p.url);
+          used = true;
+        }
+      }
+      if (/demo archive/i.test(p.label)) {
+        map.set("demo archive", p.url);
+        used = true;
+      }
+      if (used) consumed.add(p.url);
+    }
+    return {
+      inlineLinks: map,
+      displayedPressLinks: (d?.pressLinks ?? []).filter((p) => !consumed.has(p.url)),
+    };
+  }, [d]);
+
+  const renderLinked = useCallback(
+    (text: string) => {
+      if (inlineLinks.size === 0) return text;
+      const parts = text.split(/(@[A-Za-z0-9_.]+|demo archive)/gi);
+      return parts.map((part, i) => {
+        const url = inlineLinks.get(part.toLowerCase());
+        if (!url) return part;
+        return (
+          <a
+            key={i}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-dotted underline-offset-4 hover:opacity-80"
+            style={{ color }}
+          >
+            {part}
+          </a>
+        );
+      });
+    },
+    [inlineLinks, color],
+  );
+
   useEffect(() => {
     if (lightboxIndex === null) return;
     const onKey = (e: KeyboardEvent) => {
