@@ -505,7 +505,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "767% YoY social growth, 5M+ avg monthly impressions, 40K+ Discord community, 20K → 200K+ on X.",
         details: {
           client: "Oasis Protocol",
-          role: "Head of Marketing",
+          role: "Brand Lead",
           timeframe: "2022 – 2024",
           situation:
             "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
@@ -558,7 +558,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "481% social growth in six months, 2M+ user base, 200K+ daily actives across Unite/Taki.",
         details: {
           client: "Superlayer",
-          role: "Marketing Lead",
+          role: "Head of Social Media",
           timeframe: "2022 – 2023",
           situation:
             "Superlayer was an incubator with a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each needing brand recognition built from nothing. The challenge: establish credibility across multiple products simultaneously with a lean team.",
@@ -682,7 +682,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "Launched to wide appraisal, positioning Lagrange as a category leader in verifiable onchain compute.",
         details: {
           client: "Lagrange × Azuki",
-          role: "Head of Marketing",
+          role: "Marketing Lead",
           timeframe: "2024",
           situation:
             "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology—but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
@@ -723,7 +723,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "15+ new clients won using the influencer marketing guide as a BD asset. Built a playbook repeatable enough to become a key business development asset.",
         details: {
           client: "Colangelo & Partners",
-          role: "Influencer Marketing Lead",
+          role: "Marketing Manager",
           timeframe: "2019 – 2020",
           situation:
             "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements—and build a program repeatable enough to become a business development asset.",
@@ -765,7 +765,7 @@ export const characters: Record<CharacterId, Character> = {
         outcome: "654,852 reach, 733,939 impressions, and 8.92% avg engagement.",
         details: {
           client: "UNLEASHED × Refinery29",
-          role: "Campaign Director",
+          role: "Marketing Manager",
           timeframe: "2018",
           situation:
             "UNLEASHED, a nonprofit media company, spent two years producing three documentary films about women around the world. They had a launch date on Refinery29, the #1 content platform for women, and no marketing budget. The challenge: create genuine hype with nothing but creative leverage.",
