@@ -721,7 +721,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest VIII — Influencer Marketing",
         description: "Launched a program that won 15+ new clients, setting the standard for influencer marketing in the food and beverage industry.",
         tags: ["Partnerships", "Content", "Strategy", "Brand"],
-        goal: "Lead a new influencer marketing program for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements.",
+        goal: "Lead a new influencer marketing program for a portfolio of premium alcohol and beverage brands, each with distinct audiences, aesthetics, and compliance requirements.",
         outcome: "15+ new clients won using the influencer marketing guide as a BD asset. Built a playbook repeatable enough to become a key business development asset.",
         details: {
           client: "Colangelo & Partners",
