@@ -402,7 +402,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Making verifiable AI playable and impossible to ignore.",
         tags: ["GTM", "Campaign", "Content", "Product Launch"],
         goal: "Make zero-knowledge machine learning legible (and exciting) to developers and mainstream audiences, without alienating either.",
-        outcome: "144,309 unique users · 3.75M+ AI proofs · 1.7M+ launch views · 30+ enterprise partners.",
+        outcome: "144,309 unique users, 3.75M+ AI proofs, 1.7M+ launch views, and 30+ enterprise partners.",
         details: {
           client: "Lagrange",
           role: "Head of Marketing",
