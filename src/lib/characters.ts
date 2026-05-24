@@ -224,7 +224,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Meditations on life and culture.",
         tags: ["Essay", "Culture", "Community"],
         goal: "Build a dedicated readership around modern culture and the art of living, connecting with a community of readers and writers.",
-        outcome: "Two years of uninterrupted publishing. A growing subscriber base, delivered every other week.",
+        outcome: "Two years of consecutive publishing with a growing subscriber base.",
         details: {
           role: "Writer & Publisher",
           timeframe: "2023 – present",
