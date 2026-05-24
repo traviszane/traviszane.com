@@ -676,10 +676,10 @@ export const characters: Record<CharacterId, Character> = {
         slug: "azuki-odyssey",
         title: "Lagrange × Azuki: Bridging ZK and NFTs",
         meta: "Quest VII — Experiential",
-        description: "Making zero-knowledge technology accessible to mainstream crypto.",
+        description: "Made zero-knowledge technology accessible to mainstream crypto.",
         tags: ["Partnerships", "Product Marketing", "Campaign", "Consumer"],
         goal: "Make Lagrange's ZK Coprocessor tangible and beautiful for a mainstream NFT audience by partnering with the leading consumer brand in crypto.",
-        outcome: "Launched September 2024 to PRNewswire press coverage; positioned Lagrange as a category leader in verifiable onchain data.",
+        outcome: "Launched to wide appraisal, positioning Lagrange as a category leader in verifiable onchain compute.",
         details: {
           client: "Lagrange × Azuki",
           role: "Head of Marketing",
