@@ -193,7 +193,7 @@ export const characters: Record<CharacterId, Character> = {
     className: "Storyteller",
     tagline: "Master of syntax and storytelling.",
     blurb:
-      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current, quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
+      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current—quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     painterlyVideo: spriteWriterVideoLight,
@@ -340,13 +340,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Long Form",
         description: "700,000+ words and counting.",
         tags: ["Autofiction", "Long-Form", "Literary"],
-        goal: "Write three full-length novels, narratives tied together, drawing from real life experiences.",
+        goal: "Write three full-length novels—narratives tied together—drawing from real life experiences.",
         outcome: "Over 700,000 words drafted across three manuscripts. Currently in editing and revision.",
         details: {
           role: "Author",
           timeframe: "Ongoing",
           situation:
-            "Write three full-length novels, narratives tied together, drawing from real life experiences.",
+            "Write three full-length novels—narratives tied together—drawing from real life experiences.",
           approach:
             "Over 700,000 words drafted across three manuscripts. Currently in editing and revision phases.",
           workItems: [
@@ -988,13 +988,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest V — Experiences",
         description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
-        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
+        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
         outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
           situation:
-            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
+            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
           approach:
             "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
