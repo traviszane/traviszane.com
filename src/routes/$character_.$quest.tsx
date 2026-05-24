@@ -175,7 +175,7 @@ function QuestPage() {
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
             {ch.title}
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{ch.description}</p>
+          <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{renderLinked(ch.description)}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">
             {ch.tags.map((t) => (
