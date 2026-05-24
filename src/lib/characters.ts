@@ -399,7 +399,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest I — Product Marketing",
         description: "Making verifiable AI playable and impossible to ignore.",
         tags: ["GTM", "Campaign", "Content", "Product Launch"],
-        goal: "Make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences, without alienating either.",
+        goal: "Make zero-knowledge machine learning legible (and exciting) to developers and mainstream audiences, without alienating either.",
         outcome: "144,309 unique users · 3.75M+ AI proofs · 1.7M+ launch views · 30+ enterprise partners.",
         details: {
           client: "Lagrange",
@@ -502,7 +502,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest III — Brand & Content",
         description: "767% social growth and ownership of a new category.",
         tags: ["Rebrand", "Positioning", "Product Marketing", "Social Growth"],
-        goal: "Position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
+        goal: "Position the entire project around privacy-preserving AI, a genuinely differentiated category, before anyone else claimed it.",
         outcome: "767% YoY social growth, 5M+ avg monthly impressions, 40K+ Discord community, 20K → 200K+ on X.",
         details: {
           client: "Oasis Protocol",
@@ -555,7 +555,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Social & Growth",
         description: "481% growth across key products in six months. Built brand recognition for an ecosystem of mobile and web apps.",
         tags: ["Product Marketing", "GTM", "Content", "Community"],
-        goal: "Establish credibility across a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each requiring brand recognition and GTM strategy in a different vertical.",
+        goal: "Establish credibility across a portfolio of consumer apps (Unite, Joyride, Hotline, Trophy, SuperChamps, Taki) each requiring brand recognition and GTM strategy in a different vertical.",
         outcome: "481% social growth in six months, 2M+ user base, 200K+ daily actives across Unite/Taki.",
         details: {
           client: "Superlayer",
