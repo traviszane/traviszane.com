@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
@@ -69,7 +69,41 @@ function QuestPage() {
   const color = `var(${c.colorVar})`;
   const d = ch.details;
   const otherQuests = c.chapters.filter((q) => q.slug !== quest);
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const galleryImages = useMemo(
+    () =>
+      (d?.gallery ?? []).flatMap((g) =>
+        "type" in g ? [] : [{ src: g.src, alt: g.alt }],
+      ),
+    [d],
+  );
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const lightbox = lightboxIndex !== null ? galleryImages[lightboxIndex] : null;
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const showPrev = useCallback(
+    () =>
+      setLightboxIndex((i) =>
+        i === null ? i : (i - 1 + galleryImages.length) % galleryImages.length,
+      ),
+    [galleryImages.length],
+  );
+  const showNext = useCallback(
+    () =>
+      setLightboxIndex((i) =>
+        i === null ? i : (i + 1) % galleryImages.length,
+      ),
+    [galleryImages.length],
+  );
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowLeft") showPrev();
+      else if (e.key === "ArrowRight") showNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, closeLightbox, showPrev, showNext]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -235,25 +269,31 @@ function QuestPage() {
                   ◆ Gallery
                 </h2>
                 <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {d.gallery.map((g, i) => (
-                    "type" in g ? (
-                      <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />
-                    ) : (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => setLightbox({ src: g.src, alt: g.alt })}
-                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
-                      >
-                        <img
-                          src={g.src}
-                          alt={g.alt}
-                          loading="lazy"
-                          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </button>
-                    )
-                  ))}
+                  {(() => {
+                    let imgIdx = -1;
+                    return d.gallery.map((g, i) => {
+                      if ("type" in g) {
+                        return <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />;
+                      }
+                      imgIdx += 1;
+                      const idx = imgIdx;
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => setLightboxIndex(idx)}
+                          className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
+                        >
+                          <img
+                            src={g.src}
+                            alt={g.alt}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </button>
+                      );
+                    });
+                  })()}
 
                 </div>
               </section>
@@ -372,17 +412,40 @@ function QuestPage() {
           role="dialog"
           aria-modal="true"
           aria-label={lightbox.alt}
-          onClick={() => setLightbox(null)}
+          onClick={closeLightbox}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm anim-fade-up"
         >
           <button
             type="button"
             aria-label="Close"
-            onClick={() => setLightbox(null)}
+            onClick={closeLightbox}
             className="absolute top-4 right-4 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-foreground hover:bg-card"
           >
             Close ✕
           </button>
+          {galleryImages.length > 1 && (
+            <>
+              <button
+                type="button"
+                aria-label="Previous image"
+                onClick={(e) => { e.stopPropagation(); showPrev(); }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 w-11 h-11 flex items-center justify-center text-foreground hover:bg-card"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                aria-label="Next image"
+                onClick={(e) => { e.stopPropagation(); showNext(); }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 w-11 h-11 flex items-center justify-center text-foreground hover:bg-card"
+              >
+                →
+              </button>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                {(lightboxIndex ?? 0) + 1} / {galleryImages.length}
+              </div>
+            </>
+          )}
           <img
             src={lightbox.src}
             alt={lightbox.alt}
