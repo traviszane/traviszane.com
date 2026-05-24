@@ -193,7 +193,7 @@ export const characters: Record<CharacterId, Character> = {
     className: "Storyteller",
     tagline: "Master of syntax and storytelling.",
     blurb:
-      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current, quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
+      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current—quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     painterlyVideo: spriteWriterVideoLight,
