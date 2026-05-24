@@ -851,7 +851,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Creator",
           timeframe: "2014 – present",
           situation:
-            "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
+            "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
           approach:
             "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work—same audience, same voice, since college. Zines, travel, community, and the texture of daily life.",
           workItems: [
