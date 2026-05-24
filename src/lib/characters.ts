@@ -259,7 +259,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
           situation:
-            "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+            "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
           approach:
             "Half Thoughts began as a response to a style of social media poetry that felt too simple, and evolved into a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay.",
           workItems: [
