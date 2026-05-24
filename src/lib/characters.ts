@@ -789,9 +789,9 @@ export const characters: Record<CharacterId, Character> = {
           ],
           pressLinks: [
             { label: "Influencer post — @melaniesutra", url: "https://www.instagram.com/p/Boz-EMHgdbf/" },
-            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/Bo0BTq9lCqw/" },
-            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/BozERJ9BHmn/" },
-            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/BozHRLLgqj4/" },
+            { label: "Influencer post — @madebylondon", url: "https://www.instagram.com/p/Bo0BTq9lCqw/" },
+            { label: "Influencer post — @whatthedoost", url: "https://www.instagram.com/p/BozERJ9BHmn/" },
+            { label: "Influencer post — @pearlsandbrandy", url: "https://www.instagram.com/p/BozHRLLgqj4/" },
           ],
         },
         ctas: [
