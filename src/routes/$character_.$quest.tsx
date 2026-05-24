@@ -69,6 +69,7 @@ function QuestPage() {
   const color = `var(${c.colorVar})`;
   const d = ch.details;
   const otherQuests = c.chapters.filter((q) => q.slug !== quest);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
