@@ -237,7 +237,7 @@ function QuestPage() {
             {d.summary && !d.situation && (
               <section className="mt-10 anim-fade-up">
                 <p className="text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.summary}
+                  {renderLinked(d.summary)}
                 </p>
               </section>
             )}
