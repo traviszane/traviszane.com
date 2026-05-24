@@ -272,7 +272,7 @@ function QuestPage() {
                     <h3 className="font-display uppercase italic text-2xl md:text-3xl tracking-tight" style={{ color }}>
                       {s.heading}
                     </h3>
-                    <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{s.body}</p>
+                    <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{renderLinked(s.body)}</p>
                   </article>
                 ))}
               </section>
