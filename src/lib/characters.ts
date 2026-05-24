@@ -141,6 +141,7 @@ export interface Chapter {
   tags: string[];
   goal?: string;
   outcome?: string;
+  outcomeMeta?: string;
   details?: QuestDetails;
   /** Final CTAs rendered centered at the bottom of the quest page. */
   ctas?: CTA[];
@@ -633,7 +634,8 @@ export const characters: Record<CharacterId, Character> = {
         description: "Winning an audience of creators and consumers with bespoke social and PR strategy.",
         tags: ["PR", "Social Strategy", "Content", "Community"],
         goal: "Build a content and community presence that told the creator-token story clearly (and get it in front of the right people).",
-        outcome: "Named Fast Company's 'Top 5 Most Innovative Companies of 2022' and grew keys socials by 103% in 6 months.",
+        outcome: "Top 5 Most Innovative Companies",
+        outcomeMeta: "Fast Company",
         details: {
           client: "Rally",
           role: "Content & Community Lead",
