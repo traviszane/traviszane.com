@@ -141,6 +141,7 @@ export interface Chapter {
   tags: string[];
   goal?: string;
   outcome?: string;
+  outcomeMeta?: string;
   details?: QuestDetails;
   /** Final CTAs rendered centered at the bottom of the quest page. */
   ctas?: CTA[];
