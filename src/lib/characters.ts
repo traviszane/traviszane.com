@@ -509,7 +509,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Brand Lead",
           timeframe: "2022 – 2024",
           situation:
-            "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
+            "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI, a genuinely differentiated category, before anyone else claimed it.",
           approach:
             "Built the rebrand around ROFL (Runtime OFf-chain Logic), a technical capability that became the narrative anchor for a new category: the privacy layer for the AI stack. Repositioning wasn't just messaging work; it required rebuilding Oasis' visual, content, and product identity around a new thesis.",
           workItems: [
