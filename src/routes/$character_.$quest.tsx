@@ -243,13 +243,13 @@ function QuestPage() {
                         key={i}
                         type="button"
                         onClick={() => setLightbox({ src: g.src, alt: g.alt })}
-                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left"
+                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
                       >
                         <img
                           src={g.src}
                           alt={g.alt}
                           loading="lazy"
-                          className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
+                          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                         />
                       </button>
                     )
