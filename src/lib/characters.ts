@@ -550,12 +550,12 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "superlayer",
-        title: "Ecosystem Growth for Superlayer Apps",
+        title: "Superlayer: Ecosystem-Wide Growth",
         meta: "Quest IV — Social & Growth",
-        description: "481% growth in six months. Built brand recognition for an ecosystem of mobile and web apps.",
+        description: "481% growth across key products in six months. Built brand recognition for an ecosystem of mobile and web apps.",
         tags: ["Product Marketing", "GTM", "Content", "Community"],
-        goal: "Establish credibility across a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each needing brand recognition built from nothing.",
-        outcome: "481% social growth in six months · 2M+ user base · 200K+ daily actives across Unite/Taki.",
+        goal: "Establish credibility across a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each requiring brand recognition and GTM strategy in a different vertical.",
+        outcome: "481% social growth in six months, 2M+ user base, 200K+ daily actives across Unite/Taki.",
         details: {
           client: "Superlayer",
           role: "Marketing Lead",
