@@ -843,12 +843,12 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "instagram",
-        title: "Mixed-Media Storytelling (@travis_zane)",
+        title: "Mixed-Media Storytelling",
         meta: "Quest I — Social",
-        description: "Documentary-style storytelling with photos and words.",
+        description: "A decade of documentary photography, video, and words on @travis_zane.",
         tags: ["Photography", "Lifestyle", "Documentary"],
         goal: "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
-        outcome: "25,000+ followers built organically over a decade between California and Mexico City.",
+        outcome: "27,000+ followers built organically over a decade between California and Mexico City.",
         details: {
           role: "Creator",
           timeframe: "2014 – present",
@@ -857,19 +857,25 @@ export const characters: Record<CharacterId, Character> = {
           approach:
             "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work—same audience, same voice, since college. Zines, travel, community, and the texture of daily life in two cities.",
           workItems: [
-            "25,000+ followers built organically",
-            "Documentary-style photography and video content",
-            "Dual California / Mexico City lifestyle content",
-            "Zine and print work featured throughout",
+            "993 posts spanning a decade of documentary photography and video",
+            "Audience built organically—no paid growth, no algorithm chasing",
+            "Dual California / Mexico City lifestyle and community storytelling",
+            "Zine, print, and editorial work woven throughout the feed",
+          ],
+          shots: [
+            { src: igProfile, alt: "@travis_zane profile: 993 posts, 26.9K followers, 1,401 following" },
+            { src: igFollowers, alt: "Followers analytics: 26,998 total followers" },
+            { src: igViews, alt: "Views analytics: 27,364 views, 73.8% followers / 26.2% non-followers, 3,776 accounts reached" },
           ],
           metrics: [
-            { label: "Followers", value: "25K+" },
+            { label: "Followers", value: "26.9K" },
+            { label: "Posts", value: "993" },
             { label: "Years active", value: "10+" },
             { label: "Cities", value: "CA · CDMX" },
           ],
         },
         ctas: [
-          { label: "View the Account", href: "https://www.instagram.com/travis_zane/" },
+          { label: "View @travis_zane", href: "https://www.instagram.com/travis_zane/" },
         ],
       },
       {
