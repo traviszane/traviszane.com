@@ -340,7 +340,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Long Form",
         description: "700,000+ words and counting.",
         tags: ["Autofiction", "Long-Form", "Literary"],
-        goal: "Write three full-length novels—narratives tied together—drawing from real life experiences.",
+        goal: "Write three full-length novels, narratives tied together, drawing from real life experiences.",
         outcome: "Over 700,000 words drafted across three manuscripts. Currently in editing and revision.",
         details: {
           role: "Author",
