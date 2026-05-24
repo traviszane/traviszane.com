@@ -235,20 +235,24 @@ function QuestPage() {
                 </h2>
                 <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {d.gallery.map((g, i) => (
-                    <a
-                      key={i}
-                      href={g.src}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group block overflow-hidden rounded-md border border-border bg-card/40"
-                    >
-                      <img
-                        src={g.src}
-                        alt={g.alt}
-                        loading="lazy"
-                        className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </a>
+                    "type" in g ? (
+                      <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />
+                    ) : (
+                      <a
+                        key={i}
+                        href={g.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block overflow-hidden rounded-md border border-border bg-card/40"
+                      >
+                        <img
+                          src={g.src}
+                          alt={g.alt}
+                          loading="lazy"
+                          className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </a>
+                    )
                   ))}
                 </div>
               </section>

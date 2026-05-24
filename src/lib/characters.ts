@@ -106,6 +106,8 @@ export interface GalleryImage {
   alt: string;
 }
 
+export type GalleryItem = GalleryImage | Embed;
+
 export interface CTA {
   label: string;
   href: string;
@@ -120,7 +122,7 @@ export interface QuestDetails {
   workItems?: string[];
   metrics?: { label: string; value: string }[];
   embeds?: Embed[];
-  gallery?: GalleryImage[];
+  gallery?: GalleryItem[];
   /** Free-form image cards rendered at their natural aspect ratio (e.g. portrait analytics screenshots). */
   shots?: GalleryImage[];
   pressLinks?: { label: string; url: string }[];
@@ -235,11 +237,9 @@ export const characters: Record<CharacterId, Character> = {
             "Growing subscriber base",
             "Annual events (parties!) for readers",
           ],
-          embeds: [
-            yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
-          ],
           gallery: [
             { src: sleepoverHome, alt: "Sleepover newsletter homepage on Substack" },
+            yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
           ],
         },
         ctas: [
