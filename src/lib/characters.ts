@@ -628,12 +628,12 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "rally",
-        title: "Rally: Fast Company Top 5 Most Innovative",
+        title: "Rally: Fast Company's 'Top 5 Most Innovative'",
         meta: "Quest VI — Brand & Content",
-        description: "Winning an audience of creators and consumers.",
+        description: "Winning an audience of creators and consumers with bespoke social and PR strategy.",
         tags: ["PR", "Social Strategy", "Content", "Community"],
-        goal: "Build a content and community presence that told the creator-token story clearly—and got it in front of the right people.",
-        outcome: "Fast Company Top 5 Most Innovative Company 2022 · 103% social growth in 6 months.",
+        goal: "Build a content and community presence that told the creator-token story clearly (and get it in front of the right people).",
+        outcome: "Named Fast Company's 'Top 5 Most Innovative Companies of 2022' and grew keys socials by 103% in 6 months.",
         details: {
           client: "Rally",
           role: "Content & Community Lead",
