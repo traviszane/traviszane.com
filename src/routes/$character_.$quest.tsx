@@ -392,13 +392,13 @@ function QuestPage() {
               </section>
             )}
 
-            {d.pressLinks && d.pressLinks.length > 0 && (
+            {displayedPressLinks.length > 0 && (
               <section className="mt-12 anim-fade-up">
                 <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
                   ◆ Links
                 </h2>
                 <ul className="mt-3 space-y-2 max-w-2xl">
-                  {d.pressLinks.map((p) => (
+                  {displayedPressLinks.map((p) => (
                     <li key={p.url}>
                       <a
                         href={p.url}
