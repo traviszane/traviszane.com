@@ -929,7 +929,7 @@ export const characters: Record<CharacterId, Character> = {
           workItems: [
             "Documentary and editorial photography spanning travel, portraiture, and cultural moments",
             "Work spans California, Mexico City, New York, Hawaii, and elsewhere",
-            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles—as part of a community exhibition exploring identity, mental health, and human connection in the digital age",
+            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles, as part of a community exhibition exploring identity, mental health, and human connection in the digital age",
           ],
           metrics: [
             { label: "Featured at", value: "JANM, LA" },
