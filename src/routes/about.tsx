@@ -88,7 +88,7 @@ function AboutPage() {
 
         <div className="mt-6 flex flex-wrap gap-3 font-mono text-[11px] uppercase tracking-[0.25em]">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:travis@traviszane.com"
             className="border border-primary/50 text-primary px-4 py-2.5 transition-colors hover:bg-primary/10"
           >
             Open Inbox →

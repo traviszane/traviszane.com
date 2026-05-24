@@ -293,7 +293,7 @@ function CharacterPage() {
               </p>
             </div>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:travis@traviszane.com"
               className="inline-flex items-center justify-center self-start rounded-md bg-primary px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Send a capybara →
