@@ -199,6 +199,9 @@ function QuestPage() {
               <div className="rounded-md border border-border/70 bg-card/60 px-4 py-3 backdrop-blur-sm">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color }}>Outcome</dt>
                 <dd className="mt-1 text-sm text-foreground/90 leading-snug">{renderLinked(ch.outcome)}</dd>
+                {ch.outcomeMeta && (
+                  <dd className="mt-0.5 text-xs text-muted-foreground leading-snug">{ch.outcomeMeta}</dd>
+                )}
               </div>
             )}
           </dl>
