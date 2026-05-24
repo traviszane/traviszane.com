@@ -412,17 +412,40 @@ function QuestPage() {
           role="dialog"
           aria-modal="true"
           aria-label={lightbox.alt}
-          onClick={() => setLightbox(null)}
+          onClick={closeLightbox}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm anim-fade-up"
         >
           <button
             type="button"
             aria-label="Close"
-            onClick={() => setLightbox(null)}
+            onClick={closeLightbox}
             className="absolute top-4 right-4 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-foreground hover:bg-card"
           >
             Close ✕
           </button>
+          {galleryImages.length > 1 && (
+            <>
+              <button
+                type="button"
+                aria-label="Previous image"
+                onClick={(e) => { e.stopPropagation(); showPrev(); }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 w-11 h-11 flex items-center justify-center text-foreground hover:bg-card"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                aria-label="Next image"
+                onClick={(e) => { e.stopPropagation(); showNext(); }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 w-11 h-11 flex items-center justify-center text-foreground hover:bg-card"
+              >
+                →
+              </button>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-border bg-card/70 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                {(lightboxIndex ?? 0) + 1} / {galleryImages.length}
+              </div>
+            </>
+          )}
           <img
             src={lightbox.src}
             alt={lightbox.alt}
