@@ -254,6 +254,29 @@ function QuestPage() {
               </section>
             )}
 
+            {d.shots && d.shots.length > 0 && (
+              <section className="mt-12 anim-fade-up">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                  ◆ The Receipts
+                </h2>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {d.shots.map((s, i) => (
+                    <figure
+                      key={i}
+                      className="overflow-hidden rounded-lg border border-border bg-black/60 backdrop-blur-sm shadow-lg"
+                    >
+                      <img
+                        src={s.src}
+                        alt={s.alt}
+                        loading="lazy"
+                        className="block w-full h-auto object-contain"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {d.testimonials && d.testimonials.length > 0 && (
               <section className="mt-12 anim-fade-up">
                 <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
