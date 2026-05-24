@@ -451,7 +451,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Product Marketing",
         description: "Took a token from initial concept to nine-figure valuation at launch.",
         tags: ["Token Launch", "GTM", "PR", "Partnerships"],
-        goal: "Achieve everything required to launch a new token at scale—narrative, community infrastructure, and distribution—and execute the launch from beginning to end.",
+        goal: "Achieve everything required to launch a new token at scale (narrative, community infrastructure, and distribution), and execute the launch from beginning to end.",
         outcome: "$500M at launch, 71K+ airdrop registrations, and 1.7M+ views across retail-focused launch content.",
         details: {
           client: "Lagrange",
