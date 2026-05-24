@@ -599,7 +599,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology, reaching both consumer and developer audiences.",
           approach:
-            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns the innovation making it real. Content mixed technical depth with accessibility—research threads, product storytelling, community highlights, and real-time market commentary—creating a feed that developers and non-developers could both relate to.",
+            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns the innovation making it real. Content mixed technical depth with accessibility (research threads, product storytelling, community highlights, and real-time market commentary), creating a feed that developers and non-developers could both relate to.",
           workItems: [
             "Full social strategy and content calendar ownership",
             "Video direction, script-writing, and editing",
