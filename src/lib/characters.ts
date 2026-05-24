@@ -962,13 +962,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Branded Content",
         description: "Storytelling that serves the brand without betraying the audience.",
         tags: ["Partnerships", "Lifestyle", "Social"],
-        goal: "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
+        goal: "Create a body of partnership work that feels authentic and relatable, regardless of the industry.",
         outcome: "Collaborations with 20+ brands including Adobe, Altos Tequila, Korbel, and more.",
         details: {
           role: "Creator / Director",
           timeframe: "Ongoing",
           situation:
-            "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
+            "Create a body of partnership work that feels authentic and relatable, regardless of the industry.",
           approach:
             "Build every collaboration around an authentic story.",
           workItems: [
@@ -984,19 +984,19 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "ayem",
-        title: "ayem: An Experiment in Queer Education",
+        title: "ayem community & studio",
         meta: "Quest V — Experiences",
-        description: "Five events. One city. Real people in a room together.",
+        description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
-        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
         outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
           situation:
-            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
           approach:
-            "Produced a series of in-person events under the ayem banner in Mexico City—including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
+            "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
             "5+ events produced independently in Mexico City",
             "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
