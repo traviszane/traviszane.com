@@ -499,10 +499,10 @@ export const characters: Record<CharacterId, Character> = {
         slug: "oasis-rebrand",
         title: "Oasis: From Blockchain to AI",
         meta: "Quest III — Brand & Content",
-        description: "767% social growth. A category nobody owned (until we did).",
-        tags: ["Positioning", "Product Marketing", "Social Growth"],
+        description: "767% social growth and ownership of a new category.",
+        tags: ["Rebrand", "Positioning", "Product Marketing", "Social Growth"],
         goal: "Position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
-        outcome: "767% YoY social growth · 5M+ avg monthly impressions · 40K+ Discord · 20K → 200K+ on X.",
+        outcome: "767% YoY social growth, 5M+ avg monthly impressions, 40K+ Discord community, 20K → 200K+ on X.",
         details: {
           client: "Oasis Protocol",
           role: "Head of Marketing",
