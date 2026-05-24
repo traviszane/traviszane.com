@@ -269,25 +269,31 @@ function QuestPage() {
                   ◆ Gallery
                 </h2>
                 <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {d.gallery.map((g, i) => (
-                    "type" in g ? (
-                      <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />
-                    ) : (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => setLightbox({ src: g.src, alt: g.alt })}
-                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
-                      >
-                        <img
-                          src={g.src}
-                          alt={g.alt}
-                          loading="lazy"
-                          className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </button>
-                    )
-                  ))}
+                  {(() => {
+                    let imgIdx = -1;
+                    return d.gallery.map((g, i) => {
+                      if ("type" in g) {
+                        return <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />;
+                      }
+                      imgIdx += 1;
+                      const idx = imgIdx;
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => setLightboxIndex(idx)}
+                          className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
+                        >
+                          <img
+                            src={g.src}
+                            alt={g.alt}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </button>
+                      );
+                    });
+                  })()}
 
                 </div>
               </section>
