@@ -845,7 +845,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest I — Social",
         description: "A decade of documentary photography, video, and words on @travis_zane.",
         tags: ["Photography", "Lifestyle", "Documentary"],
-        goal: "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
+        goal: "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
         outcome: "27,000+ followers built organically over a decade between California and Mexico City.",
         details: {
           role: "Creator",
