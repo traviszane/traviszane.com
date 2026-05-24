@@ -192,13 +192,13 @@ function QuestPage() {
             {ch.goal && (
               <div className="rounded-md border border-border/70 bg-card/60 px-4 py-3 backdrop-blur-sm">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color }}>Goal</dt>
-                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{ch.goal}</dd>
+                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{renderLinked(ch.goal)}</dd>
               </div>
             )}
             {ch.outcome && (
               <div className="rounded-md border border-border/70 bg-card/60 px-4 py-3 backdrop-blur-sm">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color }}>Outcome</dt>
-                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{ch.outcome}</dd>
+                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{renderLinked(ch.outcome)}</dd>
               </div>
             )}
           </dl>
