@@ -956,7 +956,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "branded-content",
-        title: "Authentic Collaborations",
+        title: "Brand Collaborations",
         meta: "Quest IV — Branded Content",
         description: "Storytelling that serves the brand without betraying the audience.",
         tags: ["Partnerships", "Lifestyle", "Social"],
