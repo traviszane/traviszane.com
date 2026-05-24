@@ -277,10 +277,6 @@ export const characters: Record<CharacterId, Character> = {
             { src: ht3, alt: "Half Thoughts — interior spread" },
             { src: ht4, alt: "Half Thoughts — interior spread" },
             { src: ht5, alt: "Half Thoughts — interior spread" },
-            { src: ht6, alt: "Half Thoughts — interior spread" },
-            { src: ht7, alt: "Half Thoughts — interior spread" },
-            { src: ht8, alt: "Half Thoughts — interior spread" },
-            { src: ht9, alt: "Half Thoughts — interior spread" },
           ],
         },
         ctas: [
