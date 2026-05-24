@@ -768,7 +768,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Marketing Manager",
           timeframe: "2018",
           situation:
-            "UNLEASHED, a nonprofit media company, spent two years producing three documentary films about women around the world. They had a launch date on Refinery29, the #1 content platform for women, and no marketing budget. The challenge: create genuine hype with nothing but creative leverage.",
+            "UNLEASHED, a nonprofit media company, spent two years producing three documentary films about women around the world. When the time came to launch on Refinery29, the #1 content platform for women, they needed to make a splash without a marketing budget. The challenge: create genuine hype with nothing but creative leverage.",
           approach:
             "Built an international influencer campaign around what both UNLEASHED and Refinery29 do best: creative content and female empowerment. Designed, developed, and produced the full campaign from scratch by recruiting female creators on Instagram, briefing them on the film series, and offering gifts in exchange for authentic promotion. No paid media, no agency. Only well-matched creators and a story worth telling.",
           workItems: [
