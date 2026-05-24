@@ -988,13 +988,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest V — Experiences",
         description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
-        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
+        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
         outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
           situation:
-            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
+            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
           approach:
             "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
