@@ -94,6 +94,57 @@ function QuestPage() {
     [galleryImages.length],
   );
 
+  // Build inline-link map from pressLinks: any @handle in a label maps to its URL,
+  // and any "demo archive" phrase in a label maps to its URL. Those entries are
+  // then suppressed from the Links section since they're linked in the copy.
+  const { inlineLinks, displayedPressLinks } = useMemo(() => {
+    const map = new Map<string, string>();
+    const consumed = new Set<string>();
+    for (const p of d?.pressLinks ?? []) {
+      let used = false;
+      const handles = p.label.match(/@[A-Za-z0-9_.]+/g);
+      if (handles) {
+        for (const h of handles) {
+          if (!map.has(h.toLowerCase())) map.set(h.toLowerCase(), p.url);
+          used = true;
+        }
+      }
+      if (/demo archive/i.test(p.label)) {
+        map.set("demo archive", p.url);
+        used = true;
+      }
+      if (used) consumed.add(p.url);
+    }
+    return {
+      inlineLinks: map,
+      displayedPressLinks: (d?.pressLinks ?? []).filter((p) => !consumed.has(p.url)),
+    };
+  }, [d]);
+
+  const renderLinked = useCallback(
+    (text: string) => {
+      if (inlineLinks.size === 0) return text;
+      const parts = text.split(/(@[A-Za-z0-9_.]+|demo archive)/gi);
+      return parts.map((part, i) => {
+        const url = inlineLinks.get(part.toLowerCase());
+        if (!url) return part;
+        return (
+          <a
+            key={i}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-dotted underline-offset-4 hover:opacity-80"
+            style={{ color }}
+          >
+            {part}
+          </a>
+        );
+      });
+    },
+    [inlineLinks, color],
+  );
+
   useEffect(() => {
     if (lightboxIndex === null) return;
     const onKey = (e: KeyboardEvent) => {
@@ -124,7 +175,7 @@ function QuestPage() {
           <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
             {ch.title}
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{ch.description}</p>
+          <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{renderLinked(ch.description)}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">
             {ch.tags.map((t) => (
@@ -141,13 +192,13 @@ function QuestPage() {
             {ch.goal && (
               <div className="rounded-md border border-border/70 bg-card/60 px-4 py-3 backdrop-blur-sm">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color }}>Goal</dt>
-                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{ch.goal}</dd>
+                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{renderLinked(ch.goal)}</dd>
               </div>
             )}
             {ch.outcome && (
               <div className="rounded-md border border-border/70 bg-card/60 px-4 py-3 backdrop-blur-sm">
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color }}>Outcome</dt>
-                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{ch.outcome}</dd>
+                <dd className="mt-1 text-sm text-foreground/90 leading-snug">{renderLinked(ch.outcome)}</dd>
               </div>
             )}
           </dl>
@@ -167,7 +218,7 @@ function QuestPage() {
                   ◆ The Situation
                 </h2>
                 <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.situation}
+                  {renderLinked(d.situation)}
                 </p>
               </section>
             )}
@@ -178,7 +229,7 @@ function QuestPage() {
                   ◆ The Approach
                 </h2>
                 <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.approach}
+                  {renderLinked(d.approach)}
                 </p>
               </section>
             )}
@@ -186,7 +237,7 @@ function QuestPage() {
             {d.summary && !d.situation && (
               <section className="mt-10 anim-fade-up">
                 <p className="text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.summary}
+                  {renderLinked(d.summary)}
                 </p>
               </section>
             )}
@@ -203,7 +254,7 @@ function QuestPage() {
                       className="flex gap-3 text-sm md:text-base text-foreground/85 leading-relaxed"
                     >
                       <span aria-hidden style={{ color }}>▸</span>
-                      <span>{w}</span>
+                      <span>{renderLinked(w)}</span>
                     </li>
                   ))}
                 </ul>
@@ -221,7 +272,7 @@ function QuestPage() {
                     <h3 className="font-display uppercase italic text-2xl md:text-3xl tracking-tight" style={{ color }}>
                       {s.heading}
                     </h3>
-                    <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{s.body}</p>
+                    <p className="mt-3 text-foreground/85 leading-relaxed max-w-2xl">{renderLinked(s.body)}</p>
                   </article>
                 ))}
               </section>
@@ -341,13 +392,13 @@ function QuestPage() {
               </section>
             )}
 
-            {d.pressLinks && d.pressLinks.length > 0 && (
+            {displayedPressLinks.length > 0 && (
               <section className="mt-12 anim-fade-up">
                 <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
                   ◆ Links
                 </h2>
                 <ul className="mt-3 space-y-2 max-w-2xl">
-                  {d.pressLinks.map((p) => (
+                  {displayedPressLinks.map((p) => (
                     <li key={p.url}>
                       <a
                         href={p.url}
