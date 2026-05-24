@@ -18,14 +18,10 @@ import igViews from "@/assets/quests/instagram/ig-views.webp";
 
 // Half Thoughts photos (webp-optimized)
 import ht1 from "@/assets/quests/half-thoughts/1D16D0DA-EE00-499E-9B24-8B5D3D761DEA.webp";
-import ht2 from "@/assets/quests/half-thoughts/276C23D0-C06E-438B-A06E-838445ADBE9D.webp";
-import ht3 from "@/assets/quests/half-thoughts/3215E5A3-FC47-4930-B33E-E59B3F0D1B0D.webp";
-import ht4 from "@/assets/quests/half-thoughts/7C4BCD6A-0EC6-464F-B327-8FB03D3CD653.webp";
-import ht5 from "@/assets/quests/half-thoughts/BC229B90-D175-489D-B595-1336E52B9225.webp";
-import ht6 from "@/assets/quests/half-thoughts/C36A9FB4-C354-4C14-9C0E-506190AE5D29.webp";
-import ht7 from "@/assets/quests/half-thoughts/D643572E-61F1-4186-AD55-110F230AD979.webp";
-import ht8 from "@/assets/quests/half-thoughts/DA7EAA13-105E-4D79-9327-6C9E669FD877.webp";
-import ht9 from "@/assets/quests/half-thoughts/EEDD9A60-4ADA-4C19-90A7-6DA6F7BA9C60.webp";
+import ht2 from "@/assets/quests/half-thoughts/3215E5A3-FC47-4930-B33E-E59B3F0D1B0D.webp";
+import ht3 from "@/assets/quests/half-thoughts/7C4BCD6A-0EC6-464F-B327-8FB03D3CD653.webp";
+import ht4 from "@/assets/quests/half-thoughts/BC229B90-D175-489D-B595-1336E52B9225.webp";
+import ht5 from "@/assets/quests/half-thoughts/D643572E-61F1-4186-AD55-110F230AD979.webp";
 
 // Ayem (+ event gathering photos folded in)
 import ayemFlyer1 from "@/assets/quests/ayem/event-flyers.webp";
