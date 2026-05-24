@@ -146,6 +146,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
           }}
         />
         <HeadContent />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+          />
+        </noscript>
       </head>
       <body>
         {children}
