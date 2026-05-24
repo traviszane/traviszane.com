@@ -728,7 +728,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Marketing Manager",
           timeframe: "2019 – 2020",
           situation:
-            "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements—and build a program repeatable enough to become a business development asset.",
+            "Lead influencer marketing for a portfolio of premium alcohol and beverage brands (each with distinct audiences, aesthetics, and compliance requirements), and build a program repeatable enough to become a business development asset.",
           approach:
             "Built an influencer marketing guide that codified strategy, creator selection, content standards, and measurement into a single replicable framework. The guide became the pitch.",
           workItems: [
