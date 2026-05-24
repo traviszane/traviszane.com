@@ -736,7 +736,7 @@ export const characters: Record<CharacterId, Character> = {
             "Built content strategy and creator briefs for each brand",
           ],
           metrics: [
-            { label: "New clients won", value: "10+" },
+            { label: "New clients won", value: "15+" },
             { label: "Brands managed", value: "6+" },
           ],
           pressLinks: [
