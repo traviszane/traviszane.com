@@ -858,11 +858,6 @@ export const characters: Record<CharacterId, Character> = {
             "Dual California / Mexico City lifestyle and community storytelling",
             "Zine, print, and editorial work woven throughout the feed",
           ],
-          shots: [
-            { src: igProfile, alt: "@travis_zane profile: 993 posts, 26.9K followers, 1,401 following" },
-            { src: igFollowers, alt: "Followers analytics: 26,998 total followers" },
-            { src: igViews, alt: "Views analytics: 27,364 views, 73.8% followers / 26.2% non-followers, 3,776 accounts reached" },
-          ],
           metrics: [
             { label: "Followers", value: "26.9K" },
             { label: "Posts", value: "993" },
