@@ -460,7 +460,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Achieve everything required to launch a new token at scale. Build the narrative, community infrastructure, and distribution network needed to hit a $500M+ valuation at launch. One window, no second chances.",
           approach:
-            "Built a coordinated GTM rollout across PR partners, exchange partners, and financial partners simultaneously—each lane moving in parallel toward a single launch moment. Retail-focused content ran alongside institutional positioning to capture both audiences at once.",
+            "Built a coordinated GTM rollout across PR partners, exchange partners, and financial partners simultaneously, each lane moving in parallel toward a single launch moment. Retail-focused content ran alongside institutional positioning to capture both audiences at once.",
           workItems: [
             "Full token launch GTM strategy and execution",
             "All launch content written and directed: teasers, announcement, staking explainers",
