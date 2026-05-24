@@ -562,9 +562,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Head of Social Media",
           timeframe: "2022 – 2023",
           situation:
-            "Superlayer was an incubator with a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each needing brand recognition built from nothing. The challenge: establish credibility across multiple products simultaneously with a lean team.",
+            "Superlayer was an incubator with a portfolio of consumer apps (Unite, Joyride, Hotline, Trophy, SuperChamps, Taki), each needing brand recognition built from nothing. The challenge: establish credibility across multiple products simultaneously with a lean team.",
           approach:
-            "Built GTM strategies and marketing playbooks tailored to each product's audience—consumer, gaming, social—while maintaining coherent Superlayer brand equity across the ecosystem. Thought leadership and newsletter strategy ran in parallel to build the umbrella brand.",
+            "Built GTM strategies and marketing playbooks tailored to each product's audience (consumer, gaming, social) while maintaining coherent Superlayer brand equity across the ecosystem. Thought leadership and newsletter strategy ran in parallel to build the umbrella brand.",
           workItems: [
             "GTM strategies and marketing playbooks for Superlayer and all ecosystem projects",
             "Social media and content funnels for Unite, Joyride, Hotline, Trophy, SuperChamps, Taki",
