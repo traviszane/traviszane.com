@@ -11,32 +11,85 @@ import spriteWriterVideoDark from "@/assets/sprite-writer-dark.mp4";
 import spriteCreatorVideoLight from "@/assets/sprite-creator-light.mp4";
 import spriteCreatorVideoDark from "@/assets/sprite-creator-dark.mp4";
 
-// Half Thoughts photos
-import ht1 from "@/assets/quests/half-thoughts/1D16D0DA-EE00-499E-9B24-8B5D3D761DEA.jpg";
-import ht2 from "@/assets/quests/half-thoughts/276C23D0-C06E-438B-A06E-838445ADBE9D.jpg";
-import ht3 from "@/assets/quests/half-thoughts/3215E5A3-FC47-4930-B33E-E59B3F0D1B0D.jpg";
-import ht4 from "@/assets/quests/half-thoughts/7C4BCD6A-0EC6-464F-B327-8FB03D3CD653.jpg";
-import ht5 from "@/assets/quests/half-thoughts/BC229B90-D175-489D-B595-1336E52B9225.jpg";
-import ht6 from "@/assets/quests/half-thoughts/C36A9FB4-C354-4C14-9C0E-506190AE5D29.jpg";
-import ht7 from "@/assets/quests/half-thoughts/D643572E-61F1-4186-AD55-110F230AD979.jpg";
-import ht8 from "@/assets/quests/half-thoughts/DA7EAA13-105E-4D79-9327-6C9E669FD877.jpg";
-import ht9 from "@/assets/quests/half-thoughts/EEDD9A60-4ADA-4C19-90A7-6DA6F7BA9C60.jpg";
+// Half Thoughts photos (webp-optimized)
+import ht1 from "@/assets/quests/half-thoughts/1D16D0DA-EE00-499E-9B24-8B5D3D761DEA.webp";
+import ht2 from "@/assets/quests/half-thoughts/276C23D0-C06E-438B-A06E-838445ADBE9D.webp";
+import ht3 from "@/assets/quests/half-thoughts/3215E5A3-FC47-4930-B33E-E59B3F0D1B0D.webp";
+import ht4 from "@/assets/quests/half-thoughts/7C4BCD6A-0EC6-464F-B327-8FB03D3CD653.webp";
+import ht5 from "@/assets/quests/half-thoughts/BC229B90-D175-489D-B595-1336E52B9225.webp";
+import ht6 from "@/assets/quests/half-thoughts/C36A9FB4-C354-4C14-9C0E-506190AE5D29.webp";
+import ht7 from "@/assets/quests/half-thoughts/D643572E-61F1-4186-AD55-110F230AD979.webp";
+import ht8 from "@/assets/quests/half-thoughts/DA7EAA13-105E-4D79-9327-6C9E669FD877.webp";
+import ht9 from "@/assets/quests/half-thoughts/EEDD9A60-4ADA-4C19-90A7-6DA6F7BA9C60.webp";
 
-// Ayem
-import ayemFlyer1 from "@/assets/quests/ayem/event-flyers.png";
-import ayemFlyer2 from "@/assets/quests/ayem/event-flyers-2.png";
-import ayemShot1 from "@/assets/quests/ayem/screenshot-1.png";
-import ayemShot2 from "@/assets/quests/ayem/screenshot-2.png";
-import ayemShot3 from "@/assets/quests/ayem/screenshot-3.png";
-
-// Gatherings
-import gather1 from "@/assets/quests/gatherings/event-1.jpg";
-import gather2 from "@/assets/quests/gatherings/event-2.jpg";
-import gather3 from "@/assets/quests/gatherings/event-3.jpg";
-import gather4 from "@/assets/quests/gatherings/event-4.jpg";
+// Ayem (+ event gathering photos folded in)
+import ayemFlyer1 from "@/assets/quests/ayem/event-flyers.webp";
+import ayemFlyer2 from "@/assets/quests/ayem/event-flyers-2.webp";
+import ayemShot1 from "@/assets/quests/ayem/screenshot-1.webp";
+import ayemShot2 from "@/assets/quests/ayem/screenshot-2.webp";
+import ayemShot3 from "@/assets/quests/ayem/screenshot-3.webp";
+import ayemGather1 from "@/assets/quests/ayem/gathering-event-1.webp";
+import ayemGather2 from "@/assets/quests/ayem/gathering-event-2.webp";
+import ayemGather3 from "@/assets/quests/ayem/gathering-event-3.webp";
+import ayemGather4 from "@/assets/quests/ayem/gathering-event-4.webp";
 
 // Sleepover
-import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.png";
+import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.webp";
+
+// Oasis
+import oasis1 from "@/assets/quests/oasis/oasis-1.webp";
+import oasis2 from "@/assets/quests/oasis/oasis-2.webp";
+import oasis3 from "@/assets/quests/oasis/oasis-3.webp";
+
+// Azuki
+import azuki1 from "@/assets/quests/azuki/azuki-1.webp";
+import azuki2 from "@/assets/quests/azuki/azuki-2.webp";
+import azuki3 from "@/assets/quests/azuki/azuki-3.webp";
+import azuki4 from "@/assets/quests/azuki/azuki-4.webp";
+import azuki5 from "@/assets/quests/azuki/azuki-5.webp";
+
+// DeepProve
+import dp1 from "@/assets/quests/deepprove/deepprove-1.webp";
+import dp2 from "@/assets/quests/deepprove/deepprove-2.webp";
+import dp3 from "@/assets/quests/deepprove/deepprove-3.webp";
+import dp4 from "@/assets/quests/deepprove/deepprove-4.webp";
+
+// LA Token
+import la1 from "@/assets/quests/la-token/la-1.webp";
+import la2 from "@/assets/quests/la-token/la-2.webp";
+import la3 from "@/assets/quests/la-token/la-3.webp";
+import la4 from "@/assets/quests/la-token/la-4.webp";
+import la5 from "@/assets/quests/la-token/la-5.webp";
+import la6 from "@/assets/quests/la-token/la-6.webp";
+
+// Refinery29
+import r29_1 from "@/assets/quests/refinery29/r29-1.webp";
+import r29_2 from "@/assets/quests/refinery29/r29-2.webp";
+
+// Photography
+import photo1 from "@/assets/quests/photography/photo-1.webp";
+import photo2 from "@/assets/quests/photography/photo-2.webp";
+import photo3 from "@/assets/quests/photography/photo-3.webp";
+import photo4 from "@/assets/quests/photography/photo-4.webp";
+import photo5 from "@/assets/quests/photography/photo-5.webp";
+import photo6 from "@/assets/quests/photography/photo-6.webp";
+import photo7 from "@/assets/quests/photography/photo-7.webp";
+import photo8 from "@/assets/quests/photography/photo-8.webp";
+import photo9 from "@/assets/quests/photography/photo-9.webp";
+import photo10 from "@/assets/quests/photography/photo-10.webp";
+import photo11 from "@/assets/quests/photography/photo-11.webp";
+import photo12 from "@/assets/quests/photography/photo-12.webp";
+import photo13 from "@/assets/quests/photography/photo-13.webp";
+import photo14 from "@/assets/quests/photography/photo-14.webp";
+import photo15 from "@/assets/quests/photography/photo-15.webp";
+import photo16 from "@/assets/quests/photography/photo-16.webp";
+import photo17 from "@/assets/quests/photography/photo-17.webp";
+import photo18 from "@/assets/quests/photography/photo-18.webp";
+
+// Revolukin
+import rev1 from "@/assets/quests/revolukin/revolukin-1.webp";
+import rev2 from "@/assets/quests/revolukin/revolukin-2.webp";
+import rev3 from "@/assets/quests/revolukin/revolukin-3.webp";
 
 import type { Embed } from "@/components/QuestEmbed";
 
@@ -52,6 +105,11 @@ export interface GalleryImage {
   alt: string;
 }
 
+export interface CTA {
+  label: string;
+  href: string;
+}
+
 export interface QuestDetails {
   client?: string;
   role?: string;
@@ -63,7 +121,6 @@ export interface QuestDetails {
   embeds?: Embed[];
   gallery?: GalleryImage[];
   pressLinks?: { label: string; url: string }[];
-  attachments?: { label: string; href: string }[];
   testimonials?: string[];
   // legacy/extra
   summary?: string;
@@ -80,6 +137,8 @@ export interface Chapter {
   goal?: string;
   outcome?: string;
   details?: QuestDetails;
+  /** Final CTAs rendered centered at the bottom of the quest page. */
+  ctas?: CTA[];
 }
 
 export type SkillTier = "S-TIER" | "A-TIER";
@@ -154,60 +213,51 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "sleepover",
-        href: "https://sleepoverxyz.substack.com",
         title: "Sleepover",
         meta: "Quest I — Newsletter",
-        description: "A biweekly letter about how to live better—delivered with intention.",
-        tags: ["Newsletter", "Essay", "Community"],
-        goal: "Build a dedicated readership around modern culture and the art of living—minus the noise of social media.",
-        outcome: "Every other Thursday. 200+ readers. Two years running.",
+        description: "Meditations on life and culture.",
+        tags: ["Essay", "Culture", "Community"],
+        goal: "Build a dedicated readership around modern culture and the art of living, connecting with a community of readers and writers.",
+        outcome: "Two years of uninterrupted publishing. A growing subscriber base, delivered every other week.",
         details: {
           role: "Writer & Publisher",
           timeframe: "2023 – present",
           situation:
-            "Build a dedicated readership around modern culture, joy, presence, and the art of living—without the noise of social media. Write the newsletter you'd want to receive.",
+            "Build a dedicated readership around modern culture and the art of living, connecting with a community of readers and writers.",
           approach:
-            "Published every other Thursday under the name Sleepover—a biweekly letter that contemplates how to live with more joy, presence, and compassion. No growth hacks, no virality plays. Just consistent, honest writing delivered directly to people who opted in.",
+            "Publish an essay every other week under the name Sleepover, branded as evening meditations on life. No growth hacks, no virality plays. Just consistent, honest writing delivered to people who opt in.",
           workItems: [
-            "Biweekly essays on modern culture and life",
+            "Essays on modern culture and life",
             "Two years of uninterrupted publishing",
-            "200+ dedicated subscribers",
-            "Home to the announcement and backstory of Half Thoughts",
-          ],
-          metrics: [
-            { label: "Subscribers", value: "200+" },
-            { label: "Cadence", value: "Biweekly" },
-            { label: "Years running", value: "2+" },
-          ],
-          attachments: [
-            { label: "Read Sleepover ↗", href: "https://sleepoverxyz.substack.com" },
+            "Growing subscriber base",
           ],
           gallery: [
-            { src: sleepoverHome, alt: "Sleepover homepage on Substack" },
+            { src: sleepoverHome, alt: "Sleepover newsletter homepage on Substack" },
           ],
         },
+        ctas: [
+          { label: "Read Sleepover", href: "https://sleepoverxyz.substack.com" },
+        ],
       },
       {
         slug: "half-thoughts",
-        href: "https://amazon.com/Half-Thoughts-Phrases-Society-Disillusionment/dp/B0DZV9KHSQ",
         title: "Half Thoughts",
         meta: "Quest II — Publication",
         description: "A book that started as a parody and became something true.",
-        tags: ["Poetry", "Essay", "Publication"],
-        goal: "Write and self-publish a debut collection of phrases on self, sex, and society—an experiment with form and satire.",
-        outcome: "Debut collection. Self-published March 2025. Available worldwide.",
+        tags: ["Poetry", "Self-Publishing", "Satire"],
+        goal: "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+        outcome: "Debut collection. Self-published March 2025. Available worldwide on Amazon in print and Kindle.",
         details: {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
           situation:
-            "Write a book. Not the serious literary novel in progress—something faster, stranger, more immediate. An experiment in form triggered by a TikTok spiral about what good writing actually is.",
+            "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
           approach:
-            "Half Thoughts began as a response to a style of social media poetry that felt too simple—and became a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay. Sharp, witty, unfiltered. Phrases that read like intrusive thoughts—but the kind you want to highlight.",
+            "Half Thoughts began as a response to a style of social media poetry that felt too simple, and evolved into a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay.",
           workItems: [
             "Conceived, written, designed, and self-published in under a year",
             "Available globally on Amazon in print and Kindle",
             "Published March 2025",
-            "Three sections: I. Sex — II. Society — III. Self",
           ],
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
@@ -215,38 +265,37 @@ export const characters: Record<CharacterId, Character> = {
             "Full of many 'makes ya think' bits.",
           ],
           gallery: [
-            { src: ht1, alt: "Half Thoughts — interior" },
-            { src: ht2, alt: "Half Thoughts — interior" },
-            { src: ht3, alt: "Half Thoughts — interior" },
-            { src: ht4, alt: "Half Thoughts — interior" },
-            { src: ht5, alt: "Half Thoughts — interior" },
-            { src: ht6, alt: "Half Thoughts — interior" },
-            { src: ht7, alt: "Half Thoughts — interior" },
-            { src: ht8, alt: "Half Thoughts — interior" },
-            { src: ht9, alt: "Half Thoughts — interior" },
-          ],
-          attachments: [
-            {
-              label: "Buy on Amazon ↗",
-              href: "https://amazon.com/Half-Thoughts-Phrases-Society-Disillusionment/dp/B0DZV9KHSQ",
-            },
+            { src: ht1, alt: "Half Thoughts — interior spread" },
+            { src: ht2, alt: "Half Thoughts — interior spread" },
+            { src: ht3, alt: "Half Thoughts — interior spread" },
+            { src: ht4, alt: "Half Thoughts — interior spread" },
+            { src: ht5, alt: "Half Thoughts — interior spread" },
+            { src: ht6, alt: "Half Thoughts — interior spread" },
+            { src: ht7, alt: "Half Thoughts — interior spread" },
+            { src: ht8, alt: "Half Thoughts — interior spread" },
+            { src: ht9, alt: "Half Thoughts — interior spread" },
           ],
         },
+        ctas: [
+          {
+            label: "View the Book",
+            href: "https://amazon.com/Half-Thoughts-Phrases-Society-Disillusionment/dp/B0DZV9KHSQ",
+          },
+        ],
       },
       {
         slug: "revolukin-magazine",
-        href: "https://instagram.com/revolukin",
         title: "Revolukin Magazine",
-        meta: "Quest III — Print Media",
+        meta: "Quest III — Publication",
         description: "$20K raised. 3,000 copies. 7,000+ contributors. Print isn't dead.",
-        tags: ["Print", "Zine", "Crowdfunding", "Community", "Publication"],
-        goal: "Create an independent print magazine celebrating 'revolutionary kin'—kind people doing meaningful things—at a time when everyone said print was dead.",
-        outcome: "$20K raised on Kickstarter. 3,000 copies printed. 7,000+ community contributors.",
+        tags: ["Print", "Editorial", "Community"],
+        goal: "Create an independent print magazine at a time when everyone said print was dead—celebrating revolutionary kin: kind people doing cool things that make the world a better place.",
+        outcome: "$20K raised on Kickstarter. 3,000 copies printed. 184 pages. 7,000+ community contributors.",
         details: {
           role: "Founder & Editor-in-Chief",
           timeframe: "2019",
           situation:
-            "Create an independent print magazine at a time when everyone said print was dead—celebrating 'revolutionary kin,' kind people doing meaningful things, through personal essays, editorials, and interviews.",
+            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin'—kind people doing cool things that make the world a better place—through personal essays, editorials, and interviews.",
           approach:
             "Launched a Kickstarter campaign in 2019, raised $20,000, and produced a 184-page debut issue exploring the human concept of time. Three sections: Introspection (personal essays), Invention (editorials with creative influencers), Inquiry (interviews with artists, researchers, and activists).",
           workItems: [
@@ -262,26 +311,40 @@ export const characters: Record<CharacterId, Character> = {
             { label: "Pages", value: "184" },
             { label: "Contributors", value: "7,000+" },
           ],
-          attachments: [
-            { label: "@revolukin on Instagram ↗", href: "https://instagram.com/revolukin" },
+          gallery: [
+            { src: rev1, alt: "Revolukin Magazine — cover and spread" },
+            { src: rev2, alt: "Revolukin Magazine — cover and spread" },
+            { src: rev3, alt: "Revolukin Magazine — cover and spread" },
+          ],
+          pressLinks: [
+            {
+              label: "Revolukin Magazine on Kickstarter",
+              url: "https://www.kickstarter.com/projects/traviszane/revolukin-magazine",
+            },
           ],
         },
+        ctas: [
+          {
+            label: "Download the Magazine (PDF)",
+            href: "/quest-assets/revolukin-issue-1.pdf",
+          },
+        ],
       },
       {
         slug: "trilogy-in-progress",
-        title: "Three Novels In Progress",
+        title: "A Trilogy (In Progress)",
         meta: "Quest IV — Long Form",
         description: "700,000+ words and counting.",
-        tags: ["Autofiction", "Long-Form"],
-        goal: "Write three full-length works of autofiction—finding something universal in the specific.",
-        outcome: "Over 700,000 words drafted. Currently in editing and revision.",
+        tags: ["Autofiction", "Long-Form", "Literary"],
+        goal: "Write three full-length novels—narratives tied together—drawing from real life experiences.",
+        outcome: "Over 700,000 words drafted across three manuscripts. Currently in editing and revision.",
         details: {
           role: "Author",
           timeframe: "Ongoing",
           situation:
-            "Write three full-length novels drawing from real life—autofiction that finds something universal in the specific. No deadline. No publisher. Just the work.",
+            "Write three full-length novels—narratives tied together—drawing from real life experiences.",
           approach:
-            "Over 700,000 words drafted across three manuscripts. Currently in editing and revision phases. The writing happens alongside everything else—the marketing work, the newsletter, the travel, the city-switching. It's the thread that runs through all of it.",
+            "Over 700,000 words drafted across three manuscripts. Currently in editing and revision phases.",
           workItems: [
             "Three autofiction manuscripts in progress",
             "700,000+ words drafted",
@@ -328,30 +391,31 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "deepprove-gtm",
-        href: "https://lagrange.dev/blog/turing-roulette-recap-humanity",
-        title: "Turing Roulette & DeepProve",
-        meta: "Quest I — GTM",
-        description: "Making verifiable AI playable—and impossible to ignore.",
-        tags: ["GTM Strategy", "Campaign", "Product Launch"],
-        goal: "Introduce a technically complex AI product to developer and mainstream audiences without losing either.",
+        title: "AI Product 'DeepProve'",
+        meta: "Quest I — Product Marketing",
+        description: "Making verifiable AI playable and impossible to ignore.",
+        tags: ["GTM", "Campaign", "Content", "Product Launch"],
+        goal: "Make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences, without alienating either.",
         outcome: "144,309 unique users · 3.75M+ AI proofs · 1.7M+ launch views · 30+ enterprise partners.",
         details: {
           client: "Lagrange",
           role: "Head of Marketing",
           timeframe: "2024 – 2025",
           situation:
-            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences simultaneously, without dumbing it down for one or alienating the other.",
+            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences, without alienating one or the other.",
           approach:
-            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases—teaser, announcement, activation, partner amplification, use case storytelling, and ongoing progress updates—each piece building narrative momentum toward the full product reveal.",
+            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases—teaser, announcement, game seasons, partner amplification, use-case highlights, and ongoing progress updates—each piece building narrative momentum to win and sustain product adoption.",
           workItems: [
             "Full end-to-end GTM strategy across brand, social, growth, and PR",
             "All hero content and campaign messaging written and directed in-house",
             "Multi-phase social rollout across X with coordinated partner and enterprise posts",
             "Turing Roulette tournament design and activation",
+            "Full campaign visual design and branding",
+            "Collaboration with engineering teams for product and activation UX",
             "DeepProve product launch content suite",
           ],
           metrics: [
-            { label: "Unique users", value: "144K+" },
+            { label: "Unique users", value: "144,309" },
             { label: "AI proofs", value: "3.75M+" },
             { label: "Launch views", value: "1.7M+" },
             { label: "Partners", value: "30+" },
@@ -363,23 +427,34 @@ export const characters: Record<CharacterId, Character> = {
             tw("https://x.com/lagrangedev/status/1937859910877769992"),
             tw("https://x.com/lagrangedev/status/1957472685103226883"),
           ],
+          gallery: [
+            { src: dp1, alt: "DeepProve campaign visual" },
+            { src: dp2, alt: "DeepProve campaign visual" },
+            { src: dp3, alt: "DeepProve campaign visual" },
+            { src: dp4, alt: "DeepProve campaign visual" },
+          ],
         },
+        ctas: [
+          {
+            label: "View the Campaign",
+            href: "https://lagrange.dev/blog/turing-roulette-recap-humanity",
+          },
+        ],
       },
       {
         slug: "la-token-launch",
-        href: "https://x.com/LagrangeFndn",
-        title: "$LA: Zero to $1B+",
-        meta: "Quest II — Token Launch",
-        description: "One token. One shot. Coordinated across exchanges, press, and the open internet.",
-        tags: ["Token Launch", "GTM", "Partnerships", "PR"],
-        goal: "Launch a new token at scale—building the narrative, community infrastructure, and distribution to hit a $1B+ valuation at launch.",
-        outcome: "$1B+ valuation at launch · 71K+ airdrop registrations · 1.7M+ views.",
+        title: "Zero to $500M+ with $LA",
+        meta: "Quest II — Product Marketing",
+        description: "Took a token from initial concept to nine-figure valuation at launch.",
+        tags: ["Token Launch", "GTM", "PR", "Partnerships"],
+        goal: "Achieve everything required to launch a new token at scale—narrative, community infrastructure, and distribution to hit a $500M+ valuation at launch.",
+        outcome: "$1B+ valuation at launch · 71K+ airdrop registrations · 1.7M+ views across retail-focused launch content.",
         details: {
           client: "Lagrange",
           role: "Head of Marketing",
           timeframe: "2025",
           situation:
-            "Launch a new token at scale—building the narrative, community infrastructure, and distribution network needed to hit a $1B+ valuation at launch. One window, no second chances.",
+            "Achieve everything required to launch a new token at scale. Build the narrative, community infrastructure, and distribution network needed to hit a $500M+ valuation at launch. One window, no second chances.",
           approach:
             "Built a coordinated GTM rollout across PR partners, exchange partners, and financial partners simultaneously—each lane moving in parallel toward a single launch moment. Retail-focused content ran alongside institutional positioning to capture both audiences at once.",
           workItems: [
@@ -387,6 +462,9 @@ export const characters: Record<CharacterId, Character> = {
             "All launch content written and directed: teasers, announcement, staking explainers",
             "Cross-functional coordination across PR, exchange, and financial partners",
             "Retail audience content strategy and rollout",
+            "Tokenomics positioning in collaboration with legal and finance",
+            "Staking program design in collaboration with engineering and development",
+            "Product positioning in APAC with exclusive experiences and merch",
           ],
           metrics: [
             { label: "Valuation at launch", value: "$1B+" },
@@ -398,68 +476,48 @@ export const characters: Record<CharacterId, Character> = {
             tw("https://x.com/lagrangedev/status/1927760534218457462"),
             tw("https://x.com/lagrangedev/status/1930233195934457911"),
           ],
-        },
-      },
-      {
-        slug: "lagrange-social",
-        href: "https://x.com/lagrangedev",
-        title: "Lagrange: 30K → 100K+",
-        meta: "Quest III — Social Growth",
-        description: "340% YoY. Not followers—a community with a point of view.",
-        tags: ["Social Growth", "Content", "Brand"],
-        goal: "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and ZK.",
-        outcome: "340% YoY growth · 635K+ avg monthly impressions · top mindshare in verifiable AI.",
-        details: {
-          client: "Lagrange",
-          role: "Head of Marketing",
-          timeframe: "2024 – 2025",
-          situation:
-            "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology—without losing technical credibility in the process.",
-          approach:
-            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns that conversation. Content mixed technical depth with accessibility—research threads, product storytelling, community highlights, and real-time market commentary—creating a feed that developers and non-developers could both follow.",
-          workItems: [
-            "Full social strategy and content calendar ownership",
-            "All copy written in-house across @lagrangedev and @lagrangefndn",
-            "Narrative arc built across product launches, ecosystem moments, and market events",
-            "Korean developer community built via Telegram alongside English-language growth",
-          ],
-          metrics: [
-            { label: "YoY growth", value: "340%" },
-            { label: "Monthly impressions", value: "635K+" },
-            { label: "Followers", value: "100K+" },
-          ],
-          embeds: [
-            tw("https://x.com/lagrangedev/status/1831065183151902876"),
-            tw("https://x.com/lagrangedev/status/1866528308550307998"),
-            tw("https://x.com/lagrangedev/status/1933192657330733204"),
-            tw("https://x.com/lagrangedev/status/2006070846738293076"),
+          gallery: [
+            { src: la1, alt: "$LA token launch creative" },
+            { src: la2, alt: "$LA token launch creative" },
+            { src: la3, alt: "$LA token launch creative" },
+            { src: la4, alt: "$LA token launch creative" },
+            { src: la5, alt: "$LA token launch creative" },
+            { src: la6, alt: "$LA token launch creative" },
           ],
         },
+        ctas: [
+          {
+            label: "View the Campaign",
+            href: "https://www.lagrangefoundation.org/blog/introducing-the-lagrange-token",
+          },
+        ],
       },
       {
         slug: "oasis-rebrand",
-        href: "https://x.com/OasisProtocol",
-        title: "Oasis: From Blockchain to AI Infrastructure",
-        meta: "Quest IV — Rebrand",
-        description: "767% social growth. A category nobody owned—until they did.",
-        tags: ["Rebrand", "Positioning", "Category Creation"],
-        goal: "Reposition the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
-        outcome: "767% YoY growth · 20K → 200K+ on X · 5M+ avg monthly impressions · 40K+ Discord.",
+        title: "Oasis: From Blockchain to AI",
+        meta: "Quest III — Brand & Content",
+        description: "767% social growth. A category nobody owned (until we did).",
+        tags: ["Positioning", "Product Marketing", "Social Growth"],
+        goal: "Position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
+        outcome: "767% YoY social growth · 5M+ avg monthly impressions · 40K+ Discord · 20K → 200K+ on X.",
         details: {
           client: "Oasis Protocol",
           role: "Head of Marketing",
           timeframe: "2022 – 2024",
           situation:
-            "Oasis was a well-built but narratively stuck L1 blockchain competing in a crowded field. The opportunity: reposition the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
+            "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
           approach:
-            "Built the rebrand around ROFL (Runtime OFf-chain Logic)—a technically real capability that became the narrative anchor for a new category: the privacy layer for the AI stack. Repositioning wasn't just messaging work; it required rebuilding the entire content and campaign infrastructure around a new thesis.",
+            "Built the rebrand around ROFL (Runtime OFf-chain Logic), a technical capability that became the narrative anchor for a new category: the privacy layer for the AI stack. Repositioning wasn't just messaging work; it required rebuilding Oasis' visual, content, and product identity around a new thesis.",
           workItems: [
             "Led narrative and positioning workshops to establish category leadership",
+            "Completed an entire visual redesign for the Oasis brand, involving community stakeholders in the final decision",
+            "Implemented brand new messaging across all key products and marketing channels",
             "Directed multiple product launches and rebrands: Emerald EVM, Sapphire EVM, Oasis Privacy Layer, ROFL",
             "Built and managed co-marketing network of 100+ partners",
             "Owned all content, messaging, and brand assets across social, blog, and ads",
             "Produced ETHDam, Oasis' flagship branded developer event",
             "Grew @oasisprotocol from 20K → 200K+ on X",
+            "Built demo archive for builders at demos.oasis.io",
           ],
           metrics: [
             { label: "YoY growth", value: "767%" },
@@ -473,17 +531,28 @@ export const characters: Record<CharacterId, Character> = {
             tw("https://x.com/OasisProtocol/status/1781041265192431753"),
             tw("https://x.com/OasisProtocol/status/1802782957993873491"),
           ],
+          gallery: [
+            { src: oasis1, alt: "Travis presenting at an Oasis event" },
+            { src: oasis2, alt: "Travis presenting at an Oasis event" },
+            { src: oasis3, alt: "Travis presenting at an Oasis event" },
+          ],
+          pressLinks: [
+            { label: "@OasisProtocol on X", url: "https://x.com/OasisProtocol" },
+            { label: "Oasis demo archive — demos.oasis.io", url: "https://demos.oasis.io/" },
+          ],
         },
+        ctas: [
+          { label: "View the Campaign", href: "https://oasis.net/" },
+        ],
       },
       {
         slug: "superlayer",
-        href: "https://x.com/superlayerio",
-        title: "Superlayer: Mobile & Web App Ecosystem",
-        meta: "Quest V — Ecosystem Growth",
-        description: "481% in six months. Built brand recognition for products nobody had heard of yet.",
-        tags: ["Thought Leadership", "Newsletter", "GTM"],
-        goal: "Establish credibility across a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—from cold start.",
-        outcome: "481% social growth in six months · 2M+ user base · 200K+ DAU across Unite/Taki.",
+        title: "Ecosystem Growth for Superlayer Apps",
+        meta: "Quest IV — Social & Growth",
+        description: "481% growth in six months. Built brand recognition for an ecosystem of mobile and web apps.",
+        tags: ["Product Marketing", "GTM", "Content", "Community"],
+        goal: "Establish credibility across a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each needing brand recognition built from nothing.",
+        outcome: "481% social growth in six months · 2M+ user base · 200K+ daily actives across Unite/Taki.",
         details: {
           client: "Superlayer",
           role: "Marketing Lead",
@@ -495,6 +564,7 @@ export const characters: Record<CharacterId, Character> = {
           workItems: [
             "GTM strategies and marketing playbooks for Superlayer and all ecosystem projects",
             "Social media and content funnels for Unite, Joyride, Hotline, Trophy, SuperChamps, Taki",
+            "Led ASO for all Superlayer ecosystem mobile apps",
             "Thought leadership and newsletter campaigns ghostwritten for leadership",
             "Influencer and community campaigns for a 2M+ user base",
           ],
@@ -511,27 +581,69 @@ export const characters: Record<CharacterId, Character> = {
         },
       },
       {
+        slug: "lagrange-social",
+        title: "The Future of Humanity is Lagrange",
+        meta: "Quest V — Social & Growth",
+        description: "340% YoY growth, establishing Lagrange as a leader in emerging tech.",
+        tags: ["Social Strategy", "Content", "Community", "Brand"],
+        goal: "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology.",
+        outcome: "340% YoY follower growth · 635K+ avg monthly impressions · top mindshare in verifiable AI.",
+        details: {
+          client: "Lagrange",
+          role: "Head of Marketing",
+          timeframe: "2024 – 2025",
+          situation:
+            "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology, reaching both consumer and developer audiences.",
+          approach:
+            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns the innovation making it real. Content mixed technical depth with accessibility—research threads, product storytelling, community highlights, and real-time market commentary—creating a feed that developers and non-developers could both relate to.",
+          workItems: [
+            "Full social strategy and content calendar ownership",
+            "Video direction, script-writing, and editing",
+            "All copy written in-house across @lagrangedev, @lagrangefndn, and founder accounts",
+            "Narrative arc built across product launches, ecosystem moments, and market events",
+            "Led co-marketing with strategic partners for consumer and crypto visibility (including Azuki)",
+            "Korean developer community built via Telegram alongside English-language growth",
+          ],
+          metrics: [
+            { label: "YoY growth", value: "340%" },
+            { label: "Monthly impressions", value: "635K+" },
+            { label: "Followers", value: "100K+" },
+          ],
+          embeds: [
+            tw("https://x.com/lagrangedev/status/1831065183151902876"),
+            tw("https://x.com/lagrangedev/status/1866528308550307998"),
+            tw("https://x.com/lagrangedev/status/1933192657330733204"),
+            tw("https://x.com/lagrangedev/status/2006070846738293076"),
+          ],
+          pressLinks: [
+            { label: "Infinite Proving Layer — lagrange.dev/blog", url: "https://lagrange.dev/blog/infinite-proving-layer" },
+          ],
+        },
+        ctas: [
+          { label: "View the Account", href: "https://x.com/lagrangedev" },
+        ],
+      },
+      {
         slug: "rally",
-        href: "https://x.com/rally_io",
-        title: "Rally: Content, Community & a Fast Company Top 5",
-        meta: "Quest VI — PR & Strategy",
-        description: "Creator economy storytelling that earned the room.",
-        tags: ["PR", "Content", "Social"],
-        goal: "Build a content and community presence that told the creator-token story clearly—and get it in front of the right people.",
+        title: "Rally: Fast Company Top 5 Most Innovative",
+        meta: "Quest VI — Brand & Content",
+        description: "Winning an audience of creators and consumers.",
+        tags: ["PR", "Social Strategy", "Content", "Community"],
+        goal: "Build a content and community presence that told the creator-token story clearly—and got it in front of the right people.",
         outcome: "Fast Company Top 5 Most Innovative Company 2022 · 103% social growth in 6 months.",
         details: {
           client: "Rally",
           role: "Content & Community Lead",
           timeframe: "2021 – 2022",
           situation:
-            "Rally was building infrastructure for creator tokens at a time when the category was misunderstood and the press was skeptical. The job: build a content and community presence that told the story clearly—and get it in front of the right people.",
+            "Rally was building infrastructure for creator tokens at a time when the category was misunderstood and the press was skeptical. The job: build a content and community presence that told the story clearly, and get it in front of the right people.",
           approach:
-            "Built Rally's social and community ops from the ground up while working closely with execs and PR to place the brand in earned media. The Portugal. The Man campaign became a proof point: a real artist, a real token, a story the mainstream press could tell.",
+            "Built Rally's social and community ops from the ground up while working closely with execs and PR to place the brand in earned media. The 'Portugal. The Man' campaign became a proof point: a real artist, a real token, a story the mainstream press could tell.",
           workItems: [
             "Developed and managed all social, community, and content ops",
             "Covered and amplified creator stories across the platform",
             "Collaborated with exec team and PR on media strategy",
-            "Portugal. The Man token campaign—covered by CoinDesk, Rolling Stone, Decrypt",
+            "Led content around the 'Portugal. The Man' campaign, covered by CoinDesk, Rolling Stone, Decrypt",
           ],
           metrics: [
             { label: "Fast Company", value: "Top 5" },
@@ -558,12 +670,53 @@ export const characters: Record<CharacterId, Character> = {
         },
       },
       {
+        slug: "azuki-odyssey",
+        title: "Lagrange × Azuki: Bridging ZK and NFTs",
+        meta: "Quest VII — Experiential",
+        description: "Making zero-knowledge technology accessible to mainstream crypto.",
+        tags: ["Partnerships", "Product Marketing", "Campaign", "Consumer"],
+        goal: "Make Lagrange's ZK Coprocessor tangible and beautiful for a mainstream NFT audience by partnering with the leading consumer brand in crypto.",
+        outcome: "Launched September 2024 to PRNewswire press coverage; positioned Lagrange as a category leader in verifiable onchain data.",
+        details: {
+          client: "Lagrange × Azuki",
+          role: "Head of Marketing",
+          timeframe: "2024",
+          situation:
+            "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology—but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
+          approach:
+            "Planned and produced the Azuki × Lagrange Odyssey—an immersive, celestial interactive experience that allowed Azuki NFT holders to explore their collection's onchain history: trading activity, collector trends, and community behavior over time, all powered by Lagrange's ZK Coprocessor 1.0. The experience translated a deeply technical product into something a non-developer could feel and explore. The Odyssey launched alongside the ZK Coprocessor 1.0 and served as its flagship consumer-facing proof of concept.",
+          workItems: [
+            "Planned and produced the full Azuki × Lagrange Odyssey experience",
+            "Coordinated partnership between Lagrange and Azuki—one of crypto's most recognized consumer brands",
+            "Developed consumer-facing narrative and messaging for a technically complex product",
+            "Experience targeted Azuki's community of NFT collectors—bridging developer technology and mainstream crypto culture",
+            "Launched alongside ZK Coprocessor 1.0 as the product's flagship activation",
+          ],
+          gallery: [
+            { src: azuki1, alt: "Azuki Odyssey experience" },
+            { src: azuki2, alt: "Azuki Odyssey experience" },
+            { src: azuki3, alt: "Azuki Odyssey experience" },
+            { src: azuki4, alt: "Azuki Odyssey experience" },
+            { src: azuki5, alt: "Azuki Odyssey experience" },
+          ],
+          pressLinks: [
+            {
+              label: "PRNewswire — Lagrange and Azuki launch interactive experience",
+              url: "https://www.prnewswire.com/news-releases/lagrange-and-azuki-launch-interactive-experience-to-fuel-azukis-ecosystem-growth-302235714.html",
+            },
+          ],
+        },
+        ctas: [
+          { label: "View the Campaign", href: "https://azukiodyssey.lagrange.dev" },
+        ],
+      },
+      {
         slug: "colangelo-influencer",
         title: "Colangelo & Partners: Influencer Program",
-        meta: "Quest VII — Influencer Marketing",
-        description: "A program that won 10+ new clients. Built from a single guide.",
-        tags: ["Influencer", "Beverage", "Business Development"],
-        goal: "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—and make it repeatable enough to become a business development asset.",
+        meta: "Quest VIII — Influencer Marketing",
+        description: "A program that won 10+ new clients, built from a single guide.",
+        tags: ["Partnerships", "Content Strategy", "Brand"],
+        goal: "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements—and build a program repeatable enough to become a business development asset.",
         outcome: "10+ new clients won using the influencer marketing guide as a BD asset.",
         details: {
           client: "Colangelo & Partners",
@@ -572,7 +725,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements—and build a program repeatable enough to become a business development asset.",
           approach:
-            "Built an influencer marketing guide that codified strategy, creator selection, content standards, and measurement into a single replicable framework. The guide became the pitch—and won.",
+            "Built an influencer marketing guide that codified strategy, creator selection, content standards, and measurement into a single replicable framework. The guide became the pitch.",
           workItems: [
             "Led influencer marketing program across multiple alcohol and beverage brands",
             "Managed creator relationships for: @SapporoBeerUSA, @DiplomaticoRum, @Disaronno_Official, @FarNienteWinery, @koloarum, @proseccodoc",
@@ -583,20 +736,28 @@ export const characters: Record<CharacterId, Character> = {
             { label: "New clients won", value: "10+" },
             { label: "Brands managed", value: "6+" },
           ],
-          attachments: [
-            {
-              label: "Download influencer whitepaper (PDF) ↗",
-              href: "/quest-assets/colangelo-influencer-whitepaper.pdf",
-            },
+          pressLinks: [
+            { label: "@SapporoBeerUSA on Instagram", url: "https://www.instagram.com/sapporobeerusa/" },
+            { label: "@DiplomaticoRum on Instagram", url: "https://www.instagram.com/diplomaticorum/" },
+            { label: "@Disaronno_Official on Instagram", url: "https://www.instagram.com/disaronno_official/" },
+            { label: "@proseccodoc on Instagram", url: "https://www.instagram.com/proseccodoc/" },
+            { label: "@FarNienteWinery on Instagram", url: "https://www.instagram.com/farnientewinery/" },
+            { label: "@koloarum on Instagram", url: "https://www.instagram.com/koloarum/" },
           ],
         },
+        ctas: [
+          {
+            label: "Download the Influencer Whitepaper",
+            href: "/quest-assets/colangelo-influencer-whitepaper.pdf",
+          },
+        ],
       },
       {
         slug: "refinery29-unleashed",
         title: "Refinery29 × UNLEASHED: #ConnectingThread",
-        meta: "Quest VIII — Creative Direction",
-        description: "654K reach. 8.92% engagement. Zero budget. Just creativity and conviction.",
-        tags: ["Creative Direction", "Influencer", "Nonprofit"],
+        meta: "Quest IX — Creative Direction",
+        description: "654K reach. 8.92% engagement. Zero budget.",
+        tags: ["Partnerships", "Content Strategy", "Brand"],
         goal: "Create genuine hype for a Refinery29 documentary launch with no marketing budget—using nothing but creative leverage.",
         outcome: "654,852 reach · 733,939 impressions · 8.92% avg engagement.",
         details: {
@@ -604,9 +765,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Campaign Director",
           timeframe: "2018",
           situation:
-            "UNLEASHED—a nonprofit media company—spent two years producing three documentary films about women around the world. They had a launch date on Refinery29, the #1 content platform for women, and no marketing budget. The challenge: create genuine hype with nothing but creative leverage.",
+            "UNLEASHED, a nonprofit media company, spent two years producing three documentary films about women around the world. They had a launch date on Refinery29, the #1 content platform for women, and no marketing budget. The challenge: create genuine hype with nothing but creative leverage.",
           approach:
-            "Built an international influencer campaign around what both UNLEASHED and Refinery29 do best—creative content and female empowerment. Designed, developed, and produced the full campaign from scratch: recruited female creators on Instagram, briefed them on the film series, and offered jewelry gifts in exchange for authentic promotion. No paid media. No agency. Just well-matched creators and a story worth telling.",
+            "Built an international influencer campaign around what both UNLEASHED and Refinery29 do best: creative content and female empowerment. Designed, developed, and produced the full campaign from scratch by recruiting female creators on Instagram, briefing them on the film series, and offering gifts in exchange for authentic promotion. No paid media, no agency. Only well-matched creators and a story worth telling.",
           workItems: [
             "Full influencer campaign development, management, and analysis",
             "Creator sourcing and outreach across international Instagram talent",
@@ -619,7 +780,27 @@ export const characters: Record<CharacterId, Character> = {
             { label: "Engagement", value: "8.92%" },
             { label: "Paid media", value: "$0" },
           ],
+          gallery: [
+            { src: r29_1, alt: "Refinery29 × UNLEASHED campaign" },
+            { src: r29_2, alt: "Refinery29 × UNLEASHED analytics" },
+          ],
+          pressLinks: [
+            { label: "Influencer post — @melaniesutra", url: "https://www.instagram.com/p/Boz-EMHgdbf/" },
+            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/Bo0BTq9lCqw/" },
+            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/BozERJ9BHmn/" },
+            { label: "Influencer post — campaign", url: "https://www.instagram.com/p/BozHRLLgqj4/" },
+          ],
         },
+        ctas: [
+          {
+            label: "View the India Film",
+            href: "https://www.refinery29.com/en-us/2018/10/214238/connecting-thread-india-women-fashion-beading-artisan-video",
+          },
+          {
+            label: "View the NYC Film",
+            href: "https://www.refinery29.com/en-us/foster-pride-crochet-crafts-nonprofit-new-york-city",
+          },
+        ],
       },
     ],
   },
@@ -655,13 +836,12 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "instagram",
-        href: "https://instagram.com/travis_zane",
-        title: "@travis_zane: 25K+ and a Decade in the Making",
-        meta: "Quest I — Community",
-        description: "Documentary-style living, shared in real time.",
-        tags: ["Content", "Photography", "Community"],
-        goal: "Build an authentic audience around travel, creativity, and personal storytelling.",
-        outcome: "25,000+ followers. Built organically over a decade between California and Mexico City.",
+        title: "Mixed-Media Storytelling (@travis_zane)",
+        meta: "Quest I — Social",
+        description: "Documentary-style storytelling with photos and words.",
+        tags: ["Photography", "Lifestyle", "Documentary"],
+        goal: "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
+        outcome: "25,000+ followers built organically over a decade between California and Mexico City.",
         details: {
           role: "Creator",
           timeframe: "2014 – present",
@@ -680,20 +860,19 @@ export const characters: Record<CharacterId, Character> = {
             { label: "Years active", value: "10+" },
             { label: "Cities", value: "CA · CDMX" },
           ],
-          attachments: [
-            { label: "@travis_zane on Instagram ↗", href: "https://instagram.com/travis_zane" },
-          ],
         },
+        ctas: [
+          { label: "View the Account", href: "https://www.instagram.com/travis_zane/" },
+        ],
       },
       {
         slug: "youtube",
-        href: "https://youtube.com/@travontheweb",
-        title: "Film & Video: Collections of Fleeting Moments",
-        meta: "Quest II — Film & Video",
-        description: "Documentary shorts, personal films, and branded video.",
-        tags: ["Video", "Documentary", "Creative Direction"],
-        goal: "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate.",
-        outcome: "A body of work spanning personal documentary, memoir, and branded content for Spotify, Adobe, and Google.",
+        title: "Experimental Video",
+        meta: "Quest II — Film",
+        description: "Documentary shorts, personal films, and branded content.",
+        tags: ["Documentary", "Short Film", "Art"],
+        goal: "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
+        outcome: "A body of work spanning documentary series, personal memoir, and shorts on uncertainty.",
         details: {
           role: "Director / Editor",
           timeframe: "2016 – present",
@@ -721,60 +900,75 @@ export const characters: Record<CharacterId, Character> = {
             yt("https://youtu.be/YxJvjbgW_58"),
             yt("https://www.youtube.com/watch?v=RuuiooyNCcs"),
           ],
-          workItems: [
-            "Branded clients include: Spotify, Adobe, Google",
-          ],
-          attachments: [
-            { label: "youtube.com/@travontheweb ↗", href: "https://youtube.com/@travontheweb" },
-          ],
         },
+        ctas: [
+          { label: "View the Channel", href: "https://youtube.com/@traviszane" },
+        ],
       },
       {
         slug: "photography",
-        title: "Photography: Documentary & Editorial",
+        title: "Experiential Stills",
         meta: "Quest III — Photography",
-        description: "Travel, portraiture, and cultural moments across California, Mexico City, and beyond.",
-        tags: ["Photography", "Documentary", "Editorial"],
-        goal: "Capture the texture of real life, real places, and real people without staging any of it.",
-        outcome: "Featured at the Japanese American National Museum in Los Angeles.",
+        description: "Featured at the Japanese American National Museum in Los Angeles.",
+        tags: ["Editorial", "Documentary", "Art"],
+        goal: "Document life experience through photography—capturing the textures of culture, environment, technology, and mental health that are quintessential to the 'American experience.'",
+        outcome: "Selected to exhibit photography and writing at the Japanese American National Museum in Los Angeles.",
         details: {
           role: "Photographer",
           timeframe: "Ongoing",
           situation:
-            "Documentary and editorial photography as a natural extension of the same instinct that drives the writing and video work—capturing the texture of real life, real places, and real people without staging any of it.",
+            "Document life experience through the medium of photography, capturing the textures of culture, environment, technology, and mental health that is quintessential to the 'American experience.'",
           approach:
-            "Selected to exhibit photography and writing at the Japanese American National Museum—one of the largest museums dedicated to sharing the Japanese American experience in the United States—as part of a community exhibition exploring identity, mental health, and human connection in the digital age.",
+            "Take photos and edit them… :) Instinct serves best!",
           workItems: [
             "Documentary and editorial photography spanning travel, portraiture, and cultural moments",
-            "Work spans California, Mexico City, New York, Hawaii, and international travel",
-            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles",
+            "Work spans California, Mexico City, New York, Hawaii, and elsewhere",
+            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles—as part of a community exhibition exploring identity, mental health, and human connection in the digital age",
           ],
           metrics: [
             { label: "Featured at", value: "JANM, LA" },
+          ],
+          gallery: [
+            { src: photo1, alt: "Photography portfolio" },
+            { src: photo2, alt: "Photography portfolio" },
+            { src: photo3, alt: "Photography portfolio" },
+            { src: photo4, alt: "Photography portfolio" },
+            { src: photo5, alt: "Photography portfolio" },
+            { src: photo6, alt: "Photography portfolio" },
+            { src: photo7, alt: "Photography portfolio" },
+            { src: photo8, alt: "Photography portfolio" },
+            { src: photo9, alt: "Photography portfolio" },
+            { src: photo10, alt: "Photography portfolio" },
+            { src: photo11, alt: "Photography portfolio" },
+            { src: photo12, alt: "Photography portfolio" },
+            { src: photo13, alt: "Photography portfolio" },
+            { src: photo14, alt: "Photography portfolio" },
+            { src: photo15, alt: "Photography portfolio" },
+            { src: photo16, alt: "Photography portfolio" },
+            { src: photo17, alt: "Photography portfolio" },
+            { src: photo18, alt: "Photography portfolio" },
           ],
         },
       },
       {
         slug: "branded-content",
-        title: "Branded Content Collaborations",
+        title: "Authentic Collaborations",
         meta: "Quest IV — Branded Content",
         description: "Storytelling that serves the brand without betraying the audience.",
-        tags: ["Brand Partnerships", "Content", "Creative Direction"],
-        goal: "Build a body of partnership work that spans industries—content that feels native to the creator's world, not like an ad dropped into it.",
-        outcome: "Collaborations with brands small and large—including Adobe, Spotify, and Google.",
+        tags: ["Partnerships", "Lifestyle", "Social"],
+        goal: "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
+        outcome: "Collaborations with 20+ brands including Adobe, Altos Tequila, Korbel, and more.",
         details: {
           role: "Creator / Director",
           timeframe: "Ongoing",
           situation:
-            "Build a body of partnership work that spans industries—creating content that feels native to the creator's world, not like an ad dropped into it.",
+            "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
           approach:
-            "Every collaboration built around authentic storytelling and real audience fit. The brief never drives the content—the voice does.",
+            "Build every collaboration around an authentic story.",
           workItems: [
-            "Altos Tequila collaboration",
-            "Korbel collaboration",
-            "Google Local Guides — chosen as a creator for the launch of the Google Local Guides program",
-            "Adobe, Spotify branded video content",
-            "More on the way",
+            "Collaborations with 20+ brands including Adobe, Altos Tequila, Korbel, and more",
+            "Chosen as a creator for the launch of the Google Local Guides program",
+            "More on the way!",
           ],
           embeds: [
             ig("https://www.instagram.com/reel/DGEGAMkvnot/"),
@@ -785,22 +979,24 @@ export const characters: Record<CharacterId, Character> = {
       {
         slug: "ayem",
         title: "ayem: An Experiment in Queer Education",
-        meta: "Quest V — Education",
-        description: "A queer education project built in public.",
-        tags: ["Education", "Community", "Publishing"],
-        goal: "Create a platform for honest, accessible education around sexuality, relationships, and identity.",
-        outcome: "A body of educational content, workshops, and a printed relationship anarchy zine.",
+        meta: "Quest V — Experiences",
+        description: "Five events. One city. Real people in a room together.",
+        tags: ["Community", "Events", "Education"],
+        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+        outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project and the Sleepover community party.",
         details: {
-          role: "Founder & Educator",
-          timeframe: "2022–2024",
+          role: "Founder & Host",
+          timeframe: "2023",
           situation:
-            "Build a queer education project that could live online and offline—giving people language, frameworks, and community around sexuality, relationships, and identity.",
+            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
           approach:
-            "Created ayem as an ongoing educational platform: visual content, workshops, and printed materials—including a zine on relationship anarchy designed to deconstruct how we relate to others and build our own models of love.",
+            "Produced a series of in-person events under the ayem banner in Mexico City—including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
+            "5+ events produced independently in Mexico City",
+            "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
             "Educational workshops on sexuality, relationships, and identity",
-            "Visual identity and content design across event flyers and digital assets",
             "Relationship anarchy zine produced and distributed",
+            "Sleepover community party",
           ],
           embeds: [
             yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
@@ -811,42 +1007,18 @@ export const characters: Record<CharacterId, Character> = {
             { src: ayemShot1, alt: "ayem event design" },
             { src: ayemShot2, alt: "ayem event design" },
             { src: ayemShot3, alt: "ayem event design" },
-          ],
-          attachments: [
-            {
-              label: "Download the Relationship Anarchy zine (PDF) ↗",
-              href: "/quest-assets/ayem-relationship-anarchy-zine.pdf",
-            },
+            { src: ayemGather1, alt: "ayem gathering in Mexico City" },
+            { src: ayemGather2, alt: "ayem gathering in Mexico City" },
+            { src: ayemGather3, alt: "ayem gathering in Mexico City" },
+            { src: ayemGather4, alt: "ayem gathering in Mexico City" },
           ],
         },
-      },
-      {
-        slug: "gatherings",
-        title: "Gatherings: Taking Community Offline",
-        meta: "Quest VI — Gatherings",
-        description: "Five events. One city. Real people in a room together.",
-        tags: ["Events", "Community", "Production"],
-        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation.",
-        outcome: "5+ events independently produced in Mexico City, including the Sleepover community party.",
-        details: {
-          role: "Producer & Host",
-          timeframe: "2023",
-          situation:
-            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation. Build something that could only exist in a room.",
-          approach:
-            "Produced a series of in-person events in Mexico City—including 'Exploring Relationship Anarchy' at HAAB Project, and Sleepover, a recurring community party. Each gathering designed to bring online conversations into shared physical space.",
-          workItems: [
-            "5+ events produced independently in Mexico City",
-            "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
-            "Sleepover community party",
-          ],
-          gallery: [
-            { src: gather1, alt: "Gathering in Mexico City" },
-            { src: gather2, alt: "Gathering in Mexico City" },
-            { src: gather3, alt: "Gathering in Mexico City" },
-            { src: gather4, alt: "Gathering in Mexico City" },
-          ],
-        },
+        ctas: [
+          {
+            label: "Download the Relationship Anarchy Zine",
+            href: "/quest-assets/ayem-relationship-anarchy-zine.pdf",
+          },
+        ],
       },
     ],
   },
