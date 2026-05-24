@@ -1000,7 +1000,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "Five events. One city. Real people in a room together.",
         tags: ["Community", "Events", "Education"],
         goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
-        outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project and the Sleepover community party.",
+        outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
