@@ -11,6 +11,11 @@ import spriteWriterVideoDark from "@/assets/sprite-writer-dark.mp4";
 import spriteCreatorVideoLight from "@/assets/sprite-creator-light.mp4";
 import spriteCreatorVideoDark from "@/assets/sprite-creator-dark.mp4";
 
+// Instagram analytics screenshots
+import igProfile from "@/assets/quests/instagram/ig-profile.webp";
+import igFollowers from "@/assets/quests/instagram/ig-followers.webp";
+import igViews from "@/assets/quests/instagram/ig-views.webp";
+
 // Half Thoughts photos (webp-optimized)
 import ht1 from "@/assets/quests/half-thoughts/1D16D0DA-EE00-499E-9B24-8B5D3D761DEA.webp";
 import ht2 from "@/assets/quests/half-thoughts/276C23D0-C06E-438B-A06E-838445ADBE9D.webp";
