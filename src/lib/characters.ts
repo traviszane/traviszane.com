@@ -883,21 +883,21 @@ export const characters: Record<CharacterId, Character> = {
           role: "Director / Editor",
           timeframe: "2016 – present",
           situation:
-            "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
+            "Develop a distinct visual voice through film and video: documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
           approach:
-            "A body of work built around the belief that the most interesting films are about ordinary people in specific places at particular moments—and that the job of the filmmaker is to show up, pay attention, and get out of the way.",
+            "A body of work built around the belief that the most interesting films are about ordinary people in specific places at particular moments, and that the job of the filmmaker is to show up, pay attention, and get out of the way.",
           sections: [
             {
               heading: "Isla Vista & UCSB Series",
-              body: "A four-part documentary series exploring the UC Santa Barbara and Isla Vista experience, built from footage shot in 2017. An attempt to preserve what makes a community of young people navigating their lives genuinely special—the magic of a place we once called home, continuing to teach and embolden us long after we've left.",
+              body: "A four-part documentary series exploring the UC Santa Barbara and Isla Vista experience, built from footage shot in 2017. An attempt to preserve what makes a community of young people navigating their lives genuinely special: the magic of a place we once called home, continuing to teach and embolden us long after we've left.",
             },
             {
               heading: "96 Years: A Film for My Grandmother",
-              body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life—including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
+              body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life, including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
             },
             {
               heading: "Shorts on Uncertainty: 'Joy' + 'Floating'",
-              body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty—celebrating the people, places, and moments that give us a reason to keep going.",
+              body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty, celebrating the people, places, and moments that give us a reason to keep going.",
             },
           ],
           embeds: [
