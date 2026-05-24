@@ -687,14 +687,14 @@ export const characters: Record<CharacterId, Character> = {
           role: "Marketing Lead",
           timeframe: "2024",
           situation:
-            "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology—but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
+            "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology, but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
           approach:
-            "Planned and produced the Azuki × Lagrange Odyssey—an immersive, celestial interactive experience that allowed Azuki NFT holders to explore their collection's onchain history: trading activity, collector trends, and community behavior over time, all powered by Lagrange's ZK Coprocessor 1.0. The experience translated a deeply technical product into something a non-developer could feel and explore. The Odyssey launched alongside the ZK Coprocessor 1.0 and served as its flagship consumer-facing proof of concept.",
+            "Planned and produced the Azuki × Lagrange Odyssey, an immersive, celestial interactive experience that allowed Azuki NFT holders to explore their collection's onchain history: trading activity, collector trends, and community behavior over time, all powered by Lagrange's ZK Coprocessor 1.0. The experience translated a deeply technical product into something a non-developer could feel and explore. The Odyssey launched alongside the ZK Coprocessor 1.0 and served as its flagship consumer-facing proof of concept.",
           workItems: [
             "Planned and produced the full Azuki × Lagrange Odyssey experience",
-            "Coordinated partnership between Lagrange and Azuki—one of crypto's most recognized consumer brands",
+            "Coordinated partnership between Lagrange and Azuki, one of crypto's most recognized consumer brands",
             "Developed consumer-facing narrative and messaging for a technically complex product",
-            "Experience targeted Azuki's community of NFT collectors—bridging developer technology and mainstream crypto culture",
+            "Experience targeted Azuki's community of NFT collectors, bridging developer technology and mainstream crypto culture",
             "Launched alongside ZK Coprocessor 1.0 as the product's flagship activation",
           ],
           gallery: [
