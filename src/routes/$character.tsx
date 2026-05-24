@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
@@ -248,9 +248,9 @@ function CharacterPage() {
                     </div>
                   )}
                   {ch.slug && (
-                    <ArrowUpRight
-                      className="absolute bottom-3 right-3 size-5 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-purple-500 dark:text-orange-400"
-                      strokeWidth={2.5}
+                    <ArrowRight
+                      className="absolute bottom-3 right-3 size-4 opacity-0 translate-x-1 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-300 text-purple-500 dark:text-orange-400"
+                      strokeWidth={1.5}
                     />
                   )}
                 </>
