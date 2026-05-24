@@ -218,7 +218,7 @@ function QuestPage() {
                   ◆ The Situation
                 </h2>
                 <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
-                  {d.situation}
+                  {renderLinked(d.situation)}
                 </p>
               </section>
             )}
