@@ -122,7 +122,7 @@ export interface QuestDetails {
   workItems?: string[];
   metrics?: { label: string; value: string }[];
   embeds?: Embed[];
-  gallery?: GalleryImage[];
+  gallery?: GalleryItem[];
   /** Free-form image cards rendered at their natural aspect ratio (e.g. portrait analytics screenshots). */
   shots?: GalleryImage[];
   pressLinks?: { label: string; url: string }[];
