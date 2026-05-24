@@ -193,7 +193,7 @@ export const characters: Record<CharacterId, Character> = {
     className: "Storyteller",
     tagline: "Master of syntax and storytelling.",
     blurb:
-      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current—quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
+      "Essays, fiction, philosophy: the form changes, the insight grows. The Writer transforms tangled ideas into prose that reads like a current, quiet, deliberate, and hard to put down. He seeks truth in modern life whilst honoring its shapeshifting nature.",
     sprite: spriteWriter,
     spriteDark: spriteWriterDark,
     painterlyVideo: spriteWriterVideoLight,
@@ -253,13 +253,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Publication",
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Self-Publishing", "Satire"],
-        goal: "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+        goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
         outcome: "Published March 2025. Available worldwide on Amazon in print and Kindle.",
         details: {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
           situation:
-            "Write a book with the goal of making something fun—an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+            "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
           approach:
             "Half Thoughts began as a response to a style of social media poetry that felt too simple, and evolved into a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay.",
           workItems: [
@@ -269,7 +269,7 @@ export const characters: Record<CharacterId, Character> = {
           ],
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
-            "Genuine, honest, and authentic—each poem is a beautiful exploration of love, sex, identity, and the struggle of life.",
+            "Genuine, honest, and authentic. Each poem is a beautiful exploration of love, sex, identity, and the struggle of life.",
             "Full of many 'makes ya think' bits.",
           ],
           gallery: [
@@ -293,13 +293,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest III — Publication",
         description: "$20K raised. 3,000 copies. 7,000+ contributors. Print isn't dead!",
         tags: ["Print", "Editorial", "Community"],
-        goal: "Create an independent print magazine at a time when everyone said print was dead—celebrating revolutionary kin: kind people doing cool things that make the world a better place.",
+        goal: "Create an independent print magazine at a time when everyone said print was dead, celebrating revolutionary kin: kind people doing cool things that make the world a better place.",
         outcome: "$20K raised on Kickstarter. 3,000 copies printed. 184 pages. 7,000+ community contributors.",
         details: {
           role: "Founder & Editor-in-Chief",
           timeframe: "2019",
           situation:
-            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin'—kind people doing cool things that make the world a better place—through personal essays, editorials, and interviews.",
+            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin' (kind people doing cool things that make the world a better place) through personal essays, editorials, and interviews.",
           approach:
             "Launched a Kickstarter campaign in 2019, raised $20,000, and produced a 184-page debut issue exploring the human concept of time. Three sections: Introspection (personal essays), Invention (editorials with creative influencers), Inquiry (interviews with artists, researchers, and activists).",
           workItems: [
@@ -340,13 +340,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Long Form",
         description: "700,000+ words and counting.",
         tags: ["Autofiction", "Long-Form", "Literary"],
-        goal: "Write three full-length novels—narratives tied together—drawing from real life experiences.",
+        goal: "Write three full-length novels, narratives tied together, drawing from real life experiences.",
         outcome: "Over 700,000 words drafted across three manuscripts. Currently in editing and revision.",
         details: {
           role: "Author",
           timeframe: "Ongoing",
           situation:
-            "Write three full-length novels—narratives tied together—drawing from real life experiences.",
+            "Write three full-length novels, narratives tied together, drawing from real life experiences.",
           approach:
             "Over 700,000 words drafted across three manuscripts. Currently in editing and revision phases.",
           workItems: [
@@ -406,9 +406,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Head of Marketing",
           timeframe: "2024 – 2025",
           situation:
-            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible—and exciting—to developers and mainstream audiences, without alienating one or the other.",
+            "DeepProve was a technically complex verifiable AI product entering a crowded, skeptical market. The challenge: make zero-knowledge machine learning legible (and exciting) to developers and mainstream audiences, without alienating one or the other.",
           approach:
-            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases—teaser, announcement, game seasons, partner amplification, use-case highlights, and ongoing progress updates—each piece building narrative momentum to win and sustain product adoption.",
+            "Instead of a standard product launch, the campaign was built around an experience: Turing Roulette, an AI tournament that put the product's capabilities directly in players' hands. The campaign ran in phases (teaser, announcement, game seasons, partner amplification, use-case highlights, and ongoing progress updates), each piece building narrative momentum to win and sustain product adoption.",
           workItems: [
             "Full end-to-end GTM strategy across brand, social, growth, and PR",
             "All hero content and campaign messaging written and directed in-house",
@@ -451,7 +451,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Product Marketing",
         description: "Took a token from initial concept to nine-figure valuation at launch.",
         tags: ["Token Launch", "GTM", "PR", "Partnerships"],
-        goal: "Achieve everything required to launch a new token at scale—narrative, community infrastructure, and distribution—and execute the launch from beginning to end.",
+        goal: "Achieve everything required to launch a new token at scale (narrative, community infrastructure, and distribution), and execute the launch from beginning to end.",
         outcome: "$500M at launch, 71K+ airdrop registrations, and 1.7M+ views across retail-focused launch content.",
         details: {
           client: "Lagrange",
@@ -460,7 +460,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Achieve everything required to launch a new token at scale. Build the narrative, community infrastructure, and distribution network needed to hit a $500M+ valuation at launch. One window, no second chances.",
           approach:
-            "Built a coordinated GTM rollout across PR partners, exchange partners, and financial partners simultaneously—each lane moving in parallel toward a single launch moment. Retail-focused content ran alongside institutional positioning to capture both audiences at once.",
+            "Built a coordinated GTM rollout across PR partners, exchange partners, and financial partners simultaneously, each lane moving in parallel toward a single launch moment. Retail-focused content ran alongside institutional positioning to capture both audiences at once.",
           workItems: [
             "Full token launch GTM strategy and execution",
             "All launch content written and directed: teasers, announcement, staking explainers",
@@ -509,7 +509,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Brand Lead",
           timeframe: "2022 – 2024",
           situation:
-            "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI—a genuinely differentiated category—before anyone else claimed it.",
+            "Oasis was a well-built, albeit narratively stuck L1 blockchain competing in a crowded field. The project needed someone to do a complete overhaul of their brand, social, content, and product marketing. The opportunity: position the entire project around privacy-preserving AI, a genuinely differentiated category, before anyone else claimed it.",
           approach:
             "Built the rebrand around ROFL (Runtime OFf-chain Logic), a technical capability that became the narrative anchor for a new category: the privacy layer for the AI stack. Repositioning wasn't just messaging work; it required rebuilding Oasis' visual, content, and product identity around a new thesis.",
           workItems: [
@@ -562,9 +562,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Head of Social Media",
           timeframe: "2022 – 2023",
           situation:
-            "Superlayer was an incubator with a portfolio of consumer apps—Unite, Joyride, Hotline, Trophy, SuperChamps, Taki—each needing brand recognition built from nothing. The challenge: establish credibility across multiple products simultaneously with a lean team.",
+            "Superlayer was an incubator with a portfolio of consumer apps (Unite, Joyride, Hotline, Trophy, SuperChamps, Taki), each needing brand recognition built from nothing. The challenge: establish credibility across multiple products simultaneously with a lean team.",
           approach:
-            "Built GTM strategies and marketing playbooks tailored to each product's audience—consumer, gaming, social—while maintaining coherent Superlayer brand equity across the ecosystem. Thought leadership and newsletter strategy ran in parallel to build the umbrella brand.",
+            "Built GTM strategies and marketing playbooks tailored to each product's audience (consumer, gaming, social) while maintaining coherent Superlayer brand equity across the ecosystem. Thought leadership and newsletter strategy ran in parallel to build the umbrella brand.",
           workItems: [
             "GTM strategies and marketing playbooks for Superlayer and all ecosystem projects",
             "Social media and content funnels for Unite, Joyride, Hotline, Trophy, SuperChamps, Taki",
@@ -599,7 +599,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology, reaching both consumer and developer audiences.",
           approach:
-            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns the innovation making it real. Content mixed technical depth with accessibility—research threads, product storytelling, community highlights, and real-time market commentary—creating a feed that developers and non-developers could both relate to.",
+            "Every post was built around a consistent thesis: verifiable AI is the next frontier, and Lagrange owns the innovation making it real. Content mixed technical depth with accessibility (research threads, product storytelling, community highlights, and real-time market commentary), creating a feed that developers and non-developers could both relate to.",
           workItems: [
             "Full social strategy and content calendar ownership",
             "Video direction, script-writing, and editing",
@@ -687,14 +687,14 @@ export const characters: Record<CharacterId, Character> = {
           role: "Marketing Lead",
           timeframe: "2024",
           situation:
-            "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology—but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
+            "Lagrange's ZK Coprocessor was a genuinely powerful piece of technology, but explaining zero-knowledge proofs and SQL queries over onchain data to a mainstream audience is a different challenge entirely. The opportunity: partner with Azuki, the leading consumer brand in crypto with one of the most passionate NFT communities in the world, and build an experience that made the technology tangible and beautiful.",
           approach:
-            "Planned and produced the Azuki × Lagrange Odyssey—an immersive, celestial interactive experience that allowed Azuki NFT holders to explore their collection's onchain history: trading activity, collector trends, and community behavior over time, all powered by Lagrange's ZK Coprocessor 1.0. The experience translated a deeply technical product into something a non-developer could feel and explore. The Odyssey launched alongside the ZK Coprocessor 1.0 and served as its flagship consumer-facing proof of concept.",
+            "Planned and produced the Azuki × Lagrange Odyssey, an immersive, celestial interactive experience that allowed Azuki NFT holders to explore their collection's onchain history: trading activity, collector trends, and community behavior over time, all powered by Lagrange's ZK Coprocessor 1.0. The experience translated a deeply technical product into something a non-developer could feel and explore. The Odyssey launched alongside the ZK Coprocessor 1.0 and served as its flagship consumer-facing proof of concept.",
           workItems: [
             "Planned and produced the full Azuki × Lagrange Odyssey experience",
-            "Coordinated partnership between Lagrange and Azuki—one of crypto's most recognized consumer brands",
+            "Coordinated partnership between Lagrange and Azuki, one of crypto's most recognized consumer brands",
             "Developed consumer-facing narrative and messaging for a technically complex product",
-            "Experience targeted Azuki's community of NFT collectors—bridging developer technology and mainstream crypto culture",
+            "Experience targeted Azuki's community of NFT collectors, bridging developer technology and mainstream crypto culture",
             "Launched alongside ZK Coprocessor 1.0 as the product's flagship activation",
           ],
           gallery: [
@@ -721,14 +721,14 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest VIII — Influencer Marketing",
         description: "Launched a program that won 15+ new clients, setting the standard for influencer marketing in the food and beverage industry.",
         tags: ["Partnerships", "Content", "Strategy", "Brand"],
-        goal: "Lead a new influencer marketing program for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements.",
+        goal: "Lead a new influencer marketing program for a portfolio of premium alcohol and beverage brands, each with distinct audiences, aesthetics, and compliance requirements.",
         outcome: "15+ new clients won using the influencer marketing guide as a BD asset. Built a playbook repeatable enough to become a key business development asset.",
         details: {
           client: "Colangelo & Partners",
           role: "Marketing Manager",
           timeframe: "2019 – 2020",
           situation:
-            "Lead influencer marketing for a portfolio of premium alcohol and beverage brands—each with distinct audiences, aesthetics, and compliance requirements—and build a program repeatable enough to become a business development asset.",
+            "Lead influencer marketing for a portfolio of premium alcohol and beverage brands (each with distinct audiences, aesthetics, and compliance requirements), and build a program repeatable enough to become a business development asset.",
           approach:
             "Built an influencer marketing guide that codified strategy, creator selection, content standards, and measurement into a single replicable framework. The guide became the pitch.",
           workItems: [
@@ -853,10 +853,10 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
           approach:
-            "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work—same audience, same voice, since college. Zines, travel, community, and the texture of daily life.",
+            "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work, same audience, same voice, since college. Zines, travel, community, and the texture of daily life.",
           workItems: [
             "993 posts spanning a decade of documentary photography and video",
-            "Audience built organically—no paid growth, no algorithm chasing",
+            "Audience built organically, no paid growth, no algorithm chasing",
             "Dual California / Mexico City lifestyle and community storytelling",
             "Zine, print, and editorial work woven throughout the feed",
           ],
@@ -929,7 +929,7 @@ export const characters: Record<CharacterId, Character> = {
           workItems: [
             "Documentary and editorial photography spanning travel, portraiture, and cultural moments",
             "Work spans California, Mexico City, New York, Hawaii, and elsewhere",
-            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles—as part of a community exhibition exploring identity, mental health, and human connection in the digital age",
+            "Photography and writing selected for exhibition at the Japanese American National Museum in Los Angeles, as part of a community exhibition exploring identity, mental health, and human connection in the digital age",
           ],
           metrics: [
             { label: "Featured at", value: "JANM, LA" },
