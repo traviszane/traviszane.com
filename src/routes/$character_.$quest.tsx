@@ -238,12 +238,11 @@ function QuestPage() {
                     "type" in g ? (
                       <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />
                     ) : (
-                      <a
+                      <button
                         key={i}
-                        href={g.src}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block overflow-hidden rounded-md border border-border bg-card/40"
+                        type="button"
+                        onClick={() => setLightbox({ src: g.src, alt: g.alt })}
+                        className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left"
                       >
                         <img
                           src={g.src}
@@ -251,9 +250,10 @@ function QuestPage() {
                           loading="lazy"
                           className="h-full w-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
                         />
-                      </a>
+                      </button>
                     )
                   ))}
+
                 </div>
               </section>
             )}
