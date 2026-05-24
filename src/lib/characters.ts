@@ -585,12 +585,12 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "lagrange-social",
-        title: "The Future of Humanity is Lagrange",
+        title: "Lagrange: Leadership in ZK & AI",
         meta: "Quest V — Social & Growth",
         description: "340% YoY growth, establishing Lagrange as a leader in emerging tech.",
         tags: ["Social Strategy", "Content", "Community", "Brand"],
         goal: "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology.",
-        outcome: "340% YoY follower growth · 635K+ avg monthly impressions · top mindshare in verifiable AI.",
+        outcome: "340% YoY follower growth, 635K+ avg monthly impressions, and top mindshare in verifiable AI.",
         details: {
           client: "Lagrange",
           role: "Head of Marketing",
