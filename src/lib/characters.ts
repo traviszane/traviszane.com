@@ -125,6 +125,8 @@ export interface QuestDetails {
   metrics?: { label: string; value: string }[];
   embeds?: Embed[];
   gallery?: GalleryImage[];
+  /** Free-form image cards rendered at their natural aspect ratio (e.g. portrait analytics screenshots). */
+  shots?: GalleryImage[];
   pressLinks?: { label: string; url: string }[];
   testimonials?: string[];
   // legacy/extra
