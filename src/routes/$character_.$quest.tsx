@@ -69,7 +69,41 @@ function QuestPage() {
   const color = `var(${c.colorVar})`;
   const d = ch.details;
   const otherQuests = c.chapters.filter((q) => q.slug !== quest);
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const galleryImages = useMemo(
+    () =>
+      (d?.gallery ?? []).flatMap((g) =>
+        "type" in g ? [] : [{ src: g.src, alt: g.alt }],
+      ),
+    [d],
+  );
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const lightbox = lightboxIndex !== null ? galleryImages[lightboxIndex] : null;
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const showPrev = useCallback(
+    () =>
+      setLightboxIndex((i) =>
+        i === null ? i : (i - 1 + galleryImages.length) % galleryImages.length,
+      ),
+    [galleryImages.length],
+  );
+  const showNext = useCallback(
+    () =>
+      setLightboxIndex((i) =>
+        i === null ? i : (i + 1) % galleryImages.length,
+      ),
+    [galleryImages.length],
+  );
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowLeft") showPrev();
+      else if (e.key === "ArrowRight") showNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, closeLightbox, showPrev, showNext]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
