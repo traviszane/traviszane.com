@@ -845,13 +845,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest I — Social",
         description: "A decade of documentary photography, video, and words on @travis_zane.",
         tags: ["Photography", "Lifestyle", "Documentary"],
-        goal: "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
+        goal: "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
         outcome: "27,000+ followers built organically over a decade between California and Mexico City.",
         details: {
           role: "Creator",
           timeframe: "2014 – present",
           situation:
-            "Build an authentic audience around travel, creativity, and personal storytelling—without chasing trends or optimizing for the algorithm. Let the life be the content.",
+            "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
           approach:
             "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work—same audience, same voice, since college. Zines, travel, community, and the texture of daily life.",
           workItems: [
@@ -877,27 +877,27 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Film",
         description: "Documentary shorts, personal films, and branded content.",
         tags: ["Documentary", "Short Film", "Art"],
-        goal: "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
+        goal: "Develop a distinct visual voice through film and video: documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
         outcome: "A body of work spanning documentary series, personal memoir, and shorts on uncertainty.",
         details: {
           role: "Director / Editor",
           timeframe: "2016 – present",
           situation:
-            "Develop a distinct visual voice through film and video—documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
+            "Develop a distinct visual voice through film and video: documentary-style, narrative-driven, intimate. Treat the camera as a tool for emotional honesty, not just documentation.",
           approach:
-            "A body of work built around the belief that the most interesting films are about ordinary people in specific places at particular moments—and that the job of the filmmaker is to show up, pay attention, and get out of the way.",
+            "A body of work built around the belief that the most interesting films are about ordinary people in specific places at particular moments, and that the job of the filmmaker is to show up, pay attention, and get out of the way.",
           sections: [
             {
               heading: "Isla Vista & UCSB Series",
-              body: "A four-part documentary series exploring the UC Santa Barbara and Isla Vista experience, built from footage shot in 2017. An attempt to preserve what makes a community of young people navigating their lives genuinely special—the magic of a place we once called home, continuing to teach and embolden us long after we've left.",
+              body: "A four-part documentary series exploring the UC Santa Barbara and Isla Vista experience, built from footage shot in 2017. An attempt to preserve what makes a community of young people navigating their lives genuinely special: the magic of a place we once called home, continuing to teach and embolden us long after we've left.",
             },
             {
               heading: "96 Years: A Film for My Grandmother",
-              body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life—including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
+              body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life, including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
             },
             {
               heading: "Shorts on Uncertainty: 'Joy' + 'Floating'",
-              body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty—celebrating the people, places, and moments that give us a reason to keep going.",
+              body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty, celebrating the people, places, and moments that give us a reason to keep going.",
             },
           ],
           embeds: [
@@ -913,11 +913,11 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "photography",
-        title: "Experiential Stills",
+        title: "EDITORIAL PHOTOGRAPHY",
         meta: "Quest III — Photography",
         description: "Featured at the Japanese American National Museum in Los Angeles.",
         tags: ["Editorial", "Documentary", "Art"],
-        goal: "Document life experience through photography—capturing the textures of culture, environment, technology, and mental health that are quintessential to the 'American experience.'",
+        goal: "Document life experience through photography, capturing the textures of culture, environment, technology, and mental health that are quintessential to the 'American experience.'",
         outcome: "Selected to exhibit photography and writing at the Japanese American National Museum in Los Angeles.",
         details: {
           role: "Photographer",
@@ -962,13 +962,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest IV — Branded Content",
         description: "Storytelling that serves the brand without betraying the audience.",
         tags: ["Partnerships", "Lifestyle", "Social"],
-        goal: "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
+        goal: "Create a body of partnership work that feels authentic and relatable, regardless of the industry.",
         outcome: "Collaborations with 20+ brands including Adobe, Altos Tequila, Korbel, and more.",
         details: {
           role: "Creator / Director",
           timeframe: "Ongoing",
           situation:
-            "Create a body of partnership work that spans industries, publishing content that feels native to my lived experiences.",
+            "Create a body of partnership work that feels authentic and relatable, regardless of the industry.",
           approach:
             "Build every collaboration around an authentic story.",
           workItems: [
@@ -984,19 +984,19 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "ayem",
-        title: "ayem: An Experiment in Queer Education",
+        title: "ayem community & studio",
         meta: "Quest V — Experiences",
-        description: "Five events. One city. Real people in a room together.",
+        description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
-        goal: "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+        goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
         outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
           situation:
-            "Take the online community offline—create physical spaces in Mexico City for creative expression, connection, and honest conversation around sexuality and relationships. Build something that could only exist in a room.",
+            "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around sexuality and relationships.",
           approach:
-            "Produced a series of in-person events under the ayem banner in Mexico City—including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
+            "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
             "5+ events produced independently in Mexico City",
             "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
