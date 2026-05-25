@@ -254,7 +254,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Publication",
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Self-Publishing", "Satire"],
-        goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+        goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what \"good writing\" actually is.",
         outcome: "Named \"#1 New Release in LGBTQ+ Poetry.\" 5-star ratings across countries.",
         details: {
           role: "Author, Designer, Publisher",
