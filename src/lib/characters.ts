@@ -636,7 +636,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "rally",
-        title: "Rally: Fast Company's 'Top 5 Most Innovative'",
+        title: "Rally: Fast Company's \"Top 5 Most Innovative\"",
         meta: "Quest VI — Brand & Content",
         description: "Winning an audience of creators and consumers with bespoke social and PR strategy.",
         tags: ["PR", "Social Strategy", "Content", "Community"],
