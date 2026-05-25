@@ -984,7 +984,7 @@ export const characters: Record<CharacterId, Character> = {
             "More on the way!",
           ],
           embeds: [
-            ig("https://www.instagram.com/reel/DGEGAMkvnot/"),
+            ig("https://www.instagram.com/p/DGEGAMkvnot/"),
             ig("https://www.instagram.com/reel/DQmeYP8karS/"),
           ],
         },
