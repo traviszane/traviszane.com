@@ -736,7 +736,7 @@ export const characters: Record<CharacterId, Character> = {
           workItems: [
             "Led influencer marketing program across multiple alcohol and beverage brands",
             "Managed creator relationships for: @SapporoBeerUSA, @DiplomaticoRum, @Disaronno_Official, @FarNienteWinery, @koloarum, @proseccodoc",
-            "Developed influencer marketing guide that won 10+ new clients",
+            "Developed influencer marketing guide that won 15+ new clients",
             "Built content strategy and creator briefs for each brand",
           ],
           metrics: [
