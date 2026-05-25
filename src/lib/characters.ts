@@ -1003,7 +1003,7 @@ export const characters: Record<CharacterId, Character> = {
           situation:
             "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
           approach:
-            "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
+            "Produced a series of in-person events under the ayem banner in Mexico City, including \"Exploring Relationship Anarchy,\" a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
             "5+ events produced independently in Mexico City",
             "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
