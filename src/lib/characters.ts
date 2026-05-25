@@ -269,9 +269,9 @@ export const characters: Record<CharacterId, Character> = {
             "Available globally on Amazon in print and Kindle",
           ],
           metrics: [
-            { label: "New Release on Amazon", value: "#1" },
-            { label: "Average Rating", value: "5-Star" },
-            { label: "Availability", value: "Global" },
+            { value: "#1 New Release", label: "on Amazon" },
+            { value: "5-Star", label: "Average Rating" },
+            { value: "Global", label: "Availability" },
           ],
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
