@@ -996,7 +996,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
         goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
-        outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
+        outcome: "5+ events produced independently in Mexico City, including \"Exploring Relationship Anarchy\" at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
