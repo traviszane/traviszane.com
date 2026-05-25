@@ -903,7 +903,7 @@ export const characters: Record<CharacterId, Character> = {
               body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life, including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
             },
             {
-              heading: "Shorts on Uncertainty: 'Joy' + 'Floating'",
+              heading: "Shorts on Uncertainty: \"Joy\" + \"Floating\"",
               body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty, celebrating the people, places, and moments that give us a reason to keep going.",
             },
           ],
