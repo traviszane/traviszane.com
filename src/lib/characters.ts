@@ -254,13 +254,13 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest II — Publication",
         description: "A book that started as a parody and became something true.",
         tags: ["Poetry", "Self-Publishing", "Satire"],
-        goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+        goal: "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what \"good writing\" actually is.",
         outcome: "Named \"#1 New Release in LGBTQ+ Poetry.\" 5-star ratings across countries.",
         details: {
           role: "Author, Designer, Publisher",
           timeframe: "2024 – 2025",
           situation:
-            "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what 'good writing' actually is.",
+            "Write a book with the goal of making something fun, an experiment in form triggered by a TikTok spiral about what \"good writing\" actually is.",
           approach:
             "Half Thoughts began as a response to a style of social media poetry that felt too simple, and evolved into a genuine reckoning with that instinct. The book is split into three sections (Sex, Society, Self), each introduced by a prose essay.",
           workItems: [
@@ -276,7 +276,7 @@ export const characters: Record<CharacterId, Character> = {
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
             "Genuine, honest, and authentic. Each poem is a beautiful exploration of love, sex, identity, and the struggle of life.",
-            "Full of many 'makes ya think' bits.",
+            "Full of many \"makes ya think\" bits.",
           ],
           gallery: [
             { src: amazonListing, alt: "Half Thoughts on Amazon — #1 New Release in LGBTQ+ Poetry" },
@@ -306,7 +306,7 @@ export const characters: Record<CharacterId, Character> = {
           role: "Founder & Editor-in-Chief",
           timeframe: "2019",
           situation:
-            "Create an independent print magazine at a time when everyone said print was dead, celebrating 'revolutionary kin' (kind people doing cool things that make the world a better place) through personal essays, editorials, and interviews.",
+            "Create an independent print magazine at a time when everyone said print was dead, celebrating \"revolutionary kin\" (kind people doing cool things that make the world a better place) through personal essays, editorials, and interviews.",
           approach:
             "Launched a Kickstarter campaign in 2019, raised $20,000, and produced a 184-page debut issue exploring the human concept of time. Three sections: Introspection (personal essays), Invention (editorials with creative influencers), Inquiry (interviews with artists, researchers, and activists).",
           workItems: [
@@ -402,7 +402,7 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "deepprove-gtm",
-        title: "AI Product 'DeepProve'",
+        title: "AI Product \"DeepProve\"",
         meta: "Quest I — Product Marketing",
         description: "Making verifiable AI playable and impossible to ignore.",
         tags: ["GTM", "Campaign", "Content", "Product Launch"],
@@ -636,7 +636,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "rally",
-        title: "Rally: Fast Company's 'Top 5 Most Innovative'",
+        title: "Rally: Fast Company's \"Top 5 Most Innovative\"",
         meta: "Quest VI — Brand & Content",
         description: "Winning an audience of creators and consumers with bespoke social and PR strategy.",
         tags: ["PR", "Social Strategy", "Content", "Community"],
@@ -903,7 +903,7 @@ export const characters: Record<CharacterId, Character> = {
               body: "A visual memoir for Jeanette Zane's 96th birthday, built around an interview conducted in 2016. A film about joy, loss, memory, and what it means to have lived a full life, including footage from Hawaii, California, New England, and Oahu spanning 2016–2019.",
             },
             {
-              heading: "Shorts on Uncertainty: 'Joy' + 'Floating'",
+              heading: "Shorts on Uncertainty: \"Joy\" + \"Floating\"",
               body: "Two short films made in the first year after moving from California to New York City. An attempt to capture the multifaceted nature of joy amid uncertainty, celebrating the people, places, and moments that give us a reason to keep going.",
             },
           ],
@@ -996,17 +996,17 @@ export const characters: Record<CharacterId, Character> = {
         description: "An experiment in queer education, launched online and in-person.",
         tags: ["Community", "Events", "Education"],
         goal: "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
-        outcome: "5+ events produced independently in Mexico City, including 'Exploring Relationship Anarchy' at HAAB Project.",
+        outcome: "5+ events produced independently in Mexico City, including \"Exploring Relationship Anarchy\" at HAAB Project.",
         details: {
           role: "Founder & Host",
           timeframe: "2023",
           situation:
             "Create physical and online spaces for the queer community designed for creative expression, connection, and honest conversation around identity and relationships.",
           approach:
-            "Produced a series of in-person events under the ayem banner in Mexico City, including 'Exploring Relationship Anarchy,' a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
+            "Produced a series of in-person events under the ayem banner in Mexico City, including \"Exploring Relationship Anarchy,\" a community gathering designed to deconstruct how we relate to others and build our own models of love. Accompanied by a printed zine on relationship anarchy distributed at events.",
           workItems: [
             "5+ events produced independently in Mexico City",
-            "'Exploring Relationship Anarchy' hosted at HAAB Project, Hipódromo Condesa, June 2023",
+            "\"Exploring Relationship Anarchy\" hosted at HAAB Project, Hipódromo Condesa, June 2023",
             "Educational workshops on sexuality, relationships, and identity",
             "Relationship anarchy zine produced and distributed",
             "Sleepover community party",
