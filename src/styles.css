@@ -191,6 +191,17 @@
   20%  { opacity: 0.9; }
   100% { transform: translate(var(--dx, 60px), var(--dy, -80px)) scale(0.4); opacity: 0; }
 }
+@keyframes ember-rise {
+  0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  12%  { opacity: 1; transform: translate(calc(var(--dx, 40px) * 0.1), calc(var(--dy, -240px) * 0.1)) scale(1); }
+  55%  { opacity: 0.85; }
+  100% { transform: translate(var(--dx, 40px), var(--dy, -240px)) scale(0.3); opacity: 0; }
+}
+@keyframes ember-flicker {
+  0%, 100% { filter: brightness(1); }
+  40%      { filter: brightness(1.6); }
+  70%      { filter: brightness(0.7); }
+}
 
 .anim-idle { animation: float-y 3.2s ease-in-out infinite; }
 .anim-glow { animation: glow-pulse 2.4s ease-in-out infinite; }
@@ -199,6 +210,11 @@
 .anim-blink { animation: blink 1.1s steps(2) infinite; }
 .anim-wind { animation: wind-sway 4.5s ease-in-out infinite; transform-origin: 50% 90%; }
 .anim-drift { animation: drift-particle 6s ease-in-out infinite; }
+.anim-ember { animation: ember-rise var(--dur, 5.5s) cubic-bezier(0.4, 0, 0.6, 1) infinite, ember-flicker 1.3s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-ember, .anim-drift { animation: none; opacity: 0.5; }
+}
 
 /* Flipbook duotone: orange in dark mode, purple/white in light */
 .flipbook-duotone { filter: url(#duotone-dark); }
