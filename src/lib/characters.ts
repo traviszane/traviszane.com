@@ -546,6 +546,7 @@ export const characters: Record<CharacterId, Character> = {
             tw("https://x.com/OasisProtocol/status/1802782957993873491"),
           ],
           gallery: [
+            { src: oasisBrandSystem, alt: "Oasis rebrand — logo and icon system across blue, black, and white treatments" },
             { src: oasis1, alt: "Travis presenting at an Oasis event" },
             { src: oasis2, alt: "Travis presenting at an Oasis event" },
             { src: oasis3, alt: "Travis presenting at an Oasis event" },
