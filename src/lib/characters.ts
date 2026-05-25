@@ -268,6 +268,12 @@ export const characters: Record<CharacterId, Character> = {
             "210 pages of poetry and prose",
             "Available globally on Amazon in print and Kindle",
           ],
+          metrics: [
+            { label: "New Release Ranking", value: "#1" },
+            { label: "Rating", value: "5-Star" },
+            { label: "Pages", value: "210" },
+            { label: "Availability", value: "Global" },
+          ],
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
             "Genuine, honest, and authentic. Each poem is a beautiful exploration of love, sex, identity, and the struggle of life.",
