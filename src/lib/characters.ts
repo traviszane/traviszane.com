@@ -44,6 +44,7 @@ import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.webp";
 import oasis1 from "@/assets/quests/oasis/oasis-1.webp";
 import oasis2 from "@/assets/quests/oasis/oasis-2.webp";
 import oasis3 from "@/assets/quests/oasis/oasis-3.webp";
+import oasisBrandSystem from "@/assets/quests/oasis/oasis-brand-system.webp";
 
 // Azuki
 import azuki1 from "@/assets/quests/azuki/azuki-1.webp";
@@ -545,6 +546,7 @@ export const characters: Record<CharacterId, Character> = {
             tw("https://x.com/OasisProtocol/status/1802782957993873491"),
           ],
           gallery: [
+            { src: oasisBrandSystem, alt: "Oasis rebrand — logo and icon system across blue, black, and white treatments" },
             { src: oasis1, alt: "Travis presenting at an Oasis event" },
             { src: oasis2, alt: "Travis presenting at an Oasis event" },
             { src: oasis3, alt: "Travis presenting at an Oasis event" },
