@@ -15,6 +15,8 @@ import spriteCreatorVideoDark from "@/assets/sprite-creator-dark.mp4";
 import igProfile from "@/assets/quests/instagram/ig-profile.webp";
 import igFollowers from "@/assets/quests/instagram/ig-followers.webp";
 import igViews from "@/assets/quests/instagram/ig-views.webp";
+import altosMargaritaMatch from "@/assets/quests/instagram/altos-margarita-match.png";
+import korbelPartner from "@/assets/quests/instagram/korbel-partner.png";
 
 // Half Thoughts photos (webp-optimized)
 import ht1 from "@/assets/quests/half-thoughts/1D16D0DA-EE00-499E-9B24-8B5D3D761DEA.webp";
@@ -984,8 +986,18 @@ export const characters: Record<CharacterId, Character> = {
             "More on the way!",
           ],
           embeds: [
-            ig("https://www.instagram.com/p/DGEGAMkvnot/"),
-            ig("https://www.instagram.com/reel/DQmeYP8karS/"),
+            {
+              type: "image-link",
+              url: "https://www.instagram.com/p/DGEGAMkvnot/",
+              image: altosMargaritaMatch,
+              alt: "Altos Tequila Margarita Match Instagram post featuring Travis",
+            },
+            {
+              type: "image-link",
+              url: "https://www.instagram.com/reels/DQmeYP8karS/",
+              image: korbelPartner,
+              alt: "Korbel paid partnership Instagram reel by Travis",
+            },
           ],
         },
       },

@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 export type Embed =
   | { type: "twitter"; url: string }
   | { type: "youtube"; url: string }
-  | { type: "instagram"; url: string };
+  | { type: "instagram"; url: string }
+  | { type: "image-link"; url: string; image: string; alt?: string };
 
 function instagramEmbedSrc(url: string): string | null {
   try {
@@ -64,6 +65,24 @@ export function QuestEmbed({ embed }: { embed: Embed }) {
       return () => clearTimeout(t);
     }
   }, [embed]);
+
+  if (embed.type === "image-link") {
+    return (
+      <a
+        href={embed.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block overflow-hidden rounded-md border border-border bg-card/40 backdrop-blur-sm transition hover:border-foreground/40"
+      >
+        <img
+          src={embed.image}
+          alt={embed.alt ?? "Instagram post"}
+          loading="lazy"
+          className="block w-full h-auto"
+        />
+      </a>
+    );
+  }
 
   if (embed.type === "youtube") {
     const id = youTubeId(embed.url);
