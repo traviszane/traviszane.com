@@ -402,7 +402,7 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "deepprove-gtm",
-        title: "AI Product 'DeepProve'",
+        title: "AI Product \"DeepProve\"",
         meta: "Quest I — Product Marketing",
         description: "Making verifiable AI playable and impossible to ignore.",
         tags: ["GTM", "Campaign", "Content", "Product Launch"],
