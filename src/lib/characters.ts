@@ -276,7 +276,7 @@ export const characters: Record<CharacterId, Character> = {
           testimonials: [
             "A window into the author's world, and a mirror to your own.",
             "Genuine, honest, and authentic. Each poem is a beautiful exploration of love, sex, identity, and the struggle of life.",
-            "Full of many 'makes ya think' bits.",
+            "Full of many \"makes ya think\" bits.",
           ],
           gallery: [
             { src: amazonListing, alt: "Half Thoughts on Amazon — #1 New Release in LGBTQ+ Poetry" },
