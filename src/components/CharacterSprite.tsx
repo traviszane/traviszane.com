@@ -159,6 +159,39 @@ export function CharacterSprite({ character, size = "lg", active = false, playOn
         </div>
       )}
 
+      {/* Dark-mode embers — accent-colored sparks rising from the base */}
+      {isDark && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          {[
+            { left: "18%", top: "82%", dx: "24px",  dy: "-260px", delay: "0s",   dur: "5.2s", size: 2 },
+            { left: "28%", top: "88%", dx: "-18px", dy: "-300px", delay: "0.9s", dur: "6.4s", size: 3 },
+            { left: "42%", top: "78%", dx: "32px",  dy: "-280px", delay: "1.8s", dur: "5.8s", size: 2 },
+            { left: "50%", top: "90%", dx: "-10px", dy: "-340px", delay: "2.4s", dur: "6.8s", size: 4 },
+            { left: "58%", top: "82%", dx: "26px",  dy: "-260px", delay: "3.1s", dur: "5.4s", size: 2 },
+            { left: "70%", top: "86%", dx: "-28px", dy: "-310px", delay: "3.9s", dur: "6.2s", size: 3 },
+            { left: "82%", top: "80%", dx: "16px",  dy: "-290px", delay: "4.6s", dur: "5.6s", size: 2 },
+            { left: "36%", top: "72%", dx: "-22px", dy: "-220px", delay: "5.3s", dur: "5.0s", size: 2 },
+          ].map((p, i) => (
+            <span
+              key={i}
+              className="absolute rounded-full anim-ember"
+              style={{
+                left: p.left,
+                top: p.top,
+                width: p.size,
+                height: p.size,
+                background: `radial-gradient(circle, white 0%, ${color} 55%, transparent 100%)`,
+                boxShadow: `0 0 6px ${color}, 0 0 14px color-mix(in oklab, ${color} 70%, transparent), 0 0 28px color-mix(in oklab, ${color} 35%, transparent)`,
+                ["--dx" as string]: p.dx,
+                ["--dy" as string]: p.dy,
+                ["--dur" as string]: p.dur,
+                animationDelay: p.delay,
+              }}
+            />
+          ))}
+        </div>
+      )}
+
       {hasVideo ? (
         <div className={cn("relative flex items-end justify-center", sizeMap[size])}>
           <img
