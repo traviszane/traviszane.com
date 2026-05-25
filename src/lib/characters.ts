@@ -44,6 +44,7 @@ import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.webp";
 import oasis1 from "@/assets/quests/oasis/oasis-1.webp";
 import oasis2 from "@/assets/quests/oasis/oasis-2.webp";
 import oasis3 from "@/assets/quests/oasis/oasis-3.webp";
+import oasisBrandSystem from "@/assets/quests/oasis/oasis-brand-system.webp";
 
 // Azuki
 import azuki1 from "@/assets/quests/azuki/azuki-1.webp";
