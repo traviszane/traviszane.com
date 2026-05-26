@@ -131,6 +131,7 @@ export interface QuestDetails {
   shots?: GalleryImage[];
   pressLinks?: { label: string; url: string }[];
   testimonials?: string[];
+  substackPosts?: { title: string; url: string; image: string }[];
   // legacy/extra
   summary?: string;
   sections?: QuestSection[];
