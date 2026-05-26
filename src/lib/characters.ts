@@ -38,7 +38,6 @@ import ayemGather3 from "@/assets/quests/ayem/gathering-event-3.webp";
 import ayemGather4 from "@/assets/quests/ayem/gathering-event-4.webp";
 
 // Sleepover
-import sleepoverHome from "@/assets/quests/sleepover/sleepover-home.webp";
 
 // Oasis
 import oasis1 from "@/assets/quests/oasis/oasis-1.webp";
