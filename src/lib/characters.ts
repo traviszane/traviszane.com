@@ -857,7 +857,7 @@ export const characters: Record<CharacterId, Character> = {
         description: "A decade of documentary photography, video, and words on @travis_zane.",
         tags: ["Photography", "Lifestyle", "Documentary"],
         goal: "Build an authentic audience around travel, creativity, and personal storytelling without chasing trends or optimizing for the algorithm. Let the life be the content.",
-        outcome: "27,000+ followers built organically over a decade between California and Mexico City.",
+        outcome: "27,000+ followers built organically over a decade.",
         details: {
           role: "Creator",
           timeframe: "2014 – present",
@@ -874,7 +874,6 @@ export const characters: Record<CharacterId, Character> = {
             { label: "Followers", value: "26.9K" },
             { label: "Posts", value: "1,000+" },
             { label: "Years active", value: "10+" },
-            { label: "Cities", value: "CA · CDMX" },
           ],
         },
         ctas: [
