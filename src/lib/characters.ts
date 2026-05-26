@@ -244,8 +244,34 @@ export const characters: Record<CharacterId, Character> = {
             "Annual events (parties!) for readers",
           ],
           gallery: [
-            { src: sleepoverHome, alt: "Sleepover newsletter homepage on Substack" },
             yt("https://www.youtube.com/watch?v=p65hcxiR4IQ"),
+          ],
+          substackPosts: [
+            {
+              title: "Coping with the Climate Crisis (and more) via Memes",
+              url: "https://www.sleepover.life/p/coping-with-the-climate-crisis-and",
+              image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a693de5-2996-4fe5-a8c6-8f513ea0b50b_1024x1024.png",
+            },
+            {
+              title: "I Love You, Ah-Mah",
+              url: "https://www.sleepover.life/p/i-love-you-ah-mah",
+              image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb5cee5c-cf19-4fb6-af15-4c16bd34f4ca_2168x1390.png",
+            },
+            {
+              title: "Gringo Guilt: Should I Go Back to Where I Came From?",
+              url: "https://www.sleepover.life/p/gringo-guilt-should-i-go-back-to",
+              image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46c4b729-1f76-4004-8b53-bb58dc91d739_1456x1048.png",
+            },
+            {
+              title: "The Marriage Effect: What My Wedding Taught Me",
+              url: "https://www.sleepover.life/p/the-marriage-effect-what-my-wedding",
+              image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d1ec339-f5c4-47b0-8513-7e2d7a03e822_6000x3376.jpeg",
+            },
+            {
+              title: "Death Café",
+              url: "https://www.sleepover.life/p/death-cafe",
+              image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d0b710a-74ef-46d9-ac00-7f5f6a3fda14_3024x4032.jpeg",
+            },
           ],
         },
         ctas: [
