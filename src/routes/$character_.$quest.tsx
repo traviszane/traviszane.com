@@ -319,38 +319,85 @@ function QuestPage() {
               </section>
             )}
 
-            {d.gallery && d.gallery.length > 0 && (
+            {d.gallery && d.gallery.length > 0 && (() => {
+              const singleEmbed =
+                d.gallery.length === 1 && "type" in d.gallery[0]
+                  ? (d.gallery[0] as Extract<typeof d.gallery[number], { type: string }>)
+                  : null;
+              return (
+                <section className="mt-12 anim-fade-up">
+                  <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
+                    ◆ Gallery
+                  </h2>
+                  {singleEmbed ? (
+                    <div className="mt-4">
+                      <QuestEmbed embed={singleEmbed} />
+                    </div>
+                  ) : (
+                    <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      {(() => {
+                        let imgIdx = -1;
+                        return d.gallery.map((g, i) => {
+                          if ("type" in g) {
+                            return <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />;
+                          }
+                          imgIdx += 1;
+                          const idx = imgIdx;
+                          return (
+                            <button
+                              key={i}
+                              type="button"
+                              onClick={() => setLightboxIndex(idx)}
+                              className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
+                            >
+                              <img
+                                src={g.src}
+                                alt={g.alt}
+                                loading="lazy"
+                                className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                              />
+                            </button>
+                          );
+                        });
+                      })()}
+                    </div>
+                  )}
+                </section>
+              );
+            })()}
+
+            {d.substackPosts && d.substackPosts.length > 0 && (
               <section className="mt-12 anim-fade-up">
                 <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
-                  ◆ Gallery
+                  ◆ Popular Posts
                 </h2>
-                <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {(() => {
-                    let imgIdx = -1;
-                    return d.gallery.map((g, i) => {
-                      if ("type" in g) {
-                        return <QuestEmbed key={`${g.type}-${i}-${g.url}`} embed={g} />;
-                      }
-                      imgIdx += 1;
-                      const idx = imgIdx;
-                      return (
-                        <button
-                          key={i}
-                          type="button"
-                          onClick={() => setLightboxIndex(idx)}
-                          className="group block overflow-hidden rounded-md border border-border bg-card/40 text-left aspect-square flex items-center justify-center p-1"
-                        >
-                          <img
-                            src={g.src}
-                            alt={g.alt}
-                            loading="lazy"
-                            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </button>
-                      );
-                    });
-                  })()}
-
+                <div className="mt-4 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
+                  {d.substackPosts.map((p) => (
+                    <a
+                      key={p.url}
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex-shrink-0 w-[min(240px,70vw)] snap-start overflow-hidden rounded-md border border-border bg-card/60 backdrop-blur-sm transition hover:border-foreground/40"
+                    >
+                      <div className="aspect-square overflow-hidden bg-muted">
+                        <img
+                          src={p.image}
+                          alt={p.title}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="px-3 py-3">
+                        <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
+                          Sleepover
+                        </div>
+                        <div className="mt-1 text-sm font-medium text-foreground leading-snug line-clamp-3">
+                          {p.title}
+                        </div>
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </section>
             )}
