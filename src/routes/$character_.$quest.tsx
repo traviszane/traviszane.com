@@ -322,7 +322,7 @@ function QuestPage() {
             {d.gallery && d.gallery.length > 0 && (() => {
               const singleEmbed =
                 d.gallery.length === 1 && "type" in d.gallery[0]
-                  ? (d.gallery[0] as Extract<typeof d.gallery[number], { type: string }>)
+                  ? (d.gallery[0] as Embed)
                   : null;
               return (
                 <section className="mt-12 anim-fade-up">
