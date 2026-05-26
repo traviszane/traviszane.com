@@ -10,7 +10,7 @@ import backdropUrl from "@/assets/scene-backdrop.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Choose your character.—Travis Zane" },
+      { title: "Choose your character. — Travis Zane" },
       {
         name: "description",
         content:

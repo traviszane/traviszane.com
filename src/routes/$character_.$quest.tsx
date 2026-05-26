@@ -26,13 +26,13 @@ export const Route = createFileRoute("/$character_/$quest")({
     const url = `https://traviszane.com/${params.character}/${params.quest}`;
     return {
       meta: [
-        { title: `${ch.title}—${c.name}` },
+        { title: `${ch.title} — ${c.name}` },
         { name: "description", content: desc },
-        { property: "og:title", content: `${ch.title}—${c.name}` },
+        { property: "og:title", content: `${ch.title} — ${c.name}` },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { name: "twitter:title", content: `${ch.title}—${c.name}` },
+        { name: "twitter:title", content: `${ch.title} — ${c.name}` },
         { name: "twitter:description", content: desc },
       ],
       links: [{ rel: "canonical", href: url }],
@@ -172,7 +172,7 @@ function QuestPage() {
             <span className="text-muted-foreground/40">·</span>
             <span className="text-muted-foreground">{ch.meta}</span>
           </div>
-          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-white">
+          <h1 className="mt-2 font-display uppercase italic text-4xl md:text-6xl leading-[0.95] tracking-tight text-foreground">
             {ch.title}
           </h1>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{renderLinked(ch.description)}</p>

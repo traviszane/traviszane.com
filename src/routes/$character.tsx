@@ -20,12 +20,12 @@ export const Route = createFileRoute("/$character")({
     const url = `https://traviszane.com/${params.character}`;
     return {
       meta: [
-        { title: `${c.name}—${c.className}'s Journey` },
+        { title: `${c.name} — ${c.className}'s Journey` },
         { name: "description", content: desc },
-        { property: "og:title", content: `${c.name}—${c.className}'s Journey` },
+        { property: "og:title", content: `${c.name} — ${c.className}'s Journey` },
         { property: "og:description", content: desc },
         { property: "og:url", content: url },
-        { name: "twitter:title", content: `${c.name}—${c.className}'s Journey` },
+        { name: "twitter:title", content: `${c.name} — ${c.className}'s Journey` },
         { name: "twitter:description", content: desc },
       ],
       links: [{ rel: "canonical", href: url }],
