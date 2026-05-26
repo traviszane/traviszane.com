@@ -866,14 +866,13 @@ export const characters: Record<CharacterId, Character> = {
           approach:
             "A decade of documentary-style photography and storytelling split between California and Mexico City. The feed has grown alongside the work, same audience, same voice, since college. Zines, travel, community, and the texture of daily life.",
           workItems: [
-            "993 posts spanning a decade of documentary photography and video",
+            "1,000+ posts spanning a decade of documentary photography and video",
             "Audience built organically, no paid growth, no algorithm chasing",
-            "Dual California / Mexico City lifestyle and community storytelling",
             "Zine, print, and editorial work woven throughout the feed",
           ],
           metrics: [
             { label: "Followers", value: "26.9K" },
-            { label: "Posts", value: "993" },
+            { label: "Posts", value: "1,000+" },
             { label: "Years active", value: "10+" },
             { label: "Cities", value: "CA · CDMX" },
           ],
