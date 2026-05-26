@@ -875,6 +875,15 @@ export const characters: Record<CharacterId, Character> = {
             { label: "Posts", value: "1,000+" },
             { label: "Years active", value: "10+" },
           ],
+          embeds: [
+            { type: "instagram", url: "https://www.instagram.com/p/C-_1l4LuRTp/" },
+            { type: "instagram", url: "https://www.instagram.com/p/DS4Bk04DtvF/" },
+            { type: "instagram", url: "https://www.instagram.com/p/DTWcvuTEfQV/" },
+            { type: "instagram", url: "https://www.instagram.com/p/DMeSO9EOJXa/" },
+            { type: "instagram", url: "https://www.instagram.com/p/DMMWiAFuVnq/" },
+            { type: "instagram", url: "https://www.instagram.com/p/C_RmLxkuGE0/" },
+            { type: "instagram", url: "https://www.instagram.com/reel/C0VA3xHOqZs/" },
+          ],
         },
         ctas: [
           { label: "View @travis_zane", href: "https://www.instagram.com/travis_zane/" },
