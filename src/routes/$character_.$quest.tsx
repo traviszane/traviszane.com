@@ -309,9 +309,11 @@ function QuestPage() {
                 <h2 className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color }}>
                   ◆ Receipts
                 </h2>
-                <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                <div className="mt-4 flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory">
                   {d.embeds.map((e, i) => (
-                    <QuestEmbed key={`${e.type}-${i}-${e.url}`} embed={e} />
+                    <div key={`${e.type}-${i}-${e.url}`} className="flex-shrink-0 w-[min(340px,85vw)] snap-start">
+                      <QuestEmbed embed={e} />
+                    </div>
                   ))}
                 </div>
               </section>
