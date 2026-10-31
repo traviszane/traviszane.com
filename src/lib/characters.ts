@@ -203,7 +203,7 @@ const ig = (url: string): Embed => ({ type: "instagram", url });
 const CLIENT_LINKS: Record<string, string> = {
   Daydream: "https://daydream.builders/",
   Lagrange: "https://lagrange.dev",
-  "Oasis Protocol": "https://oasis.net/",
+  Oasis: "https://oasis.net/",
   Superlayer: "https://superlayer.io/",
   Rally: "https://rally.io/",
   "Lagrange × Azuki": "https://lagrange.dev",
