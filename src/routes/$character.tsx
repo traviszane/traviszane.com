@@ -235,7 +235,8 @@ function CharacterPage() {
                             <dd className="mt-0.5 text-xs text-foreground/85 leading-snug">{ch.outcome}</dd>
                           </div>
                         )}
-                      </dl>
+                        </dl>
+                      </>
                     )}
                     <div className="mt-3 flex flex-wrap gap-2">
                       {ch.tags.map((t) => (
