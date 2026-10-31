@@ -443,7 +443,7 @@ export const characters: Record<CharacterId, Character> = {
         title: "Redefining “Marketing” with Autonomous GTM Pipelines",
         meta: "Quest I — Marketing Engineering",
         description: "Building enterprise Growth OS infrastructure for major tech clients.",
-        tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
+        tags: ["Marketing Engineering", "Systems Architecture", "Product Marketing", "Content"],
         goal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue.",
         outcome: "Successfully migrated 3 enterprise AI/Tech clients to a centralized, custom-engineered Growth OS.",
         details: {
