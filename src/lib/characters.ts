@@ -436,7 +436,7 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "marketing-engineering",
-        title: "Engineering a Custom Growth OS for Enterprise Tech",
+        title: "Redefining “Marketing” with Autonomous GTM Pipelines",
         meta: "Quest I — Marketing Engineering",
         description: "Building enterprise Growth OS infrastructure for major tech clients.",
         tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
@@ -574,7 +574,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "oasis-rebrand",
-        title: "Oasis: From Blockchain to AI",
+        title: "Creating a New Category for AI Infrastructure",
         meta: "Quest IV — Brand & Content",
         description: "767% social growth and ownership of a new category.",
         tags: ["Rebrand", "Positioning", "Product Marketing", "Social Growth"],
@@ -663,7 +663,7 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "lagrange-social",
-        title: "From Niche Dev Account to Crypto Thought Leader",
+        title: "Niche Dev Account to Crypto Thought Leader",
         meta: "Quest VI — Social & Growth",
         description: "340% YoY growth, establishing Lagrange as a leader in emerging tech.",
         tags: ["Social Strategy", "Content", "Community", "Brand"],
