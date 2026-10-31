@@ -126,6 +126,8 @@ export interface QuestDetails {
   role?: string;
   timeframe?: string;
   situation?: string;
+  /** Secondary paragraph rendered under `situation` (e.g. NDA notes). */
+  situationNote?: string;
   approach?: string;
   workItems?: string[];
   metrics?: { label: string; value: string }[];
@@ -449,7 +451,9 @@ export const characters: Record<CharacterId, Character> = {
           role: "Fractional Head of Marketing",
           timeframe: "2026",
           situation:
-            "The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers. Note: Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
+            "The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers.",
+          situationNote:
+            "Note: Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
           approach:
             "Audited existing SaaS tooling and identified massive handoff failures between engineering, sales, and marketing. Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems. Enforced strict CI/CD governance for all content deployment. Developed custom LLM workflows with rigorous negative constraints and voice anchors to ensure all AI-generated output was indistinguishable from the founding team's native tone, completely avoiding industry AI tropes.",
           workItems: [

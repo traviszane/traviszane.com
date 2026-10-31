@@ -223,6 +223,11 @@ function QuestPage() {
                 <p className="mt-3 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl">
                   {renderLinked(d.situation)}
                 </p>
+                {d.situationNote && (
+                  <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
+                    {renderLinked(d.situationNote)}
+                  </p>
+                )}
               </section>
             )}
 
