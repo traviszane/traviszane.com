@@ -224,7 +224,7 @@ function CharacterPage() {
                             <dt className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
                               Goal
                             </dt>
-                            <dd className="mt-0.5 text-xs text-foreground/85 leading-snug">{ch.goal}</dd>
+                            <dd className="mt-0.5 text-xs text-foreground/85 leading-snug">{ch.cardGoal ?? ch.goal}</dd>
                           </div>
                         )}
                         {ch.outcome && (
