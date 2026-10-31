@@ -408,7 +408,7 @@ export const characters: Record<CharacterId, Character> = {
     id: "marketer",
     name: "The Marketer",
     className: "Tactician",
-    tagline: "Architect of branding and growth.",
+    tagline: "Engineer of branding and growth.",
     blurb:
       "Campaigns and positioning built to compound, not just perform. The Marketer treats growth as a system: clear messaging, viral outputs, and data-driven storytelling. He is obsessed with making complex technology legible to the humans its meant to serve.",
     sprite: spriteMarketer,
@@ -423,9 +423,9 @@ export const characters: Record<CharacterId, Character> = {
       { label: "Years in marketing", value: "10+" },
     ],
     skills: [
+      { label: "Growth", tier: "S-TIER" },
       { label: "Strategy", tier: "S-TIER" },
-      { label: "Positioning", tier: "S-TIER" },
-      { label: "Growth", tier: "A-TIER" },
+      { label: "Positioning", tier: "A-TIER" },
     ],
     stats: [
       { label: "Strategy", value: 97 },
@@ -436,7 +436,7 @@ export const characters: Record<CharacterId, Character> = {
     chapters: [
       {
         slug: "marketing-engineering",
-        title: "Architecting a Custom Growth OS for Enterprise Tech",
+        title: "Engineering a Custom Growth OS for Enterprise Tech",
         meta: "Quest I — Marketing Engineering",
         description: "Building enterprise Growth OS infrastructure for major tech clients.",
         tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
@@ -890,7 +890,7 @@ export const characters: Record<CharacterId, Character> = {
     id: "creator",
     name: "The Creator",
     className: "Maker",
-    tagline: "Chronicler of culture and community.",
+    tagline: "Architect of culture and community.",
     blurb:
       "Worlds built at the intersection of image, language, and experience. The Creator invents narrative from visuals, community from ideas, and categories where there are none. He masters not only how to make things, but how to ship them, too.",
     sprite: spriteCreator,
@@ -910,7 +910,7 @@ export const characters: Record<CharacterId, Character> = {
       { label: "Creative Direction", tier: "A-TIER" },
     ],
     stats: [
-      { label: "Community Building", value: 96 },
+      { label: "Community", value: 96 },
       { label: "Aesthetic & Taste", value: 94 },
       { label: "Creative Direction", value: 91 },
     ],
