@@ -455,7 +455,7 @@ export const characters: Record<CharacterId, Character> = {
           situationNote:
             "Note: Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
           approach:
-            "Audited existing SaaS tooling and identified massive handoff failures between engineering, sales, and marketing. Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems. Enforced strict CI/CD governance for all content deployment. Developed custom LLM workflows with rigorous negative constraints and voice anchors to ensure all AI-generated output was indistinguishable from the founding team's native tone, completely avoiding industry AI tropes.",
+            "Treated market expansion like a software release cycle. First, we mapped out the cross-departmental telemetry failures between engineering, sales, and marketing. Then, we engineered a unified Growth OS that integrated CRM data with automated editorial pipelines—enforcing strict CI/CD governance and hard negative-constraint filters so all generated GTM output bypassed generic AI tropes and locked directly into the technical founders' actual voices.",
           workItems: [
             "Audited existing SaaS tooling and mapped handoff failures between engineering, sales, and marketing",
             "Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems",
