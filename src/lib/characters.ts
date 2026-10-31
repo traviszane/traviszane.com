@@ -199,6 +199,22 @@ const tw = (url: string): Embed => ({ type: "twitter", url });
 const yt = (url: string): Embed => ({ type: "youtube", url });
 const ig = (url: string): Embed => ({ type: "instagram", url });
 
+/** Known client URLs, keyed by the client name used in quest data. */
+const CLIENT_LINKS: Record<string, string> = {
+  Daydream: "https://daydream.builders/",
+  Lagrange: "https://lagrange.dev",
+  "Oasis Protocol": "https://oasis.net/",
+  Superlayer: "https://superlayer.io/",
+  Rally: "https://rally.io/",
+  "Lagrange × Azuki": "https://lagrange.dev",
+  "Colangelo & Partners": "https://www.colangelopr.com/",
+  "UNLEASHED × Refinery29": "https://www.refinery29.com/en-us",
+};
+
+/** URL for a known client name, if one exists. */
+export const clientUrl = (name?: string): string | undefined =>
+  (name && CLIENT_LINKS[name]) || undefined;
+
 export const characters: Record<CharacterId, Character> = {
   writer: {
     id: "writer",

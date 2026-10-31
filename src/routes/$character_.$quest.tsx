@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, type ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
 import { QuestEmbed, type Embed } from "@/components/QuestEmbed";
-import { characters, type CharacterId } from "@/lib/characters";
+import { characters, clientUrl, type CharacterId } from "@/lib/characters";
 
 
 export const Route = createFileRoute("/$character_/$quest")({
@@ -210,7 +210,25 @@ function QuestPage() {
         {d ? (
           <>
             <section className="mt-10 grid gap-4 sm:grid-cols-3 anim-fade-up">
-              {d.client && <Meta label="Client" value={d.client} />}
+              {d.client && (
+                <Meta
+                  label="Client"
+                  value={
+                    clientUrl(d.client) ? (
+                      <a
+                        href={clientUrl(d.client)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-dotted underline-offset-4 hover:opacity-80"
+                      >
+                        {d.client}
+                      </a>
+                    ) : (
+                      d.client
+                    )
+                  }
+                />
+              )}
               {d.role && <Meta label="Role" value={d.role} />}
               {d.timeframe && <Meta label="Timeframe" value={d.timeframe} />}
             </section>
@@ -659,7 +677,7 @@ function QuestFooterNav({
   );
 }
 
-function Meta({ label, value }: { label: string; value: string }) {
+function Meta({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="rounded-md border border-border bg-card/60 px-4 py-3 backdrop-blur-sm">
       <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">{label}</div>
