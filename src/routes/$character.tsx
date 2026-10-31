@@ -211,13 +211,14 @@ function CharacterPage() {
                     <p className="mt-1 text-sm text-muted-foreground max-w-2xl">
                       {ch.description}
                     </p>
-                    {(ch.goal || ch.outcome) && (
-                      {ch.details?.client && (
-                        <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground max-w-2xl">
-                          Client: {ch.details.client}
-                        </div>
-                      )}
-                      <dl className="mt-3 grid gap-2 sm:grid-cols-2 max-w-2xl">
+                    {(ch.details?.client || ch.goal || ch.outcome) && (
+                      <>
+                        {ch.details?.client && (
+                          <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground max-w-2xl">
+                            Client: {ch.details.client}
+                          </div>
+                        )}
+                        <dl className="mt-3 grid gap-2 sm:grid-cols-2 max-w-2xl">
                         {ch.goal && (
                           <div className="rounded-sm border border-border/70 bg-background/40 px-3 py-2">
                             <dt className="font-mono text-[9px] uppercase tracking-[0.22em]" style={{ color }}>
