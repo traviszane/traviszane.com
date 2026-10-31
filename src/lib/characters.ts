@@ -442,15 +442,14 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest I — Marketing Engineering",
         description: "Building enterprise Growth OS infrastructure for major tech clients.",
         tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
-        cardGoal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue.",
-        goal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue. The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers.",
+        goal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue.",
         outcome: "Successfully migrated 3 enterprise AI/Tech clients to a centralized, custom-engineered Growth OS.",
         details: {
           client: "Daydream",
           role: "Fractional Head of Marketing",
           timeframe: "2026",
           situation:
-            "Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
+            "The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers. Note: Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
           approach:
             "Audited existing SaaS tooling and identified massive handoff failures between engineering, sales, and marketing. Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems. Enforced strict CI/CD governance for all content deployment. Developed custom LLM workflows with rigorous negative constraints and voice anchors to ensure all AI-generated output was indistinguishable from the founding team's native tone, completely avoiding industry AI tropes.",
           workItems: [
