@@ -905,7 +905,7 @@ export const characters: Record<CharacterId, Character> = {
       { label: "Worlds built", value: "8+" },
     ],
     skills: [
-      { label: "Community Building", tier: "S-TIER" },
+      { label: "Community", tier: "S-TIER" },
       { label: "Aesthetic & Taste", tier: "S-TIER" },
       { label: "Creative Direction", tier: "A-TIER" },
     ],
