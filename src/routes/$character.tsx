@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SceneBackdrop } from "@/components/SceneBackdrop";
 import { CharacterSprite } from "@/components/CharacterSprite";
 import { ChangeCharacterMenu } from "@/components/ChangeCharacterMenu";
-import { characters, characterList, type CharacterId } from "@/lib/characters";
+import { characters, characterList, clientUrl, type CharacterId } from "@/lib/characters";
 
 
 
@@ -215,7 +215,19 @@ function CharacterPage() {
                       <>
                         {ch.details?.client && (
                           <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground max-w-2xl">
-                            Client: {ch.details.client}
+                            Client:{" "}
+                            {clientUrl(ch.details?.client) ? (
+                              <a
+                                href={clientUrl(ch.details?.client)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline decoration-dotted underline-offset-4 hover:text-foreground transition-colors"
+                              >
+                                {ch.details?.client}
+                              </a>
+                            ) : (
+                              ch.details?.client
+                            )}
                           </div>
                         )}
                         <dl className="mt-3 grid gap-2 sm:grid-cols-2 max-w-2xl">
