@@ -428,9 +428,9 @@ export const characters: Record<CharacterId, Character> = {
       { label: "Positioning", tier: "A-TIER" },
     ],
     stats: [
-      { label: "Strategy", value: 97 },
-      { label: "Positioning", value: 95 },
-      { label: "Growth", value: 92 },
+      { label: "Growth", value: 97 },
+      { label: "Strategy", value: 95 },
+      { label: "Positioning", value: 92 },
     ],
     abilities: ["GTM Strategy", "Product", "Content", "Lifecycle", "Performance"],
     chapters: [
