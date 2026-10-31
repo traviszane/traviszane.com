@@ -603,7 +603,7 @@ export const characters: Record<CharacterId, Character> = {
         goal: "Position the entire project around privacy-preserving AI, a genuinely differentiated category, before anyone else claimed it.",
         outcome: "767% YoY social growth, 5M+ avg monthly impressions, 40K+ Discord community, 20K → 200K+ on X.",
         details: {
-          client: "Oasis Protocol",
+          client: "Oasis",
           role: "Brand Lead",
           timeframe: "2022 – 2024",
           situation:
