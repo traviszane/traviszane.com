@@ -39,7 +39,7 @@ function AboutPage() {
 
       <main className="relative z-10 mx-auto max-w-5xl px-6 py-8 md:py-10">
         <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.35em] text-primary">
-          File 04 · Character Autobio
+          Inventory · Character Autobio
         </p>
         <h1 className="font-display uppercase italic text-4xl md:text-5xl leading-none tracking-tight">
           Origin Story
