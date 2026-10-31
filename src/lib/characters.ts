@@ -66,6 +66,11 @@ import la4 from "@/assets/quests/la-token/la-4.webp";
 import la5 from "@/assets/quests/la-token/la-5.webp";
 import la6 from "@/assets/quests/la-token/la-6.webp";
 
+// Marketing Engineering (Growth OS)
+import mo1 from "@/assets/quests/growth-os/receipt-1.jpg";
+import mo2 from "@/assets/quests/growth-os/receipt-2.jpg";
+import mo3 from "@/assets/quests/growth-os/receipt-3.jpg";
+
 // Refinery29
 import r29_1 from "@/assets/quests/refinery29/r29-1.webp";
 import r29_2 from "@/assets/quests/refinery29/r29-2.webp";
@@ -430,11 +435,46 @@ export const characters: Record<CharacterId, Character> = {
     abilities: ["GTM Strategy", "Product", "Content", "Lifecycle", "Performance"],
     chapters: [
       {
+        slug: "marketing-engineering",
+        title: "Architecting a Custom Growth OS for Enterprise Tech",
+        meta: "Quest I — Marketing Engineering",
+        description: "Building enterprise Growth OS infrastructure for major tech clients.",
+        tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
+        goal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue. The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers.",
+        outcome: "Successfully migrated 3 enterprise AI/Tech clients to a centralized, custom-engineered Growth OS.",
+        details: {
+          client: "Daydream",
+          role: "Fractional Head of Marketing",
+          timeframe: "2026",
+          situation:
+            "Client specifics and proprietary pipelines withheld under NDA. The following outlines the systemic architecture built across three enterprise tech clients.",
+          approach:
+            "Audited existing SaaS tooling and identified massive handoff failures between engineering, sales, and marketing. Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems. Enforced strict CI/CD governance for all content deployment. Developed custom LLM workflows with rigorous negative constraints and voice anchors to ensure all AI-generated output was indistinguishable from the founding team's native tone, completely avoiding industry AI tropes.",
+          workItems: [
+            "Audited existing SaaS tooling and mapped handoff failures between engineering, sales, and marketing",
+            "Built a custom Marketing OS connecting CRM data, product telemetry, and AI editorial systems",
+            "Enforced strict CI/CD governance for all content deployment",
+            "Developed custom LLM workflows with rigorous negative constraints and voice anchors to keep output indistinguishable from the founding team's native tone",
+            "Scaled organic and paid asset production while maintaining absolute fidelity to the founders' highly technical brand voices",
+          ],
+          metrics: [
+            { label: "Clients migrated", value: "3" },
+            { label: "Deployment speed", value: "80%+" },
+            { label: "Agency dependencies", value: "0" },
+          ],
+          gallery: [
+            { src: mo1, alt: "Growth OS receipt — the command center kanban pipeline" },
+            { src: mo2, alt: "Growth OS receipt — the AI editorial constraints engine" },
+            { src: mo3, alt: "Growth OS receipt — pipeline velocity telemetry" },
+          ],
+        },
+      },
+      {
         slug: "deepprove-gtm",
         title: "AI Product \"DeepProve\"",
-        meta: "Quest I — Product Marketing",
+        meta: "Quest II — Product Launch",
         description: "Making verifiable AI playable and impossible to ignore.",
-        tags: ["GTM", "Campaign", "Content", "Product Launch"],
+        tags: ["GTM", "Campaign", "Content", "Product Marketing"],
         goal: "Make zero-knowledge machine learning legible (and exciting) to developers and mainstream audiences, without alienating either.",
         outcome: "144,309 unique users, 3.75M+ AI proofs, 1.7M+ launch views, and 30+ enterprise partners.",
         details: {
@@ -484,9 +524,9 @@ export const characters: Record<CharacterId, Character> = {
       {
         slug: "la-token-launch",
         title: "Zero to $500M+ with $LA",
-        meta: "Quest II — Product Marketing",
+        meta: "Quest III — Product Launch",
         description: "Took a token from initial concept to nine-figure valuation at launch.",
-        tags: ["Token Launch", "GTM", "PR", "Partnerships"],
+        tags: ["Product Marketing", "GTM", "PR", "Partnerships"],
         goal: "Achieve everything required to launch a new token at scale (narrative, community infrastructure, and distribution), and execute the launch from beginning to end.",
         outcome: "$500M at launch, 71K+ airdrop registrations, and 1.7M+ views across retail-focused launch content.",
         details: {
@@ -535,7 +575,7 @@ export const characters: Record<CharacterId, Character> = {
       {
         slug: "oasis-rebrand",
         title: "Oasis: From Blockchain to AI",
-        meta: "Quest III — Brand & Content",
+        meta: "Quest IV — Brand & Content",
         description: "767% social growth and ownership of a new category.",
         tags: ["Rebrand", "Positioning", "Product Marketing", "Social Growth"],
         goal: "Position the entire project around privacy-preserving AI, a genuinely differentiated category, before anyone else claimed it.",
@@ -588,8 +628,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "superlayer",
-        title: "Superlayer: Ecosystem-Wide Growth",
-        meta: "Quest IV — Social & Growth",
+        title: "481% Growth Across Six Consumer Apps",
+        meta: "Quest V — Social & Growth",
         description: "481% growth across key products in six months. Built brand recognition for an ecosystem of mobile and web apps.",
         tags: ["Product Marketing", "GTM", "Content", "Community"],
         goal: "Establish credibility across a portfolio of consumer apps (Unite, Joyride, Hotline, Trophy, SuperChamps, Taki), each requiring brand recognition and GTM strategy in a different vertical.",
@@ -623,8 +663,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "lagrange-social",
-        title: "Lagrange: Leadership in ZK & AI",
-        meta: "Quest V — Social & Growth",
+        title: "From Niche Dev Account to Crypto Thought Leader",
+        meta: "Quest VI — Social & Growth",
         description: "340% YoY growth, establishing Lagrange as a leader in emerging tech.",
         tags: ["Social Strategy", "Content", "Community", "Brand"],
         goal: "Grow @lagrangedev from a niche developer account into a recognized, trusted voice in verifiable AI and zero-knowledge technology.",
@@ -666,8 +706,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "rally",
-        title: "Rally: Fast Company's \"Top 5 Most Innovative\"",
-        meta: "Quest VI — Brand & Content",
+        title: "Fast Company’s “Top 5 Most Innovative”",
+        meta: "Quest VII — Brand & Content",
         description: "Winning an audience of creators and consumers with bespoke social and PR strategy.",
         tags: ["PR", "Social Strategy", "Content", "Community"],
         goal: "Build a content and community presence that told the creator-token story clearly (and get it in front of the right people).",
@@ -713,8 +753,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "azuki-odyssey",
-        title: "Lagrange × Azuki: Bridging ZK and NFTs",
-        meta: "Quest VII — Experiential",
+        title: "Bridging ZK Infrastructure with Mainstream NFTs",
+        meta: "Quest VIII — Experiential",
         description: "Made zero-knowledge technology accessible to mainstream crypto.",
         tags: ["Partnerships", "Product Marketing", "Campaign", "Consumer"],
         goal: "Make Lagrange's ZK Coprocessor tangible and beautiful for a mainstream NFT audience by partnering with the leading consumer brand in crypto.",
@@ -754,8 +794,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "colangelo-influencer",
-        title: "Colangelo & Partners: Influencer Program",
-        meta: "Quest VIII — Influencer Marketing",
+        title: "The 15-Client Influencer Revenue Playbook",
+        meta: "Quest IX — Influencer Marketing",
         description: "Launched a program that won 15+ new clients, setting the standard for influencer marketing in the food and beverage industry.",
         tags: ["Partnerships", "Content", "Strategy", "Brand"],
         goal: "Lead a new influencer marketing program for a portfolio of premium alcohol and beverage brands, each with distinct audiences, aesthetics, and compliance requirements.",
@@ -796,8 +836,8 @@ export const characters: Record<CharacterId, Character> = {
       },
       {
         slug: "refinery29-unleashed",
-        title: "Refinery29: Documentary Film Release",
-        meta: "Quest IX — Creative Direction",
+        title: "650K+ Reach Film Release With Zero Ad Spend",
+        meta: "Quest X — Creative Direction",
         description: "654K reach. 8.92% engagement. Zero budget.",
         tags: ["Partnerships", "Content", "Strategy", "Brand"],
         goal: "Create genuine hype for a Refinery29 documentary launch with no marketing budget, using nothing but creative leverage and organic campaigns.",
