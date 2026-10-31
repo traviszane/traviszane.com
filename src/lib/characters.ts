@@ -148,6 +148,8 @@ export interface Chapter {
   meta: string;
   description: string;
   tags: string[];
+  /** Shorter goal copy used only on the character-page quest card; falls back to `goal`. */
+  cardGoal?: string;
   goal?: string;
   outcome?: string;
   outcomeMeta?: string;
@@ -440,6 +442,7 @@ export const characters: Record<CharacterId, Character> = {
         meta: "Quest I — Marketing Engineering",
         description: "Building enterprise Growth OS infrastructure for major tech clients.",
         tags: ["Marketing Engineering", "Growth OS", "Systems Architecture", "AI Orchestration", "GTM"],
+        cardGoal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue.",
         goal: "Transition three high-growth B2B tech companies away from disjointed \"random acts of content\" and into a continuous delivery pipeline for revenue. The objective was to engineer a central Growth OS that automated market research, unified brand voice across LLM workflows, and scaled GTM campaigns without relying on traditional bloated agency retainers.",
         outcome: "Successfully migrated 3 enterprise AI/Tech clients to a centralized, custom-engineered Growth OS.",
         details: {
